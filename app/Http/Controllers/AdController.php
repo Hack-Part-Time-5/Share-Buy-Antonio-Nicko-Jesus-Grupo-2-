@@ -8,9 +8,9 @@ use App\Http\Controllers\Controller;
 class AdController extends Controller
 {
     public function __construct(){
-        $this->middelware('auth');
+        $this->middleware('auth');
     }
     public function create(){
-        return view('ads.create');
+        return view('ad.create');
     }
 }
