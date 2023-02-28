@@ -1,5 +1,5 @@
 <x-layout>
-    <x-slot name='title'>Rapido--Login</x-slot>
+    <x-slot name='title'>Share&Buy-Login</x-slot>
     {{-- FORM LOGIN --}}
     <div class="container-fluid">
         <div class="row">
@@ -16,7 +16,7 @@
                     </div>
                 @endif 
                 {{-- FORM FIELDS --}}
-                <form action="/login" method="POST" class="form-control">
+                <form action="/login" method="POST" role="form" class="form-control">
                     @csrf
                     {{-- EMAIL --}}
                     <div class="space-around my-2">
@@ -29,7 +29,7 @@
                         <div class="validate"></div>
                     </div>
                        {{-- BUTTON-LOGIN --}}
-                       <button type="button" class="btn btn-info">Enter</button>
+                       <button type="submit" class="btn btn-info">Enter</button>
                 </form>
                 <p class="my-3">Have you an account?<a class="btn btn-info btn-sm ms-2" href="{{route('register')}}">Register</a></p>
             </div>

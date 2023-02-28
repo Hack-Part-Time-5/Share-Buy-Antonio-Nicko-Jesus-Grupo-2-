@@ -15,7 +15,7 @@
               <a class="nav-link active" aria-current="page" href="{{route('login')}}">Enter</a>
             </li>   
             @endif
-            @if(Route::has('reister'))
+            @if(Route::has('register'))
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="{{route('register')}}">Register</a>
             </li>
@@ -28,7 +28,7 @@
               <form action="{{route('logout')}}" id="logoutForm" method="POST">
                 @csrf
               </form>
-              <a href="#" id="logoutBtn" class="nav-link">Salir</a>
+              <a href="#" id="logoutBtn" class="nav-link">Exit</a>
             </li>
           @endguest  
           <li class="nav-item dropdown">
