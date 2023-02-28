@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" href="#">Share&Buy</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -9,9 +9,28 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
+          @guest                      
+            @if (Route::has('login'))
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{{route('login')}}">Enter</a>
+            </li>   
+            @endif
+            @if(Route::has('reister'))
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{{route('register')}}">Register</a>
+            </li>
+            @endif
+          @else
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link active" aria-current="page" href="{{route('ads.create')}}">Create Ad</a>
           </li>
+            <li class="nav-item">
+              <form action="{{route('logout')}}" id="logoutForm" method="POST">
+                @csrf
+              </form>
+              <a href="#" id="logoutBtn" class="nav-link">Salir</a>
+            </li>
+          @endguest  
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Dropdown
@@ -22,10 +41,7 @@
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
-          </li>
+          </li>          
         </ul>
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
