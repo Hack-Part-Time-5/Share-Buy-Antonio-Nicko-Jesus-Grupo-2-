@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use App\Models\Ad;
 use Livewire\Component;
 use App\Models\Category;
+use Illuminate\Support\Facades\Auth;
 
 
 
@@ -19,7 +20,7 @@ class CreateAd extends Component
 
 
     protected $rules = [
-        'title'=>'requires|min:4',
+        'title'=>'required|min:4',
         'body'=>'required|min:8',
         'category'=>'required',
         'price'=>'required|numeric'
@@ -32,11 +33,13 @@ class CreateAd extends Component
     public function store()
     {
         $category =Category::find($this->category);
-        $category->ads()->create([
+        $ad = $category->ads()->create([
             'title'=>$this->title,
             'body'=>$this->body,
-            'price'=>$this->price
+            'price'=>$this->price,
         ]);
+
+        Auth::user()->ads()->save($ad);
 
         session()->flash('message', 'Ad created successfully');
 

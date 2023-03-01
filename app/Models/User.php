@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Models;
+use App\Models\Ad;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -17,6 +18,10 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+    public function ads()
+    {
+        return $this->HasMany(Ad::class);
+    }
     protected $fillable = [
         'name',
         'email',
