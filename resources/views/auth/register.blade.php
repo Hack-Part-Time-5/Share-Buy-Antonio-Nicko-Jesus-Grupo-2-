@@ -37,7 +37,7 @@
                                 <input type="password" name="password_confirmation" id="password_confirmation" class="form-control.forms_fields-input" placeholder="Your password again">
                                 <div class="validate"></div>
                             </div>
-                            <button type="submit" class="form-button-edit text-center space-around my-2">
+                            <button type="submit" class="btn btn-info form-button-edit text-center space-around my-2">
                                 Create account
                             </button>
                         </form>    
