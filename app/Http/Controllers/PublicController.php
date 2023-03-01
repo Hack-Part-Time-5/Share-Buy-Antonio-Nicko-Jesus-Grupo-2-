@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Ad;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Route;
 use Illuminate\Routing\Controller;
@@ -10,6 +12,13 @@ class PublicController extends Controller
 {
     public function index()
     {
-      return view('welcome');
+      $ads = Ad::orderBy('created_at', 'desc')->take(6)->get();
+     /*  dd($ads[0]->user->name); */
+      return view('welcome', compact('ads'));
     }
-}
+    public function adsByCategory(Category $category){
+      $ads = $category->ads()->latest()->get();
+      return view('ad.by-category', compact('category', 'ads'));
+    }
+    
+} 

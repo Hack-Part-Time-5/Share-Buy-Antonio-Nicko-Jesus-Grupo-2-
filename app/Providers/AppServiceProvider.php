@@ -22,7 +22,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         try{
-            $categories= Category::all();
+            $categories = Category::all();
             View::share('categories', $categories);
         } catch (\Throwable $th){
             dump("ALERT: Recuerda lanzar las migratios cuando acabes el clone");
