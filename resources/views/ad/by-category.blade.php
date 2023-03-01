@@ -23,7 +23,9 @@
                             <small>{{ $ad->user->name }}</small>
                         </div>
                         <a href="{{route('ads.show', $ad)}}" class="btn btn-primary">Mostrar Más</a>
+                        
                     </div>
+                    {{$ads->links()}}
                 </div>
             </div>
             @empty
