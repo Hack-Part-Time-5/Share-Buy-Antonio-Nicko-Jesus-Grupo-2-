@@ -19,7 +19,7 @@
                                 </ul>
                             </div>
                         @endif
-                        <form action="/register" method="POST" role="form" class="php-email-fomr">
+                        <form action="/register" method="POST" role="form" class="php-email-form">
                             @csrf
                             <div class="form-field-edit form-field space-around my-2">
                                 <input type="text" name="name" id="name" class="form-control forms_field-input" placeholder="Your name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">

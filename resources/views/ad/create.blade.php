@@ -5,7 +5,7 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">
-                        New Ad
+                        <h1>Create New Ad</h1>
                     </div>
                     <div class="card-body">      
                         <livewire:create-ad/>                  
