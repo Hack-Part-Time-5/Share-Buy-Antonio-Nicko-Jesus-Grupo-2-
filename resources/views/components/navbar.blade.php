@@ -9,9 +9,19 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{{route('home')}}">Home</a>
           </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Categories
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              @foreach ($categories as $category)
+                <li><a href="{{route('category.ads', $category)}}" class="dropdown-item">{{$category->name}}</a></li>
+              @endforeach
+            </ul>
+          </li>      
           @guest                      
             @if (Route::has('login'))
-            <li class="nav-item">
+            <li class="nav-item ">
               <a class="nav-link active" aria-current="page" href="{{route('login')}}">Enter</a>
             </li>   
             @endif
@@ -30,22 +40,8 @@
               </form>
               <a href="#" id="logoutBtn" class="nav-link">Exit</a>
             </li>
-          @endguest  
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Categories
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              @foreach ($categories as $category)
-                <li><a href="{{route('category.ads', $category)}}" class="dropdown-item">{{$category->name}}</a></li>
-              @endforeach
-            </ul>
-          </li>          
-        </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+          @endguest                
+        </ul>        
       </div>
     </div>
   </nav>
