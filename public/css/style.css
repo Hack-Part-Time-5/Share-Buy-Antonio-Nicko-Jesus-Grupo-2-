@@ -1,0 +1,64 @@
+
+:root{
+    --main-color: rgb(229, 48, 48);
+    --rose-color: rgb(255, 148, 148);
+}
+.letra_logo{
+    color: var(--main-color) !important;
+}
+
+.navbar-register_button{
+    background-color: var(--main-color);
+    border-radius: 20em !important; 
+    border: 2px solid var(--main-color) !important;
+   
+}
+/* .navbar-register__a{
+    border: 10px black !important;
+   
+} */
+.navbar-upload{
+    border: 2px solid var(--main-color) !important;
+    border-radius: 20em !important; 
+    border: 2px solid var(--main-color) !important;
+    
+} 
+.navbar-upload__a{
+    color: var(--main-color) !important;
+}
+.banner{
+    background-color: var(--main-color);
+    min-height: 30vh;
+    
+}
+.buscador_banner{
+    min-width: 18em;
+    border-radius: 20em !important;
+    border: none;
+    padding: .5em 3em;
+}
+
+.linea--banner{
+    background-color: var(--rose-color);
+}
+.categorias{
+    overflow: scroll;
+}
+.categorias-carrousel{
+    max-width: 80%;
+}
+.category-items{
+    margin: 0 .3em 0 2em !important;
+    
+}
+.category__list-item{
+    list-style: none;
+}
+.amarillo{
+    background-color: rgb(255, 162, 0);
+    min-width: 80%;
+}
+
+.cards_home_anuncios{
+    max-width: 60%;
+}

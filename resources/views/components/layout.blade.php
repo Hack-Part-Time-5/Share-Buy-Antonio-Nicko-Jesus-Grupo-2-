@@ -7,6 +7,7 @@
     <title>{{$title ?? 'Share&Buy'}}</title>
     @livewireStyles
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <link rel="stylesheet" href="/css/style.css">
     
 </head>
 <body>
