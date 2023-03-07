@@ -32,7 +32,7 @@ class CreateAd extends Component
     ];
     public function store()
     {
-        $category =Category::find($this->category);
+        $category = Category::find($this->category);
         $ad = $category->ads()->create([
             'title'=>$this->title,
             'body'=>$this->body,

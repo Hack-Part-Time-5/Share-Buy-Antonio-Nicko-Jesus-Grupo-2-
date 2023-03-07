@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* colores */
+:root{
+    --main-color: #ff385c;
+    
+    --rose-color: #f6b5c7;
+}
+.letra_logo{
+    color: var(--main-color) !important;
+}
+
+.navbar-register_button{
+    background-color: var(--main-color);
+    border-radius: 20em !important; 
+    border: 2px solid var(--main-color) !important;
+ 
+}
+/* navbar */
+/* .navbar-register__a{
+    border: 10px black !important;
+   
+} */
+.navbar-upload{
+    border: 2px solid var(--main-color) !important;
+    border-radius: 20em !important; 
+    border: 2px solid var(--main-color) !important;
+    
+} 
+.navbar-upload__a{
+    color: var(--main-color) !important;
+}
+/* banner */
+.banner{
+
+    background-image: url("/img/home_header.png");
+    min-height: 30vh;
+    
+}
+
+.carrito_header{
+    /* position: absolute; */     
+    top: -280%;
+    left: 75vw;
+    width: 280px !important;
+}
+/* .container__buscador{
+    max-height: 5px;
+} */
+.buscador_banner{
+    width: 30em !important;
+    
+    border-radius: 20em !important;
+    border: none;
+    padding: .20em 0.6em;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+.placeholder_buscador{
+    text-align: center;
+}
+.placeholder_buscador::placeholder{
+    background-image: url(/img/icons/search_icon.svg);
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-position:  2rem center;
+    
+    
+    
+}
+
+.linea--banner{
+    background-color: var(--rose-color);
+}
+/* categorias */
+.categorias{
+    overflow: scroll;
+}
+.categories_icons{
+    width: 50px !important;
+} 
+.categorias-carrousel{
+    max-width: 80%;
+}
+.category-items{
+    color: black;
+    list-style: none;
+    text-decoration: none !important;
+    margin: 0 3em;
+    
+}
+.category__list-item{
+    list-style: none;
+    text-decoration: none !important;
+}
+.category-items{
+    list-style: none;
+    text-decoration: none !important;
+}
+
+/* amarillo */
+.banner_secundario{
+    background-image: url(/img/banner_home2.png);
+    min-width: 60%;
+    min-height: 10vh;
+    background-size: cover;
+}
+
+.cards_home_anuncios{
+    max-width: 60%;
+}
+
+/* medias */
+/* @media (min-width: 1020px){
+    .carrito_header{
+        top: -5.5em !important;
+        left: 50em;
+        width: 200px !important;
+        /* display: none !important; */
+    }     
+}  */
