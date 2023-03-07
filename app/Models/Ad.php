@@ -26,5 +26,8 @@ class Ad extends Model
 		$this->is_accepted = $value;
 		$this->save();
 		return true;
-	}
+    }
+    static public function ToBeRevisionedCount(){
+        return Ad::where('is_accepted', null)->count();
+    }
 }
