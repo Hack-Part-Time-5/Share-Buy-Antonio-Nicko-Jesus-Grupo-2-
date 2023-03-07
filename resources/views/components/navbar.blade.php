@@ -6,14 +6,38 @@
           </button>     
         <div class="collapse navbar-collapse col-6 justify-content-end " id="navbarSupportedContent">
           <ul class="navbar-nav mb-2 mb-lg-0 me-0">
-            {{-- <li class="nav-item">
+            <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="{{route('home')}}">Home</a>
-            </li> --}}
-            {{-- <li class="nav-item dropdown">
+            </li>
+            <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Categories
+                {{Auth::user()->name}}
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                @if (Auth::user()->is_revisor)
+            <li>
+              <a class="dropdown-item" href="{{  route('revisor.home')  }}">
+                Revisor
+                <span class="badge rounded-pill bg-danger">
+                  21
+                </span>
+              </a>
+            </li>
+            @endif
+            <li>
+			<form id="logoutForm" action="{{route('logout')}}" method="POST">
+				@csrf
+			</form>
+			<a id="logoutBtn" class="dropdown-item" href="#">Salir</a>
+		</li>
+	</ul>
+</li>
+
+            {{-- 
+
+                Categories
+              </a>
+              
                 @foreach ($categories as $category)
                   <li><a href="{{route('category.ads', $category)}}" class="dropdown-item">{{$category->name}}</a></li>
                 @endforeach
@@ -27,7 +51,7 @@
               @endif
               @if (Route::has('login'))
               <li class="nav-item navbar-upload px-3">
-                <a class="nav-link active mx-3 navbar-upload__a" aria-current="page" href="{{route('login')}}">Upload</a>
+                <a class="nav-link active mx-3 navbar-upload__a" aria-current="page" href="{{route('login')}}">Sube tu producto</a>
               </li>   
               @endif
             @else

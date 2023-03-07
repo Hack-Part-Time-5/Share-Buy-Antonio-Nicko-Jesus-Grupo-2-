@@ -15,7 +15,7 @@ class MakeUserRevisor extends Command
 
     public function handle()
     {
-        $email = $this->ask("Introducior el correo del usuario");
+        $email = $this->ask("Introducir el correo del usuario");
         $user = User::where('email', $email)->first();
         if(!$user){
             $this->error("Usuario no encontrado");

@@ -3,6 +3,8 @@
 use App\Http\Controllers\AdController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicController;
+use App\Http\Controllers\RevisorController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +26,8 @@ Route::get('/ads/create', [AdController::class,'create'])->name('ads.create');
 Route::get('/category/{category:name}/ads', [PublicController::class, 'adsByCategory'])->name('category.ads');
 
 Route::get('/ads/{ad}', [AdController::class, 'show'])->name("ads.show");
+
+// ruta para la homepage del revisor
+Route::get('/revisor', [RevisorController::class, 'index'])->name('revisor.home'); 
+Route::patch('/revisor/ad/{ad}/accept',[RevisorController::class,'acceptAd'])->name('revisor.ad.accept');
+Route::patch('/revisor/ad/{ad}/reject',[RevisorController::class,'rejectAd'])->name('revisor.ad.reject');

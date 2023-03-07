@@ -19,6 +19,12 @@ class Ad extends Model
 
     public function user()
     {
-        return $this->belongsto(User::class);
+        return $this->belongsTo(User::class);
     }
+    public function setAccepted($value)
+	{
+		$this->is_accepted = $value;
+		$this->save();
+		return true;
+	}
 }
