@@ -9,7 +9,11 @@ use Illuminate\Support\Facades\Auth;
 
 class RevisorController extends Controller
 {
-    public function index ()
+    public function __construct()
+{
+	$this->middleware('isRevisor');
+}
+	public function index ()
     {
         $ad = Ad::where('is_accepted',null)
 		->orderBy('created_at','desc')
