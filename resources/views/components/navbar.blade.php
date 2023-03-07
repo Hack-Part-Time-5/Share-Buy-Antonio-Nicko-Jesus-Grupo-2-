@@ -11,10 +11,10 @@
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                {{Auth::user()->name}}
+                {{Auth::user()->name  ?? 'none'}}
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                @if (Auth::user()->is_revisor)
+                @if (Auth::user()->is_revisor  ?? 'none')
             <li>
               <a class="dropdown-item" href="{{  route('revisor.home')  }}">
                 Revisor
@@ -32,7 +32,7 @@
 		</li>
 	</ul>
 </li>
-
+          </ul>
             {{-- 
 
                 Categories
