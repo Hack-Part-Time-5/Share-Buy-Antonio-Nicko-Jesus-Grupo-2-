@@ -1,6 +1,6 @@
 
-  <nav class="navbar navbar-expand-lg mx-3 bg-body-tertiary d-flex">          
-          <a class="navbar-brand letra_logo" href="{{route('home')}}">Share&Buy</a>
+  <nav class="navbar navbar-expand-lg mx-3 bg-body-tertiary d-flex px-5">          
+          <a class="navbar-brand letra_logo" href="{{route('home')}}"><img src="/img/icons/share&buy_logo.svg" alt="logo de share&buy"></a>
           <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>     

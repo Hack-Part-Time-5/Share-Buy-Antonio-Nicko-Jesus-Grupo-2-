@@ -1,1 +1,6 @@
 --revisar la validacion en el metodo store del livewire, error que aparece cuando se deja un campo vacio al crear un nuevo anuncio.
+
+
+---incluir el icono de la categoria computers
+
+---mirar el tipo o los tipos de fuente
