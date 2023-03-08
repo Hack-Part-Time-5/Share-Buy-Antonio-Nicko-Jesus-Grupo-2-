@@ -1,35 +1,35 @@
 <x-layout>
     <x-slot name='title'>Share&Buy - ads</x-slot>
-    <div class="container-fluid  d-lg-flex flex-column justify-content-center">
-        <section class="hero">
-            <div class="d-flex flex-column row justify-content-center">
-                <div class="banner d-none d-lg-flex justify-content-center m-auto  align-items-center text-white">                                
-                    <div class="d-flex flex-column flex-wrap">
-                        <h1 class="text-center mb-3"> Compra y vende en un solo click</h1>
-                        <div class="d-flex justify-content-center flex-wrap position-relative container__buscador">
-                            <input type="text" placeholder="Empieza tu busqueda" class="buscador_banner placeholder_buscador mx-3">                    
-                            <button type="button" class="navbar-register_button text-white px-4">Buscar</button>                        
-                        </div>                                                            
-                    </div>  
-                    <div class="mx-3">
-                        <img class="carrito_header d-none d-lg-block" src="/img/carrito_header.png" alt="imagen de carrito">
-                    </div>                                  
-                </div>
-                {{-- codigo para responsive --}}
-                <div class="row banner d-flex d-lg-none justify-content-center m-auto p-1  align-items-center text-white">                                
-                    <div class="row d-flex flex-column flex-wrap">
-                        <h1 class="text-center mb-3"> Compra y vende en un solo click</h1>
-                        <div class="d-flex justify-content-center flex-wrap position-relative container__buscador">
-                            <input type="text" placeholder="Empieza tu busqueda" class="buscador_banner placeholder_buscador mx-3">                    
-                            <button type="button" class="navbar-register_button text-white px-4">Buscar</button>                        
-                        </div>                                                            
-                    </div>                                 
-                </div>
-                <div class="linea--banner mb-5 py-2 d-flex justify-content-center align-items-center">
-                    <h6 class="m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
-                </div>
+    <section class="hero container-fluid">
+        <div class="d-flex flex-column row justify-content-center">
+            <div class="banner d-none d-lg-flex justify-content-center m-auto  align-items-center text-white">                                
+                <div class="d-flex flex-column flex-wrap">
+                    <h1 class="text-center mb-3"> Compra y vende en un solo click</h1>
+                    <div class="d-flex justify-content-center flex-wrap position-relative container__buscador">
+                        <input type="text" placeholder="Empieza tu busqueda" class="buscador_banner placeholder_buscador mx-3">                    
+                        <button type="button" class="navbar-register_button text-white px-4">Buscar</button>                        
+                    </div>                                                            
+                </div>  
+                <div class="mx-3">
+                    <img class="carrito_header d-none d-lg-block" src="/img/carrito_header.png" alt="imagen de carrito">
+                </div>                                  
             </div>
-        </section>
+            {{-- codigo para responsive --}}
+            <div class="row banner d-flex d-lg-none justify-content-center m-auto p-1  align-items-center text-white">                                
+                <div class="row d-flex flex-column flex-wrap">
+                    <h1 class="text-center mb-3"> Compra y vende en un solo click</h1>
+                    <div class="d-flex justify-content-center flex-wrap position-relative container__buscador">
+                        <input type="text" placeholder="Empieza tu busqueda" class="buscador_banner placeholder_buscador mx-3">                    
+                        <button type="button" class="navbar-register_button text-white px-4">Buscar</button>                        
+                    </div>                                                            
+                </div>                                 
+            </div>
+            <div class="linea--banner mb-5 py-2 d-flex justify-content-center align-items-center">
+                <h6 class="m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
+            </div>
+        </div>
+    </section>
+    <div class="container m-auto  d-lg-flex flex-column justify-content-center">        
         <section class="categories">
             <h2 class="mx-5 d-none d-sm-block">Categorias</h2>
             <div class="categorias d-none d-md-flex justify-content-center">            
@@ -54,7 +54,7 @@
                 </li>                    
             </div>                    
         </section>
-        <section class="ads">
+        {{-- <section class="ads">
             <div class="row cards_home_anuncios m-auto">        
                 @forelse ($ads as $ad)
                 <div class="col-12 col-md-4">
@@ -85,18 +85,23 @@
             <div class="d-flex justify-content-center">
                 <button class="navbar-register_button text-white px-3 mb-5">Ver mas</button>
             </div>
-        </section>
-        <section class="ads2">
+        </section> --}}
+        <section class="ads2 d-flex flex-column justify-content-center">
             <div class="row cards_home_anuncios m-auto">        
                 @forelse ($ads as $ad)
-                <div class="col-12 col-md-4">
-                    <x-card_blog>
+                <div class="position-relative d-flex justify-content-center col-12 col-md-6 col-xl-4 justify-content-center">
+                    {{-- <div class="fondo_icon icono_fav_card">
+                        <a href="#" class=""><img src="/img/icons/fav_icon_grey.svg" alt="" class="icon_like"></a>
+                    </div>   --}}                   
+                    {{-- <span class="m-2 category_name text-white"><a href="{{route('category.ads',$ad->category)}}" class="a_category_name">{{$ad->category->name}}</a></span>                    --}}
+                    <x-card_blog>  
+                        <x-slot name='show'>{{route('ads.show', $ad)}}</x-slot>                                                      
                         <x-slot name='category'>{{$ad->category->name}}</x-slot>
-                        <x-slot name='categoryLink'>{{route('category.ads',$ad->category)}}</x-slot>
-                        <x-slot name='title'>{{$ad->title}}</x-slot>
-                        <x-slot name='body'>{{$ad->body}}</x-slot>
-                        <x-slot name='price'>{{$ad->price}}</x-slot>
-                    </x-card_blog>    
+                        <x-slot name='categoryLink'>{{route('category.ads',$ad->category)}}</x-slot> 
+                        <x-slot name='categoryName'>{{$category->name}}</x-slot>                        
+                        <x-slot name='title'>{{$ad->title}}</x-slot>                        
+                        <x-slot name='price'>{{$ad->price}}€</x-slot>
+                    </x-card_blog>       
                 </div>
                 @empty
                 <div class="col-12">
@@ -109,12 +114,11 @@
                 <button class="navbar-register_button text-white px-3 mb-5">Ver mas</button>
             </div>
         </section>
-        <section class="banner__secundario">
-            <div class="container-fluid p-0 d-flex justify-content-center">
-                <div class="banner_secundario pt-5 px-4">
+        <section class="banner_secundario">
+            <div class="pt-5 px-4 d-flex flex-column align-items-start">                
                     <h2 class="text-white">Encuentra los mejores articulos <br> y si no los encuentras vendelos tu</h2>
                     <button class="mt-5 navbar-register_button text-white px-3 mb-5"><a class="nav-link active mx-3 text-white  navbar-register__a" aria-current="page" href="{{route('login')}}">Ver mas</a></button>
-                </div>
+                
             </div>
         </section>
         <section class="blogs">
