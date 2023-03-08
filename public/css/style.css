@@ -1,6 +1,6 @@
 *{
-    margin: 0;
-    padding: 0;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 /* colores */
 :root{
@@ -11,7 +11,10 @@
 .letra_logo{
     color: var(--main-color) !important;
 }
-
+a{
+    text-decoration: none !important;
+    color: black !important;
+}
 .navbar-register_button{
     background-color: var(--main-color);
     border-radius: 20em !important; 
@@ -98,8 +101,14 @@
     list-style: none;
     text-decoration: none !important;
 }
+.category_name{
+    position: absolute;
+    left: 1em;
+    top: .5em;
+    font-size: smaller;
+}
 
-/* amarillo */
+/* banner secundario */
 .banner_secundario{
     background-image: url(/img/banner_home2.png);
     min-width: 60%;
@@ -109,14 +118,27 @@
 
 .cards_home_anuncios{
     max-width: 60%;
+
+}
+/* cards */
+
+/* .img__card{
+    
+} */
+.container__img--card{
+    max-width: 18rem;
+    min-height: 20rem;
+    max-height: 25rem;
+    background: red;
+    border-radius: 6% !important;
+    overflow: hidden;
+    display: flex;
 }
 
 /* medias */
-/* @media (min-width: 1020px){
-    .carrito_header{
-        top: -5.5em !important;
-        left: 50em;
-        width: 200px !important;
-        /* display: none !important; */
-    }     
-}  */
+@media screen (max-with: 425px ) {
+    .container__img--card{
+        
+    }
+    
+}
