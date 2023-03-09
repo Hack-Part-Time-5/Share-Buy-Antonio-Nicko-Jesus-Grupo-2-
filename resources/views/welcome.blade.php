@@ -6,8 +6,8 @@
                 <div class="d-flex flex-column flex-wrap">
                     <h1 class="text-center mb-3"> {{__('messages.welcome')}}</h1>
                     <div class="d-flex justify-content-center flex-wrap position-relative container__buscador">
-                        <input type="text" placeholder="{{__('messages.searchbanner')}}" class="buscador_banner placeholder_buscador mx-3">                    
-                        <button type="button" class="navbar-register_button text-white px-4">Buscar</button>                        
+                        <input type="text" placeholder=" {{__('messages.searchbanner')}}" class="buscador_banner placeholder_buscador mx-3">                    
+                        <button type="button" class="navbar-register_button text-white px-4">{{__('messages.searchbutton')}}</button>                        
                     </div>                                                            
                 </div>  
                 <div class="mx-3">
@@ -17,10 +17,10 @@
             {{-- codigo para responsive --}}
             <div class="row banner d-flex d-lg-none justify-content-center m-auto p-1  align-items-center text-white">                                
                 <div class="row d-flex flex-column flex-wrap">
-                    <h1 class="text-center mb-3"> </h1>
+                    <h1 class="text-center mb-3"> {{__('messages.welcome')}}</h1>
                     <div class="d-flex justify-content-center flex-wrap position-relative container__buscador">
-                        <input type="text" placeholder="{{__('messages.searchbanner')}}" class="buscador_banner placeholder_buscador mx-3">                    
-                        <button type="button" class="navbar-register_button text-white px-4">Buscar</button>                        
+                        <input type="text" placeholder=" {{__('messages.searchbanner')}}" class="buscador_banner placeholder_buscador mx-3">                    
+                        <button type="button" class="navbar-register_button text-white px-4">{{__('messages.searchbutton')}}</button>                        
                     </div>                                                            
                 </div>                                 
             </div>
@@ -31,7 +31,7 @@
     </section>
     <div class="container m-auto  d-lg-flex flex-column justify-content-center">        
         <section class="categories">
-            <h2 class="mx-5 d-none d-sm-block">Categorias</h2>
+            <h2 class="mx-5 d-none d-sm-block"> {{__('messages.categories')}}</h2>
             <div class="categorias d-none d-md-flex justify-content-center">            
                 <div class="categorias-carrousel d-flex  mb-5 ">
                     @foreach ($categories as $category)
@@ -44,7 +44,7 @@
             <div class="d-flex justify-content-center">
                 <li class="nav-item dropdown category__list-item mb-5 d-sm-none">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Categories
+                        {{__('messages.categories')}}
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     @foreach ($categories as $category)
@@ -111,13 +111,13 @@
                 @endforelse
             </div>                    
             <div class="d-flex justify-content-center">
-                <button class="navbar-register_button text-white px-3 mb-5">Ver mas</button>
+                <button class="navbar-register_button text-white px-3 mb-5">{{__('messages.show')}}</button>
             </div>
         </section>
         <section class="banner_secundario">
             <div class="pt-5 px-4 d-flex flex-column align-items-start">                
-                    <h2 class="text-white">Encuentra los mejores articulos <br> y si no los encuentras vendelos tu</h2>
-                    <button class="mt-5 navbar-register_button text-white px-3 mb-5"><a class="nav-link active mx-3 text-white  navbar-register__a" aria-current="page" href="{{route('login')}}">Ver mas</a></button>
+                    <h2 class="text-white">{{__('messages.secondbanner1')}} <br> {{__('messages.secondbanner2')}}</h2>
+                    <button class="mt-5 navbar-register_button text-white px-3 mb-5"><a class="nav-link active mx-3 text-white  navbar-register__a" aria-current="page" href="{{route('login')}}">{{__('messages.show')}}</a></button>
                 
             </div>
         </section>

@@ -3,57 +3,20 @@
 // lang/fr/messages.php
 
 return [
-    'welcome' => 'Achetez et vendez en un seul clic'
+    'welcome' => 'Achetez et vendez en un seul clic',
+    'searchbanner' => 'Commencez votre recherche',
+    'searchbutton' => 'Trouver',
+    'categories' => 'Catégories',
+    'show' => 'Autres',
+    'cars' => 'Voitures',
+    'motorcycles' => 'Motos',
+    'home' => 'Maison',
+    'tech' => 'Technologies',
+    'mobile' => 'Appareils mobiles',
+    'computers' => 'Ordinateurs',
+    'sports' => 'Sportif',
+    'music' => 'Musique',
+    'secondbanner1' => 'Trouvez les meilleurs produits et ',
+    'secondbanner2' => 'si vous ne les trouvez pas, vendez-les vous-même'
 ];
 
-return [
-    'searchbanner' => 'Commencez votre recherche'
-];
-
-return [
-    'uploadbutton' => 'Sell your Items'
-];
-
-return [
-    'Show' => 'More'
-];
-
-return [
-    'searchbutton' => 'Search'
-];
-
-return [
-    'categories' => 'Categories'
-];
-
-return [
-    'cars' => 'Cars'
-];
-
-return [
-    'motorcycles' => 'Motorcycles'
-];
-
-return [
-    'home' => 'Home'
-];
-
-return [
-    'tech' => 'Technologies'
-];
-
-return [
-    'mobile' => 'Mobiles'
-];
-
-return [
-    'computers' => 'Computers'
-];
-
-return [
-    'sports' => 'Sports'
-];
-
-return [
-    'music' => 'Music'
-];
