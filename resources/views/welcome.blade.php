@@ -4,9 +4,9 @@
         <div class="d-flex flex-column row justify-content-center">
             <div class="banner d-none d-lg-flex justify-content-center m-auto  align-items-center text-white">                                
                 <div class="d-flex flex-column flex-wrap">
-                    <h1 class="text-center mb-3"> Compra y vende en un solo click</h1>
+                    <h1 class="text-center mb-3"> {{__('messages.welcome')}}</h1>
                     <div class="d-flex justify-content-center flex-wrap position-relative container__buscador">
-                        <input type="text" placeholder="Empieza tu busqueda" class="buscador_banner placeholder_buscador mx-3">                    
+                        <input type="text" placeholder="{{__('messages.searchbanner')}}" class="buscador_banner placeholder_buscador mx-3">                    
                         <button type="button" class="navbar-register_button text-white px-4">Buscar</button>                        
                     </div>                                                            
                 </div>  
@@ -17,9 +17,9 @@
             {{-- codigo para responsive --}}
             <div class="row banner d-flex d-lg-none justify-content-center m-auto p-1  align-items-center text-white">                                
                 <div class="row d-flex flex-column flex-wrap">
-                    <h1 class="text-center mb-3"> Compra y vende en un solo click</h1>
+                    <h1 class="text-center mb-3"> </h1>
                     <div class="d-flex justify-content-center flex-wrap position-relative container__buscador">
-                        <input type="text" placeholder="Empieza tu busqueda" class="buscador_banner placeholder_buscador mx-3">                    
+                        <input type="text" placeholder="{{__('messages.searchbanner')}}" class="buscador_banner placeholder_buscador mx-3">                    
                         <button type="button" class="navbar-register_button text-white px-4">Buscar</button>                        
                     </div>                                                            
                 </div>                                 
