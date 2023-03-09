@@ -2,6 +2,13 @@
     margin: 0 !important;
     padding: 0 !important;
 }
+body{
+    height: 100%;
+
+}
+html{
+    height: 100%;
+}
 /* colores */
 :root{
     --main-color: #ff385c;
@@ -161,7 +168,20 @@
     overflow: hidden;
     display: flex;
 }
-
+/* MODAL */
+.my-modal{
+    position: fixed !important;
+    top: 20% !important;
+    left: 33.3% !important;
+    width: 50% !important;
+    border-radius: 20em !important;
+}
+.loginLinkModal{
+    width: 40%;
+}
+/* .logoModal{
+    width: 100px;
+} */
 /* medias */
 /* @media screen (max-with: 425px ) {
     .container__img--card{

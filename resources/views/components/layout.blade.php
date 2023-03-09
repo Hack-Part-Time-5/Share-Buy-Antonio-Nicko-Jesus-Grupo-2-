@@ -11,6 +11,8 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <link rel="stylesheet" href="/css/style.css">
     
+    
+    
 </head>
 <body>
     <x-navbar/>
@@ -22,5 +24,6 @@
      <x-footer/>
     @livewireScripts
     {{$script ?? ''}}
+    
 </body>
 </html>

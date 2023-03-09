@@ -98,7 +98,7 @@
                         <x-slot name='show'>{{route('ads.show', $ad)}}</x-slot>                                                      
                         <x-slot name='category'>{{$ad->category->name}}</x-slot>
                         <x-slot name='categoryLink'>{{route('category.ads',$ad->category)}}</x-slot> 
-                        <x-slot name='categoryName'>{{$category->name}}</x-slot>                        
+                        <x-slot name='categoryName'>{{$ad->category->name}}</x-slot>                        
                         <x-slot name='title'>{{$ad->title}}</x-slot>                        
                         <x-slot name='price'>{{$ad->price}}€</x-slot>
                     </x-card_blog>       
@@ -149,6 +149,6 @@
                     </x-card_blog>                
                 </div>            
             </div>    
-        </section>                
+        </section>         
     </div>
 </x-layout>
