@@ -23,7 +23,9 @@
                         </form>
                         <a id="logoutBtn" class="dropdown-item" href="#">Salir</a>
                     </li>
+
                 </ul>
+
             </li>
 
             {{-- 
@@ -80,6 +82,15 @@
                     <a href="#" id="logoutBtn" class="nav-link">Exit</a>
                 </li>
             @endguest
+            <li class="nav-item">
+                <x-locale lang="en" country="gb" />
+            </li>
+            <li class="nav-item">
+                <x-locale lang="es" country="es" />
+            </li>
+            <li class="nav-item">
+                <x-locale lang="fr" country="fr" />
+            </li>
         </ul>
     </div>
 </nav>
