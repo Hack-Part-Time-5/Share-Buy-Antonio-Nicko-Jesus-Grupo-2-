@@ -31,14 +31,11 @@
     </section>
     <div class="container m-auto  d-lg-flex flex-column justify-content-center">        
         <section class="categories">
-<<<<<<< HEAD
-            <h2 class="mx-5 d-none d-sm-block"> {{__('messages.categories')}}</h2>
-            <div class="categorias d-none d-md-flex justify-content-center">            
-=======
+            {{-- <h2 class="mx-5 d-none d-sm-block"> {{('messages.categories')}}</h2>      (ESTO QUE ESSSS????) --}}
+            <div class="categorias flex-column d-none d-md-flex justify-content-center">            
             <h2 class="mx-5 d-none d-sm-block">Descubre nuestras categorìas</h2>
-            <div class="categorias mt-5 d-none d-md-flex justify-content-center">            
->>>>>>> 279e93a (cambios modal frontend)
-                <div class="categorias-carrousel d-flex  mb-5 ">
+            <div class="categorias mt-5 d-none d-md-flex justify-content-center align-items-center flex-column">            
+                <div class="categorias-carrousel d-flex justify-content-center  mb-5 ">
                     @foreach ($categories as $category)
                         <div class="d-flex flex-column justify-content-center align-items-center">                        
                             <li class="category__list-item mx-3"><a href="{{route('category.ads', $category)}}" class="category-items d-flex justify-content-center flex-column"><img src="{{$category->img}}" class="categories_icons d-block text-center m-auto" alt=""><span class="text-center">{{$category->name}}</span></a></li>
@@ -131,25 +128,25 @@
             <h2 class="mx-5 mt-5">Blog</h2>
             <div class="row cards_home_anuncios m-auto  ">
                 <div class="d-flex justify-content-center col-12 col-md-6 col-xl-3 m-auto">
-                    <x-card_blog>
+                    <x-card_blog2>
                         <x-slot name='title'>Blog 1</x-slot>
                         <x-slot name='body'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </x-slot>
                     </x-card_blog>
                 </div>
                 <div class="d-flex justify-content-center col-12 col-md-6 col-xl-3 m-auto">    
-                    <x-card_blog>
+                    <x-card_blog2>
                         <x-slot name='title'>Blog 2</x-slot>
                         <x-slot name='body'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </x-slot>
                     </x-card_blog>
                 </div>
                 <div class="d-flex justify-content-center col-12 col-md-6 col-xl-3 m-auto">    
-                    <x-card_blog>
+                    <x-card_blog2>
                         <x-slot name='title'>Blog 3</x-slot>
                         <x-slot name='body'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </x-slot>
                     </x-card_blog>
                 </div>
                 <div class="d-flex justify-content-center col-12 col-md-6 col-xl-3 m-auto">    
-                    <x-card_blog>
+                    <x-card_blog2>
                         <x-slot name='title'>Blog 4</x-slot>
                         <x-slot name='body'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </x-slot>
                     </x-card_blog>                
