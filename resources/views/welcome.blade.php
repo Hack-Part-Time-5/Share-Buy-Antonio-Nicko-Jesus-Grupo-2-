@@ -31,8 +31,13 @@
     </section>
     <div class="container m-auto  d-lg-flex flex-column justify-content-center">        
         <section class="categories">
+<<<<<<< HEAD
             <h2 class="mx-5 d-none d-sm-block"> {{__('messages.categories')}}</h2>
             <div class="categorias d-none d-md-flex justify-content-center">            
+=======
+            <h2 class="mx-5 d-none d-sm-block">Descubre nuestras categorìas</h2>
+            <div class="categorias mt-5 d-none d-md-flex justify-content-center">            
+>>>>>>> 279e93a (cambios modal frontend)
                 <div class="categorias-carrousel d-flex  mb-5 ">
                     @foreach ($categories as $category)
                         <div class="d-flex flex-column justify-content-center align-items-center">                        
@@ -87,7 +92,8 @@
             </div>
         </section> --}}
         <section class="ads2 d-flex flex-column justify-content-center">
-            <div class="row cards_home_anuncios m-auto">        
+            <h2 class="mx-5">Últimos anuncios</h2>
+            <div class="row mt-5 cards_home_anuncios m-auto">        
                 @forelse ($ads as $ad)
                 <div class="position-relative d-flex justify-content-center col-12 col-md-6 col-xl-4 justify-content-center">
                     {{-- <div class="fondo_icon icono_fav_card">

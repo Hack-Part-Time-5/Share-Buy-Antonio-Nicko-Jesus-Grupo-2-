@@ -43,7 +43,7 @@
                     <li>
                         <button type="button" class="navbar-register_button text-white mx-3 px-3" data-bs-toggle="modal" data-bs-target="#dialog1">+ Sube tu producto</button>
                         <div class="modal fade" id="dialog1">
-                            <div class="my-modal modal-dialog modal-lg ">
+                            <div class="my-modal modal-dialog  modal-lg ">
                                 <div class="modal-content">
                                     <div class="buttonExitModal m-3">
                                         <button type="button" class="btn-close float-end" name="button" data-bs-dismiss="modal"></button>

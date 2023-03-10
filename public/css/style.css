@@ -1,10 +1,21 @@
+/* font style */
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+/* ------------------ */
 *{
     margin: 0 !important;
     padding: 0 !important;
+    
 }
 body{
     height: 100%;
+    font-family: 'Open Sans', sans-serif !important; 
 
+}
+h1{
+    font-weight: 700;
+}
+h2{
+    font-weight: bold !important;
 }
 html{
     height: 100%;
@@ -15,6 +26,8 @@ html{
     
     --rose-color: #f6b5c7;
 }
+
+
 .letra_logo{
     color: var(--main-color) !important;
 }
@@ -171,21 +184,22 @@ html{
 /* MODAL */
 .my-modal{
     position: fixed !important;
-    top: 20% !important;
-    left: 33.3% !important;
+    left: 50% !important;
+    transform: translate(-50%, 50%) !important;    
+    margin: auto;
     width: 50% !important;
     border-radius: 20em !important;
 }
 .loginLinkModal{
-    width: 40%;
+    padding: 0 4em 0 4em !important;
 }
 /* .logoModal{
     width: 100px;
 } */
 /* medias */
-/* @media screen (max-with: 425px ) {
-    .container__img--card{
-        
+/* @media  (max-with: 425px ) {
+    .my-modal{
+        width: 100% !important;
     }
     
 } */
