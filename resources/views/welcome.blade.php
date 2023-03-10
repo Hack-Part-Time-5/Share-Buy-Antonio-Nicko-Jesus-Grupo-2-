@@ -50,7 +50,7 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     @foreach ($categories as $category)
-                        <li><a href="{{route('category.ads', $category)}}" class="dropdown-item">{{$category->name}}</a></li>
+                        <li><a href="{{route('category.ads', $category)}}" class="dropdown-item">{{__($category->name)}}</a></li>
                     @endforeach
                     </ul>
                 </li>                    
@@ -99,9 +99,9 @@
                     {{-- <span class="m-2 category_name text-white"><a href="{{route('category.ads',$ad->category)}}" class="a_category_name">{{$ad->category->name}}</a></span>                    --}}
                     <x-card_blog>  
                         <x-slot name='show'>{{route('ads.show', $ad)}}</x-slot>                                                      
-                        <x-slot name='category'>{{$ad->category->name}}</x-slot>
+                        <x-slot name='category'>{{__($ad->category->name)}}</x-slot>
                         <x-slot name='categoryLink'>{{route('category.ads',$ad->category)}}</x-slot> 
-                        <x-slot name='categoryName'>{{$ad->category->name}}</x-slot>                        
+                        <x-slot name='categoryName'>{{__($ad->category->name)}}</x-slot>                        
                         <x-slot name='title'>{{$ad->title}}</x-slot>                        
                         <x-slot name='price'>{{$ad->price}}€</x-slot>
                     </x-card_blog>       
