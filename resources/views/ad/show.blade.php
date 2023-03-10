@@ -35,7 +35,7 @@
                 <div><b>Description:</b>{{$ad->body}}</div>
                 <div><b>Publish:</b>{{$ad->created_at->format('d/m/Y')}}</div>
                 <div><b>By:</b>{{$ad->user->name}}</div>
-                <div><a href="{{route('category.ads',$ad->category)}}">#{{$ad->category->name}}</a></div>
+                <div><a href="{{route('category.ads',$ad->category)}}">{{__($ad->category->name)}}</a></div>
                 <div><a href="#" class="btn btn-success">Buy now</a></div>
             </div>
         </div>

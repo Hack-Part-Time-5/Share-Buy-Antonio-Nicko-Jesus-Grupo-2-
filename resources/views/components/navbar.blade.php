@@ -7,21 +7,21 @@
         <ul class="navbar-nav mb-2 mb-lg-0 me-0">
             
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a>
+                <a class="nav-link active" aria-current="page" href="{{ route('home') }}">{{__('Inicio')}}</a>
             </li>            
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{ Auth::user()->name ?? 'none' }}</a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     @if (Auth::user()->is_revisor ?? 'none')
                         <li>
-                            <a class="dropdown-item" href="{{ route('revisor.home') }}">Revisor<span class="badge rounded-pill bg-danger">{{ \App\Models\Ad::TobeRevisionedCount() }}</span></a>
+                            <a class="dropdown-item" href="{{ route('revisor.home') }}">{{__('Revisor')}}<span class="badge rounded-pill bg-danger">{{ \App\Models\Ad::TobeRevisionedCount() }}</span></a>
                         </li>
                     @endif
                     <li>
                         <form id="logoutForm" action="{{ route('logout') }}" method="POST">
                             @csrf
                         </form>
-                        <a id="logoutBtn" class="dropdown-item" href="#">Salir</a>
+                        <a id="logoutBtn" class="dropdown-item" href="#">{{__('Salir')}}</a>
                     </li>
 
                 </ul>
@@ -41,7 +41,7 @@
             @guest
                 @if (Route::has('register'))
                     <li>
-                        <button type="button" class="navbar-register_button text-white mx-3 px-3" data-bs-toggle="modal" data-bs-target="#dialog1">+ Sube tu producto</button>
+                        <button type="button" class="navbar-register_button text-white mx-3 px-3" data-bs-toggle="modal" data-bs-target="#dialog1">{{__('+ Sube tu producto')}}</button>
                         <div class="modal fade p-2" id="dialog1">
                             <div class="my-modal modal-dialog modal-lg ">
                                 <div class="modal-content p-3">

@@ -5,7 +5,7 @@
 return [
     'welcome' => 'Achetez et vendez en un seul clic',
     'searchbanner' => 'Commencez votre recherche',
-    'searchbutton' => 'Trouver',
+    'searchbutton' => 'Rechercher',
     'categories' => 'Catégories',
     'show' => 'Autres',
     'cars' => 'Voitures',

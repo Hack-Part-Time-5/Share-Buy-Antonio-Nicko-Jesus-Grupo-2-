@@ -1,6 +1,5 @@
 <?php
 
-
 namespace App\Http\Controllers;
 use App\Mail\BecomeRevisor;
 use Illuminate\Routing\Route;
@@ -10,8 +9,6 @@ use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Artisan;
-
-
 
 
 class RevisorController extends Controller

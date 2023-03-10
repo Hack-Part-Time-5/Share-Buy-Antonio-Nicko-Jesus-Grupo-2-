@@ -6,7 +6,7 @@ return [
     'welcome' => 'Compra y vende en un solo click',
     'searchbanner' => 'Empieza tu búsqueda',
     'searchbutton' => 'Buscar',
-    'categories' => 'Categorias',
+    'categories' => 'Categorías',
     'show' => 'Ver más',
     'cars' => 'Coches',
     'motorcycles' => 'Motocicletas',

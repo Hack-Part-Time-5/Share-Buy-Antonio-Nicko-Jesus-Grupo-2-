@@ -4,10 +4,10 @@
         <div class="d-flex flex-column row justify-content-center">
             <div class="banner d-none d-lg-flex justify-content-center m-auto  align-items-center text-white">                                
                 <div class="d-flex flex-column flex-wrap">
-                    <h1 class="text-center mb-3"> {{__('messages.welcome')}}</h1>
+                    <h1 class="text-center mb-3"> {{__('Compra y vende en un solo click')}}</h1>
                     <div class="d-flex justify-content-center flex-wrap position-relative container__buscador">
-                        <input type="text" placeholder=" {{__('messages.searchbanner')}}" class="buscador_banner placeholder_buscador mx-3">                    
-                        <button type="button" class="navbar-register_button text-white px-4">{{__('messages.searchbutton')}}</button>                        
+                        <input type="text" placeholder=" {{__('Empieza tu búsqueda')}}" class="buscador_banner placeholder_buscador mx-3">                    
+                        <button type="button" class="navbar-register_button text-white px-4">{{__('Buscar')}}</button>                        
                     </div>                                                            
                 </div>  
                 <div class="mx-3">
@@ -17,28 +17,28 @@
             {{-- codigo para responsive --}}
             <div class="row banner d-flex d-lg-none justify-content-center m-auto p-1  align-items-center text-white">                                
                 <div class="row d-flex flex-column flex-wrap">
-                    <h1 class="text-center mb-3"> {{__('messages.welcome')}}</h1>
+                    <h1 class="text-center mb-3"> {{__('Compra y vende en un solo click')}}</h1>
                     <div class="d-flex justify-content-center flex-wrap position-relative container__buscador">
-                        <input type="text" placeholder=" {{__('messages.searchbanner')}}" class="buscador_banner placeholder_buscador mx-3">                    
-                        <button type="button" class="navbar-register_button text-white px-4">{{__('messages.searchbutton')}}</button>                        
+                        <input type="text" placeholder=" {{__('Empieza tu búsqueda')}}" class="buscador_banner placeholder_buscador mx-3">                    
+                        <button type="button" class="navbar-register_button text-white px-4">{{__('Buscar')}}</button>                        
                     </div>                                                            
                 </div>                                 
             </div>
             <div class="linea--banner mb-5 py-2 d-flex justify-content-center align-items-center">
-                <h6 class="m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
+                <h6 class="m-0">{{__('Para tu tranquilidad Devolución gratuita en todos nuestros productos')}}</h6>
             </div>
         </div>
     </section>
     <div class="container m-auto  d-lg-flex flex-column justify-content-center">        
         <section class="categories">
-            {{-- <h2 class="mx-5 d-none d-sm-block"> {{('messages.categories')}}</h2>      (ESTO QUE ESSSS????) --}}
+           
             <div class="categorias flex-column d-none d-md-flex justify-content-center">            
-            <h2 class="mx-5 d-none d-sm-block">Descubre nuestras categorìas</h2>
+            <h2 class="mx-5 d-none d-sm-block">{{__('Descubre nuestras categorías')}}</h2>
             <div class="categorias mt-5 d-none d-md-flex justify-content-center align-items-center flex-column">            
                 <div class="categorias-carrousel d-flex justify-content-center  mb-5 ">
                     @foreach ($categories as $category)
                         <div class="d-flex flex-column justify-content-center align-items-center">                        
-                            <li class="category__list-item mx-3"><a href="{{route('category.ads', $category)}}" class="category-items d-flex justify-content-center flex-column"><img src="{{$category->img}}" class="categories_icons d-block text-center m-auto" alt=""><span class="text-center">{{$category->name}}</span></a></li>
+                            <li class="category__list-item mx-3"><a href="{{route('category.ads', $category)}}" class="category-items d-flex justify-content-center flex-column"><img src="{{$category->img}}" class="categories_icons d-block text-center m-auto" alt=""><span class="text-center">{{__($category->name)}}</span></a></li>
                         </div>                   
                     @endforeach                
                 </div>            
@@ -46,7 +46,7 @@
             <div class="d-flex justify-content-center">
                 <li class="nav-item dropdown category__list-item mb-5 d-sm-none">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        {{__('messages.categories')}}
+                        {{__('Categorías')}}
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     @foreach ($categories as $category)
@@ -89,7 +89,7 @@
             </div>
         </section> --}}
         <section class="ads2 d-flex flex-column justify-content-center">
-            <h2 class="mx-5">Últimos anuncios</h2>
+            <h2 class="mx-5">{{__('Subidos recientemente')}}</h2>
             <div class="row mt-5 cards_home_anuncios m-auto">        
                 @forelse ($ads as $ad)
                 <div class="position-relative d-flex justify-content-center col-12 col-md-6 col-xl-4 justify-content-center">
@@ -108,24 +108,24 @@
                 </div>
                 @empty
                 <div class="col-12">
-                    <h2>Uyy.. parece que no hay nada de esta categoría</h2>
+                    <h2>{{__('Uy.. parece que no hay nada de esta categoría')}}</h2>
                     <a href="{{route('ads.create')}}" class="btn btn-success">Vende tu primer objeto</a> o <a href="{{route('home')}}" class="btn btn-primary">Vuelve a la home</a>
                 </div>
                 @endforelse
             </div>                    
             <div class="d-flex justify-content-center">
-                <button class="navbar-register_button text-white px-3 mb-5">{{__('messages.show')}}</button>
+                <button class="navbar-register_button text-white px-3 mb-5">{{__('Ver más')}}</button>
             </div>
         </section>
         <section class="banner_secundario">
             <div class="pt-5 px-4 d-flex flex-column align-items-start">                
-                    <h2 class="text-white">{{__('messages.secondbanner1')}} <br> {{__('messages.secondbanner2')}}</h2>
-                    <button class="mt-5 navbar-register_button text-white px-3 mb-5"><a class="nav-link active mx-3 text-white  navbar-register__a" aria-current="page" href="{{route('login')}}">{{__('messages.show')}}</a></button>
+                    <h2 class="text-white">{{__('Encuentra los mejores artículos y')}} <br> {{__('si no los encuentras, véndelos tú')}}</h2>
+                    <button class="mt-5 navbar-register_button text-white px-3 mb-5"><a class="nav-link active mx-3 text-white  navbar-register__a" aria-current="page" href="{{route('login')}}">{{__('Regístrate')}}</a></button>
                 
             </div>
         </section>
         <section class="blogs">
-            <h2 class="mx-5 mt-5">Blog</h2>
+            <h2 class="mx-5 mt-5">{{__('Últimos artículos')}}</h2>
             <div class="row cards_home_anuncios m-auto  ">
                 <div class="d-flex justify-content-center col-12 col-md-6 col-xl-3 m-auto">
                     <x-card_blog2>
