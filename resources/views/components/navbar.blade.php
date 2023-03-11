@@ -5,10 +5,6 @@
   </div>    
     <div class="collapse navbar-collapse col-6 justify-content-end " id="navbarSupportedContent">
         <ul class="navbar-nav mb-2 mb-lg-0 me-0">
-            
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{{ route('home') }}">{{__('Inicio')}}</a>
-            </li>            
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{ Auth::user()->name ?? 'none' }}</a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -27,6 +23,17 @@
                 </ul>
 
             </li>
+
+            
+            <li class="nav_icons nav-item">
+                <a class="nav-link active" aria-current="page" data-bs-toggle="modal" data-bs-target="#dialog1"><img src="img\icons\login_icon.svg" alt="Log in"></a>
+            </li> 
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page"><img src="img\icons\fav_icon .svg" alt="favoritos"></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page"><img src="img\icons\language_icon.svg" alt="Language"></a>
+            </li>               
 
             {{-- 
 

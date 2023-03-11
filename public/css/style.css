@@ -101,7 +101,8 @@ html{
     overflow: scroll;
 }
 .categories_icons{
-    width: 50px !important;   
+    width: 50px !important;  
+    height: 35px !important;
 } 
 .categorias-carrousel{
     max-width: 80%;
