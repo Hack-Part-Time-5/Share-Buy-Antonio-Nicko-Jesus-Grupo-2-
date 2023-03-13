@@ -45,7 +45,6 @@
                     </div>
                     <div class="modal-header">
                       <h5 id="modal_language_title">Selecciona tu idioma</h5>
-                      
                     </div>
                     <div class="modal-body d-flex m-3">
                         <li class="nav-item px-2">
@@ -54,12 +53,10 @@
                       <li class="nav-item px-2">
                         <x-locale lang="en" country="gb" />
                     </li>
-                   
                     <li class="nav-item px-2">
                         <x-locale lang="fr" country="fr" />
                     </li>
                        </div>
-                  
                   </div>
                 </div>
               </div>       
