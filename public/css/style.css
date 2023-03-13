@@ -55,7 +55,7 @@ html{
 .navbar-upload__a{
     color: var(--main-color) !important;
 }
-/* banner */
+
 .banner{
 
     background-image: url("/img/home_header_1.png");
@@ -191,6 +191,16 @@ html{
     display: flex;
 }
 
+.btn-language{
+    width: 60px;
+    height: 60px;
+    padding: 10px 16px;
+    border-radius: 35px;
+    font-size: 24px;
+    line-height: 1.33;
+}
+
+
 /* MODAL */
 .my-modal{
     position: sticky !important;
@@ -201,6 +211,9 @@ html{
     margin: auto;
     /* width: 50% !important; */
     border-radius: 20em !important;
+}
+.my-modal_idioma{
+width:25% !important;
 }
 .loginLinkModal{
     padding: 0 4em 0 4em !important;
@@ -215,3 +228,4 @@ html{
     }
     
 } 
+
