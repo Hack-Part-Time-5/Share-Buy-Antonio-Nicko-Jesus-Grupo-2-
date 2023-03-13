@@ -30,4 +30,8 @@ class Ad extends Model
     static public function ToBeRevisionedCount(){
         return Ad::where('is_accepted', null)->count();
     }
+    public function images()
+    {
+        return $this->hasMany(Image::class);
+    }
 }

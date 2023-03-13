@@ -3,4 +3,13 @@
 
 ---incluir el icono de la categoria computers
 
----mirar el tipo o los tipos de fuente
+
+
+--error cuando eres revisor
+
+--cuando no eres revisorr aparece un alert denegando el acceso
+
+tareas frontend:
+
+--crear la vista de lisrtado.
+--terminar el modal
