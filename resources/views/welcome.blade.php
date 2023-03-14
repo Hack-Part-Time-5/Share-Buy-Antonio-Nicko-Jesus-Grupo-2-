@@ -5,7 +5,7 @@
             <div class="banner d-none d-lg-flex justify-content-center m-auto  align-items-center text-white">                                
                 <div class="d-flex flex-column flex-wrap">
                     <h1 class="text-center mb-3"> {{__('Compra y vende en un solo click')}}</h1>
-                    <div class="d-flex justify-content-center flex-wrap position-relative container__buscador">
+                    <div class="d-flex flex-wrap position-relative container__buscador">
                         <input type="text" placeholder=" {{__('Empieza tu búsqueda')}}" class="buscador_banner placeholder_buscador mx-3">                    
                         <button type="button" class="navbar-register_button text-white px-4">{{__('Buscar')}}</button>                        
                     </div>                                                            
@@ -25,7 +25,7 @@
                 </div>                                 
             </div>
             <div class="linea--banner mb-5 py-2 d-flex justify-content-center align-items-center">
-                <h6 class="m-0">{{__('Para tu tranquilidad Devolución gratuita en todos nuestros productos')}}</h6>
+                <img src="\img\icons\info_icon.svg" alt="info" class="info_icon_home"><h6 class="m-0">{{__('Para tu tranquilidad Devolución gratuita en todos nuestros productos')}}</h6>
             </div>
         </div>
     </section>

@@ -40,11 +40,11 @@
             <div class=" modal fade p-2" id="modal_language" tabindex="-1" role="dialog" aria-labelledby="modal_language_title" aria-hidden="true">
                 <div class="my-modal my-modal_idioma modal-dialog modal-lg"  role="document">
                   <div class="modal-content p-3">
-                    <div class="buttonExitModal m-3">
+                    <div class="buttonExitModal m-2">
                         <button type="button" class="btn-close float-end" name="button" data-bs-dismiss="modal"></button>
                     </div>
                     <div class="modal-header">
-                      <h5 id="modal_language_title">Selecciona tu idioma</h5>
+                      <h5 class="m-3" id="modal_language_title">Selecciona tu idioma</h5>
                     </div>
                     <div class="modal-body d-flex m-3">
                         <li class="nav-item px-2">
@@ -78,24 +78,30 @@
                         <div class="modal fade p-2" id="dialog1">
                             <div class="my-modal modal-dialog modal-lg ">
                                 <div class="modal-content p-3">
-                                    <div class="buttonExitModal m-3">
+                                    <div class="buttonExitModal m-2">
                                         <button type="button" class="btn-close float-end" name="button" data-bs-dismiss="modal"></button>
                                     </div>
                                     <div class="logoModal d-flex justify-content-center">
-                                        <img src="/img/icons/share&buy_logo.svg" alt="logo de share & buy" class="logoModal">
+                                        <img class="carrito_logo_modal" src="/img/icons/carrito_logo.svg" alt="logo de share & buy" class="logoModal">
                                     </div>
                                     <div class="modal-header d-flex justify-content-center">                                
-                                        <h3 class="modal-title text-center" id="exModalLabel"><strong>Compra y vende en Share & Buy</strong></h3>                                
+                                        <h4 class="modal-title  text-center" id="exModalLabel"><strong>Compra y vende en Share & Buy</strong></h4>                                
                                     </div>
                                     <div class="d-flex  mt-3 flex-column justify-content-center align-items-center">
-                                        <p class="fs-2">Consigue los mejores precios y gana</p>
-                                        <p class="fs-2">dinero con lo que no usas.</p>
-                                        <section class="login__modal--expand container-fluid p-5">
+                                        <p class="fs-5">Consigue los mejores precios y gana</p>
+                                        <p class="fs-5">dinero con lo que no usas.</p>
+                                        <div class="mt-4 mb-3 d-flex justify-content-center">
+                                            <a class="text-center loginLinkModal nav-link active mx-3 navbar-register_button px-5 py-2 text-white  navbar-register__a" aria-current="page" href="{{ route('login') }}">Inicia Sesión</a>
+                                        </div>
+                                        <div class="mt-1 mb-2 d-flex justify-content-center">
+                                            <a class="text-center loginLinkModal nav-link active mx-3 navbar-register_button px-5 py-2 text-white  navbar-register__a" aria-current="page" href="{{ route('register') }}">Crear cuenta</a>
+                                        </div>
+                                        {{-- <section class="login__modal--expand container-fluid p-5">
                                             <div class="container-fluid">
                                                 <div class="row justify-content-center">
                                                     <div class="col-12 d-flex flex-column align-items-center  offset-md-3">
                                                         {{-- FORM TITLE --}}
-                                                        <h2 class="form-title space-around m-5 text-center">Login</h2>
+                                                        {{-- <h2 class="form-title space-around m-5 text-center">Login</h2>
                                                         @if ($errors->any())
                                                             <div class="alert alert-danger">
                                                                 <ul>
@@ -104,22 +110,22 @@
                                                                     @endforeach
                                                                 </ul>
                                                             </div>
-                                                        @endif 
+                                                        @endif  --}}
                                                         {{-- FORM FIELDS --}}
-                                                        <form action="/login" method="POST" role="form" class="form-control p-2 border-0">
-                                                            @csrf
+                                                        {{-- <form action="/login" method="POST" role="form" class="form-control p-2 border-0">
+                                                            @csrf --}}
                                                             {{-- EMAIL --}}
-                                                            <div class="space-around my-2">
+                                                            {{-- <div class="space-around my-2">
                                                                 <input type="email" name="email" id="email" class="form-control forms_field-input" placeholder="Your email" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
                                                                 <div class="validate"></div>
-                                                            </div>
+                                                            </div> --}}
                                                             {{-- PASSWORD --}}
-                                                            <div class="space-around my-2">
+                                                            {{-- <div class="space-around my-2">
                                                                 <input type="password" name="password" id="password" class="form-control forms_field-input" placeholder="Your password">
                                                                 <div class="validate"></div>
                                                             </div>
                                                                {{-- BUTTON-LOGIN --}}
-                                                               <button type="submit" class="btn btn-info">Enter</button>
+                                                               {{-- <button type="submit" class="btn btn-info">Enter</button>
                                                         </form>
                                                         <p class="my-3">Have you an account?<a class="btn btn-info btn-sm ms-2" href="{{route('register')}}">Register</a></p>
                                                     </div>
@@ -132,9 +138,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                     </li>
-                @endif
+                @endif --}}
                 @if (Route::has('login'))
                     {{-- <li class="nav-item navbar-upload px-3">
                         <a class="nav-link active mx-3 navbar-upload__a" aria-current="page" href="#"></a>

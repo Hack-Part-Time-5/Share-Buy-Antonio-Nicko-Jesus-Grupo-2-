@@ -174,6 +174,10 @@ html{
 .fondo_icon{
     background-color: rgba(255, 255, 255, 0.7) !important;
 }
+.carrito_logo_modal{
+width: 3.5rem;
+margin-bottom: 0.7rem !important;
+}
 .icon_like{
     width: 2em;
 }
@@ -206,6 +210,11 @@ html{
     line-height: 1.33;
 }
 
+.info_icon_home{
+    width: 2.5rem;
+    height: 2rem;
+    padding: 2.5rem;
+}
 
 /* MODAL */
 .my-modal{
@@ -215,8 +224,12 @@ html{
     margin: auto !important;
     transform: translate(0%, 10%) !important; 
     margin: auto;
-    /* width: 50% !important; */
+    width: 30% !important;
     border-radius: 20em !important;
+}
+
+.my-modal-title{
+    width: 2rem !important;
 }
 .my-modal_idioma{
 width:25% !important;
