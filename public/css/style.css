@@ -22,9 +22,10 @@ html{
 }
 /* colores */
 :root{
-    --main-color: #ff385c;
-    
+    --main-color: #ff385c;    
     --rose-color: #f6b5c7;
+    --gray-dark: rgba(219, 219, 219, 0.7);
+    --gray--color: ;
 }
 
 
@@ -73,12 +74,17 @@ html{
     max-height: 5px;
 } */
 .buscador_banner{
-    width: 30em !important;
-    
+    width: 30em !important;    
     border-radius: 20em !important;
     border: none;
     padding: .20em 0.6em;
     background-color: rgba(255, 255, 255, 0.7);
+}
+.buscador__show{
+    background-color: rgba(219, 219, 219, 0.7);
+    border-radius: 20em !important;
+    border: none;
+    padding: .20em 0.6em;
 }
 .placeholder_buscador{
     text-align: center;
