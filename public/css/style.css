@@ -80,15 +80,22 @@ html{
     padding: .20em 0.6em;
     background-color: rgba(255, 255, 255, 0.7);
 }
-.placeholder_buscador::placeholder{
+/* .placeholder_buscador::placeholder{
     background-image: url(/img/icons/search_icon.svg);
     background-size: 15px 15px;
     background-repeat: no-repeat;
     background-position:  0rem center ;   
+} */
+.lupa_buscador_icono{
+    left: 29px;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
+
 .placeholder_buscador{
     padding-left: 2em !important;
-   
 }
 /* searcher component */
 .buscador__show{
