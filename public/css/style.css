@@ -74,31 +74,58 @@ html{
     max-height: 5px;
 } */
 .buscador_banner{
-    width: 30em !important;    
+    width: 25em !important;    
     border-radius: 20em !important;
     border: none;
     padding: .20em 0.6em;
     background-color: rgba(255, 255, 255, 0.7);
 }
+.placeholder_buscador::placeholder{
+    background-image: url(/img/icons/search_icon.svg);
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-position:  0rem center ;   
+}
+.placeholder_buscador{
+    padding-left: 2em !important;
+    text-align: ;
+}
+/* searcher component */
 .buscador__show{
     background-color: rgba(219, 219, 219, 0.7);
     border-radius: 20em !important;
     border: none;
     padding: .20em 0.6em;
-}
-.placeholder_buscador{
-    text-align: center;
-}
-.placeholder_buscador::placeholder{
-    background-image: url(/img/icons/search_icon.svg);
-    background-size: 15px 15px;
-    background-repeat: no-repeat;
-    background-position:  2rem center;
-    
-    
+    width: 80vw;
     
 }
 
+.searcher__container{
+    width: 100%;
+}
+.dropdown__button--filtros{
+    background-color: rgba(219, 219, 219, 0.7) !important;
+    border: none !important;
+    color: black !important;
+}
+.dropdown__button--moda{
+    background-color: var(--rose-color) !important;
+    border: none !important;
+    color: black !important;
+}
+/* -------------------- */
+/* vista de show */
+.titulo__ad{
+    font-size: 2em;
+    font-weight: 300;
+}
+.category__tag{
+    background-color: var(--gray--color);
+}
+.precio{
+    font-size: larger;
+}
+/* ------------------------- */
 .linea--banner{
     background-color: var(--rose-color);
 }
