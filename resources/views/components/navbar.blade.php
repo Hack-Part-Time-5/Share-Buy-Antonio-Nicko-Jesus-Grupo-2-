@@ -5,26 +5,9 @@
   </div>    
     <div class="collapse navbar-collapse col-6 justify-content-end " id="navbarSupportedContent">
         <div class="navbar-nav mb-2 mb-lg-0 me-0">
-            <div class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{ Auth::user()->name ?? 'none' }}</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    @if (Auth::user()->is_revisor ?? 'none')
-                        <div>
-                            <a class="dropdown-item" href="{{ route('revisor.home') }}">{{__('Revisor')}}<span class="badge rounded-pill bg-danger">{{ \App\Models\Ad::TobeRevisionedCount() }}</span></a>
-                        </div>
-                    @endif
-                    <div>
-                        <form id="logoutForm" action="{{ route('logout') }}" method="POST">
-                            @csrf
-                        </form>
-                        <a id="logoutBtn" class="dropdown-item" href="#">{{__('Salir')}}</a>
-                    </div>
-
                 </div>
-
             </div>
- 
-            <div class="buttons">
+             <div class="buttons">
                 <div class="nav-item">
                 <a class="nav-link active" aria-current="page" data-bs-toggle="modal" data-bs-target="#dialog1"><img src="img\icons\login_icon.svg" alt="Log in"></a>
             </div>
@@ -47,15 +30,15 @@
                       <h5 class="m-3" id="modal_language_title">Selecciona tu idioma</h5>
                     </div>
                     <div class="modal-body d-flex m-3">
-                        <li class="nav-item px-2">
+                        <div class="nav-item px-2">
                         <x-locale lang="es" country="es" />
-                    </li>
-                      <li class="nav-item px-2">
+                        </div>
+                      <div class="nav-item px-2">
                         <x-locale lang="en" country="gb" />
-                    </li>
-                    <li class="nav-item px-2">
+                    </div>
+                    <div class="nav-item px-2">
                         <x-locale lang="fr" country="fr" />
-                    </li>
+                    </div>
                        </div>
                   </div>
                 </div>
@@ -140,22 +123,31 @@
                             </div>
                         </div> --}}
                     </li>
-                @endif --}}
+                @endif
                 @if (Route::has('login'))
                     {{-- <li class="nav-item navbar-upload px-3">
                         <a class="nav-link active mx-3 navbar-upload__a" aria-current="page" href="#"></a>
                     </li> --}}
                 @endif
             @else
+            <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{ Auth::user()->name}}</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    @if (Auth::user()->is_revisor)
+                        <div>
+                            <a class="dropdown-item" href="{{ route('revisor.home') }}">{{__('Revisor')}}<span class="badge rounded-pill bg-danger">{{ \App\Models\Ad::TobeRevisionedCount() }}</span></a>
+                        </div>
+                    @endif
+                    <div>
+                        <form id="logoutForm" action="{{ route('logout') }}" method="POST">
+                            @csrf
+                        </form>
+                        <a id="logoutBtn" class="dropdown-item" href="#">{{__('Salir')}}</a>
+                    </div>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="{{ route('ads.create') }}">Create Ad</a>
                 </li>
-                <li class="nav-item">
-                    <form action="{{ route('logout') }}" id="logoutForm" method="POST">
-                        @csrf
-                    </form>
-                    <a href="#" id="logoutBtn" class="nav-link">Exit</a>
-                </li>
+                
             @endguest
         </ul>
     </div>

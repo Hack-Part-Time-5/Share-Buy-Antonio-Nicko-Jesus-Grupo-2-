@@ -13,17 +13,17 @@ use Illuminate\Support\Facades\Artisan;
 
 class RevisorController extends Controller
 {
-    public function __construct()
-{
-	$this->middleware('isRevisor');
-}
+//     public function __construct()
+// {
+// 	$this->middleware('isRevisor');
+// }
 
 	public function index ()
     {
         $ad = Ad::where('is_accepted',null)
 		->orderBy('created_at','desc')
 		->first();
-	return view('revisor.home',compact('ad'));
+		return view('revisor.home',compact('ad'));
     }
 
 	public function becomeRevisor(){
@@ -31,7 +31,7 @@ class RevisorController extends Controller
 		return redirect()->route('home')->withMessage(['type' => 'success', 'text' => 'Solicitud enviada con éxito, pronto sabrás algo, gracias!😊']);
 	}
 	public function makeRevisor(User $user){
-		Artisan::call('shareandbuy:makeUserRevisor',['email' => $user->email]);
+		Artisan::call('shareandbuy:makeUserRevisor{email}',['email' => $user->email]);
 		return redirect()->route('home')->withMessage(['type'=>'success', 'text' => 'Ya tenemos un compañero más']);
 }
 
