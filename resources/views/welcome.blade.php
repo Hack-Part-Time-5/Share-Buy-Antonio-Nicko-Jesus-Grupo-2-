@@ -95,7 +95,7 @@
             <h2 class="mx-5">{{__('Subidos recientemente')}}</h2>
             <div class="row mt-5 cards_home_anuncios m-auto">        
                 @forelse ($ads as $ad)
-                <div class="position-relative d-flex justify-content-center col-12 col-md-6 col-xl-4 justify-content-center">
+                <div class="position-relative d-flex justify-content-center col-12 col-md-6 col-xl-3 justify-content-center">
                     {{-- <div class="fondo_icon icono_fav_card">
                         <a href="#" class=""><img src="/img/icons/fav_icon_grey.svg" alt="" class="icon_like"></a>
                     </div>   --}}                   
