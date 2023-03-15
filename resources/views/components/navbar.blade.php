@@ -1,28 +1,26 @@
-<nav class="navbar  navbar-expand-lg mx-1 bg-body-tertiary d-flex p-2 px-sm-5">
+<nav class="navbar   navbar-expand-lg mx-1 bg-body-tertiary d-flex p-2 px-sm-5">
     <div class="d-flex flex-nowrap container-fluid justify-content-between">
-        <a class="navbar-brand letra_logo" href="{{ route('home') }}"><img
-                src="/img/icons/share&buy_logo.svg" alt="logo de share&buy"></a>
+        <a class="navbar-brand letra_logo" href="{{ route('home') }}">
+            <img  src="/img/icons/share&buy_logo.svg" alt="logo de share&buy">
+        </a>
         <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
-                class="navbar-toggler-icon"></span></button>
-        <div class="d-flex buttons justify-content-end">
-            <div class="nav-item">
-                <a class="nav-link active" aria-current="page" data-bs-toggle="modal" data-bs-target="#dialog1"><img src="img\icons\login_icon.svg" alt="Log in"></a>
+                class="navbar-toggler-icon"></span></button>        
+    </div>   
+    <div class="d-block d-lg-none">
+        <div class="collapse navbar-collapse col-6 justify-content-center " id="navbarSupportedContent">
+            <div class="navbar-nav mb-2 mb-lg-0 me-0 d-flex">
+                <a href="" class="">Idioma</a>
             </div>
-            <div class="nav-item">
-                <a class="nav-link active" aria-current="page"><img src="img\icons\fav_icon .svg" alt="favoritos"></a>
+            <div class="navbar-nav mb-2 mb-lg-0 me-0 d-flex justify-content-end ">
+                <a href="" class="">Favoritos</a>
             </div>
-            <div class="nav-item">
-                <a class="nav-link active" aria-current="page" data-bs-toggle="modal"
-                    data-bs-target="#modal_language"><img src="img\icons\language_icon.svg" alt="Language"></a>
+            <div class="navbar-nav mb-2 mb-lg-0 me-0 d-flex justify-content-end ">
+                <a href="" class="">Iniciar sesion</a>
             </div>
         </div>
-    </div>
-    <div class="collapse navbar-collapse col-6 justify-content-end " id="navbarSupportedContent">
-        <div class="navbar-nav mb-2 mb-lg-0 me-0">
-        </div>
-    </div>
-
+    </div> 
+        
     {{-- Modal login --}}
     <div class=" modal fade p-2" id="modal_login" tabindex="-1" role="dialog" aria-labelledby="modal_language_title"
         aria-hidden="true">
@@ -59,9 +57,7 @@
                                     @csrf
                                     {{-- EMAIL --}}
                                     <div class="space-around my-2">
-                                        <input type="email" name="email" id="email"
-                                            class="form-control forms_field-input placeholder_login py-1" placeholder="Correo electrónico"
-                                            data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                                        <input type="email" name="email" id="email" class="form-control forms_field-input placeholder_login py-1" placeholder="Correo electrónico" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
                                         <div class="validate"></div>
                                     </div>
                                     {{-- PASSWORD --}}
@@ -74,19 +70,18 @@
                                     href="{{ route('register') }}"></a></p>
                                     {{-- BUTTON-LOGIN --}}
                                     <div class="mt-5 mb-5 d-flex justify-content-center">
-                                        <a class="text-center loginLinkModal nav-link active mx-3 navbar-register_button px-5 py-2 text-white  navbar-register__a"
-                                            aria-current="page" href="{{ route('login') }}">Iniciar sesión</a>
+                                        {{-- <a class="text-center loginLinkModal nav-link active mx-3 navbar-register_button px-5 py-2 text-white  navbar-register__a"
+                                            aria-current="page" href="{{ route('login') }}">Iniciar sesión</a> --}}
+                                            <button type="submit" class="btn btn-info">Enter</button>
+                                    </div>        
                                 </form>
-                            </div>
-                            
+                            </div>                            
                 </section>
             </div>
         </div>
     </div>
     </div>
-
     </div>
-
     {{-- Modal Idioma --}}
     <div class=" modal fade p-2" id="modal_language" tabindex="-1" role="dialog" aria-labelledby="modal_language_title"
         aria-hidden="true">
@@ -98,7 +93,7 @@
                 <div class="modal-header">
                     <h5 class="m-3" id="modal_language_title">Selecciona tu idioma</h5>
                 </div>
-                <div class="modal-body d-flex m-3">
+                <div class="modal-body justify-content-center d-flex m-3">
                     <div class="nav-item px-2">
                         <x-locale lang="es" country="es" />
                     </div>
@@ -112,23 +107,22 @@
             </div>
         </div>
     </div>
-
-    {{-- 
-
-                Categories
-              </a>
-              
-@foreach($categories as $category)
-                  <li><a href="{{ route('category.ads', $category) }}"
-    class="dropdown-item">{{ $category->name }}</a></li>
-    @endforeach
-    </ul>
-    </li> --}}
+    <div class="d-none d-lg-flex buttons w-100 align-items-center me-3 justify-content-end">
+        <div class="nav-item mx-1">
+            <a class="nav-link active" aria-current="page" data-bs-toggle="modal" data-bs-target="#dialog1"><img src="/img/icons/login_icon.svg" class="icon__nav" alt="Log in"></a>
+        </div>
+        <div class="nav-item mx-1">
+            <a class="nav-link active" aria-current="page"><img src="/img/icons/fav_icon .svg" class="icon__nav" alt="favoritos"></a>
+        </div>
+        <div class="nav-item mx-1">
+            <a class="nav-link active" aria-current="page" data-bs-toggle="modal"
+                data-bs-target="#modal_language"><img src="/img/icons/language_icon.svg" class="icon__nav" alt="Language"></a>
+        </div>
+    </div>
     @guest
         @if(Route::has('register'))
-            <div>
-                <button type="button" class="navbar-register_button text-white mx-3 px-3" data-bs-toggle="modal"
-                    data-bs-target="#dialog1">{{ __('+ Sube tu producto') }}</button>
+            <div class="container__buton--subir">
+                <button type="button" class="w-100 py-1 navbar-register_button text-white" data-bs-toggle="modal" data-bs-target="#dialog1"><span class="nav__register--button d-flex justify-content-center align-items-center">{{ __('+ Sube tu producto') }}</span></button>
             </div>
             <div class="modal fade p-2" id="dialog1">
                 <div class="my-modal modal-dialog modal-lg ">
@@ -166,19 +160,19 @@
                         <a class="nav-link active mx-3 navbar-upload__a" aria-current="page" href="#"></a>
                     </li> --}}
     @endif
-@else
+    @else                    
     <div class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
             aria-expanded="false"><strong>¡Hola {{ Auth::user()->name }}!</strong></a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <div class="dropdown-menu px-2" aria-labelledby="navbarDropdown">
             @if(Auth::user()->is_revisor)
-                <div>
-                    <a class="dropdown-item"
-                        href="{{ route('revisor.home') }}">{{ __('Revisor') }}<span
-                            class="badge rounded-pill bg-danger">{{ \App\Models\Ad::TobeRevisionedCount() }}</span></a>
+                <div class="my-2">
+                    <a class="dropdown-item" href="{{ route('revisor.home') }}">
+                        {{ __('Revisor') }}<span class="badge ms-2 rounded-pill text-black">{{ \App\Models\Ad::TobeRevisionedCount() }}</span>
+                    </a>
                 </div>
             @endif
-            <div>
+            <div class="my-2">
                 <form id="logoutForm" action="{{ route('logout') }}" method="POST">
                     @csrf
                 </form>

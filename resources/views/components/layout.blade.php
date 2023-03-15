@@ -19,17 +19,17 @@
     
 </head>
 <body>
-    <x-navbar/>
-   
-    @if (session()->has('message'))
-        <x-alert :type="session('message')['type']" :message="session('message')['text']"/>
-    @endif
-    {{$slot}}
-    <x-footer/>
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/owl.carousel.min.js"></script>
-    @livewireScripts
-    {{$script ?? ''}}
     
+        <x-navbar/>   
+        @if (session()->has('message'))
+            <x-alert :type="session('message')['type']" :message="session('message')['text']"/>
+        @endif
+        {{$slot}}
+        <x-footer/>
+        {{-- <script src="/js/jquery.min.js"></script>
+        <script src="/js/owl.carousel.min.js"></script> --}}
+        @livewireScripts
+        {{$script ?? ''}}
+      
 </body>
 </html>

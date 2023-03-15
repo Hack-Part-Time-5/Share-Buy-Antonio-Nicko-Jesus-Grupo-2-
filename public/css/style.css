@@ -36,17 +36,25 @@ html{
     text-decoration: none !important;
     color: black !important;
 }
+
+
+/* navbar */
+.icon__nav{
+    width: 1.5em !important;
+}
+.nav__register--button{
+    font-size: 0.9em !important;
+}
+.container__buton--subir{
+    width: 40% !important;
+    
+}
 .navbar-register_button{
     background-color: var(--main-color);
-    border-radius: 20em !important; 
+    border-radius: 2em !important; 
     border: 2px solid var(--main-color) !important;
  
 }
-/* navbar */
-/* .navbar-register__a{
-    border: 10px black !important;
-   
-} */
 .navbar-upload{
     border: 2px solid var(--main-color) !important;
     border-radius: 20em !important; 
@@ -180,6 +188,7 @@ html{
 }
 .carousel__show{
     background-color: var(--main-color) !important;
+    height: 500px !important;
 }
 /* ------------------------- */
 .linea--banner{

@@ -1,22 +1,18 @@
 <x-layout>
+    <x-slot name='title'>Share&Buy - show</x-slot>    
     <div class="container m-auto  d-lg-flex flex-column justify-content-center">        
         <x-search/>
         <div class="container px-3">
             <div class="row my-5">
                 <div class="col-12 col-md-6 px-4">
-                    <div id="adImages" class="carousel slide" data-bs-ride="true">
-                        <div class="carrousel-indicators">
-                            {{-- @for ($i = 0; $i < $ad->images()->count(); $i++)
-                                <button type="button" data-bs-target='#adImages' data-bs-slide-to="{{$i}}" class="@if($i == 0) active @endif" aria-current="true" aria-label="Slide {{$i + 1}}"></button>                            
-                            @endfor --}}
+                    {{-- <div id="adImages" class="carousel slide" data-bs-ride="true">
+                        <div class="carrousel-indicators">                            
                         </div>
                         <div class="carousel-inner carousel__show">
                             @foreach ($ad->images as $image )
-                                <div class="carousel-item @if($loop->first) active @endif justify-content-center col-12">
+                                <div class="carousel-item  @if($loop->first) active  @endif  justify-content-center">
                                     @if ($ad->images()->count() > 0)
-                                        <img src="{{$image->getUrl(500,500)}}" alt="" class="d-block m-auto">
-                                    @else
-                                        <img src="https://picsum.photos/700/600?a" alt="" class="d-block w-100">
+                                        <img src="{{$image->getUrl(500,500)}}" alt="" class="d-block w-100">                                    
                                     @endif                                    
                                 </div>                             
                             @endforeach
@@ -29,22 +25,34 @@
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
                         </button>
-                    </div>
-                    {{-- <div class="owl-conainer">
-                        <div class="owl-carousel owl-theme">
-                            @foreach ($ad->images as $image )
-                                <div class="item @if($loop->first) active @endif">
-                                    @if ($ad->images()->count() > 0)
-                                        <img src="{{Storage::url($image->path)}}" alt="" class="d-block w-100">    
-                                    @else
-                                        <img src="https://picsum.photos/700/600?a" alt="" class="d-block w-100">
-                                    @endif                                    
-                                </div>                             
-                            @endforeach
-                        </div>
+                    </div>                     --}}
 
-                        
-                    </div> --}}
+                    <div class="container-fluid">
+                        <div class="row">                          
+                          <div class="col-md-3 d-none d-md-block">
+                            <div class="row">
+                                @foreach ($ad->images as $image )
+                                <div class="col-md-12 mb-1">
+                                    <img src="{{$image->getUrl(500,500)}}" class="me-3 img-thumbnail img-fluid" onclick="selectImage(this.src)">                                                                                
+                                </div>                             
+                            @endforeach                                                            
+                            </div>
+                          </div>
+                          <div class="col-md-9 h-100 d-flex align-items-center ">
+                            <img id="selected-image" src="{{$ad->images()->first()->getUrl(500,500)}}" class="img-fluid">
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <script>
+                        function selectImage(src) {
+                          var selectedImage = document.getElementById("selected-image");
+                          selectedImage.src = src;
+                        }
+                      </script>
+
+                    
+
                 </div>
                 <div class="container__informacion--ad col-12 col-md-6 position-relative">
                     <div class="container__show--info my-2"><p class="titulo__ad">{{$ad->title}}</p></div>
@@ -93,5 +101,6 @@
                 </div>
             </div>
         </div>
-    </div>          
+    </div>
+    
 </x-layout>
