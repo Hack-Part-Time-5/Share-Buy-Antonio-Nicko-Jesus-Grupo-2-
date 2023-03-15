@@ -25,7 +25,7 @@ html{
     --main-color: #ff385c;    
     --rose-color: #f6b5c7;
     --gray-dark: rgba(219, 219, 219, 0.7);
-    --gray--color: ;
+    --gray--color: rgba(172, 172, 172, 0.7);
 }
 
 
@@ -103,7 +103,7 @@ html{
     border-radius: 20em !important;
     border: none;
     padding: .20em 0.6em;
-    width: 80vw;
+    width: 100% !important;
     
 }
 
@@ -126,11 +126,34 @@ html{
     font-size: 2em;
     font-weight: 300;
 }
-.category__tag{
-    background-color: var(--gray--color);
+.container__show--info a{
+    text-decoration: none !important;
+    color: black;
 }
 .precio{
     font-size: larger;
+}
+.container__show--infoUser{
+    position: absolute;
+    top: 5%;
+    left: 75%;
+}
+.container__photo--user{
+    width: 3em;
+    height: 3em;
+
+    border-radius: 100%;
+    background-color: #ff385c;
+}
+.btn__comprar{
+    background-color: var(--main-color) !important;
+    color: white !important;
+}
+.cantidad__productos{
+    font-size: 0.7em;
+}
+.entrega{
+    font-size: 0.8em;
 }
 /* ------------------------- */
 .linea--banner{
@@ -178,7 +201,15 @@ html{
     text-decoration: none !important;
     color: rgb(70, 70, 70);   
 }
-
+.category__tag{
+    font-weight: 300 !important;
+    border: none !important;
+    background-color: var(--gray--color) !important;
+    font-size: .8em !important;
+}
+.category__icon--tag{
+    width: 1.8em;
+}
 
 /* banner secundario */
 .banner_secundario{

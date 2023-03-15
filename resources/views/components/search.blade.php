@@ -1,18 +1,18 @@
 <hr>
-        <div class="container container__buscador--show d-flex justify-content-center">
-            <div class="d-flex justify-content-center searcher__container m-0">
-                <div class="container__form--show d-flex justify-content-center my-4 mx-5 flex-wrap">
+        <div class="container__buscador--show d-flex justify-content-center">
+            <div class="d-flex justify-content-center searcher__container m-auto">
+                <div class=" container__form--show d-flex justify-content-center w-75 my-4 flex-wrap">
                     <div class="d-flex d-lg-none justify-content-center flex-wrap position-relative container__buscador">
                         <input type="text" placeholder=" {{__('Empieza tu búsqueda')}}" class="buscador__show placeholder_buscador mx-3 mb-3 ">                    
                         <button type="button" class="navbar-register_button text-white px-4">{{__('Buscar')}}</button>                        
                     </div>
-                    <div class="justify-content-center d-none d-lg-flex flex-nowrap position-relative container__buscador">
-                        <input type="text" placeholder=" {{__('Empieza tu búsqueda')}}" class="buscador__show buscador_banner placeholder_buscador mx-3">                    
-                        <button type="button" class="navbar-register_button text-white px-4">{{__('Buscar')}}</button>                        
+                    <div class="justify-content-start w-100 d-none d-lg-flex flex-nowrap position-relative container__buscador">
+                        <input type="text" placeholder=" {{__('Empieza tu búsqueda')}}" class="w-75 buscador__show buscador_banner placeholder_buscador mx-3">                    
+                        <button type="button" class="ms-3 navbar-register_button text-white px-4">{{__('Buscar')}}</button>                        
                     </div>      
                 </div>        
-                <div class="container__buttons--show d-none d-lg-flex justify-content-center mx-5 my-4">
-                    <div class="dropdown mx-3 d-none d-xl-block">
+                <div class=" container__buttons--show d-none d-lg-flex justify-content-center  my-4">
+                    <div class="dropdown mx-3 {{-- d-none --}} d-xl-block">
                         <button class="btn btn-secondary dropdown__button--filtros dropdown-toggle px-3 rounded-pill" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Filtros
                         </button>

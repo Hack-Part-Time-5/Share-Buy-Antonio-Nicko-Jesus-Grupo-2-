@@ -1,5 +1,5 @@
 <nav class="navbar  navbar-expand-lg mx-1 bg-body-tertiary d-flex p-2 px-sm-5">
-    <div class="d-flex container-fluid justify-content-between">
+    <div class="d-flex flex-nowrap container-fluid justify-content-between">
         <a class="navbar-brand letra_logo" href="{{ route('home') }}"><img
                 src="/img/icons/share&buy_logo.svg" alt="logo de share&buy"></a>
         <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
