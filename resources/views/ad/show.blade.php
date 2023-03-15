@@ -14,7 +14,7 @@
                             @foreach ($ad->images as $image )
                                 <div class="carousel-item @if($loop->first) active @endif justify-content-center col-12">
                                     @if ($ad->images()->count() > 0)
-                                        <img src="{{$image->getUrl(400,400)}}" alt="" class="d-block m-auto">
+                                        <img src="{{$image->getUrl(500,500)}}" alt="" class="d-block m-auto">
                                     @else
                                         <img src="https://picsum.photos/700/600?a" alt="" class="d-block w-100">
                                     @endif                                    

@@ -64,7 +64,7 @@ class CreateAd extends Component
                 $newImage = $ad->images()->create([
                     'path' =>$image->store($newFileName, 'public')
                 ]);
-                dispatch(new ResizeImage($newImage->path,400,400));
+                dispatch(new ResizeImage($newImage->path, 500,500));
             }
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
         }

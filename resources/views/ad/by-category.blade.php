@@ -15,7 +15,7 @@
                     @else
                         <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
                     @endif     --}}
-                    <img src="{{!$ad->images()->get()->isEmpty() ? $ad->images()->first()->getUrl(400,400) : 'https://via.placeholder.com/150'}}" alt="..." class="card-img-top">                
+                    <img src="{{!$ad->images()->get()->isEmpty() ? $ad->images()->first()->getUrl(500,500) : 'https://via.placeholder.com/150'}}" alt="..." class="card-img-top">                
                     <div class="card-body">
                         <h5 class="card-title">{{$ad->title}}</h5>
                         <h6 class="card-subtitle mb-2 text-muted">{{$ad->price}}</h6>
