@@ -4,7 +4,7 @@
         <div class="container px-3">
             <div class="row my-5">
                 <div class="col-12 col-md-6 px-4">
-                    <div id="adImages" class="carousel slide" data-bs-ride="true">
+                    {{-- <div id="adImages" class="carousel slide" data-bs-ride="true">
                         <div class="carrousel-indicators">
                             @for ($i = 0; $i < $ad->images()->count(); $i++)
                                 <button type="button" data-bs-target='#adImages' data-bs-slide-to="{{$i}}" class="@if($i == 0) active @endif" aria-current="true" aria-label="Slide {{$i + 1}}"></button>                            
@@ -29,30 +29,21 @@
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
                         </button>
-                    </div>
-                    <div class="container__fotos--showAd p-2 mb-3">
-                        {{-- <div class="container__fotosAdSmall">
-                            <div class="container__fotoSmall">
-
-                            </div>
-                            <div class="container__fotoSmall">
-
-                            </div>
-                            <div class="container__fotoSmall">
-
-                            </div>
-                        </div> --}}
-                        {{-- <div class="container__fotoBig">
+                    </div>  --}}
+                    <div class="owl-conainer">
+                        <div class="owl-carousel owl-theme">
                             @foreach ($ad->images as $image )
-                                <div class="">
-                                    @if ($ad->images())
+                                <div class="item @if($loop->first) active @endif">
+                                    @if ($ad->images()->count() > 0)
                                         <img src="{{Storage::url($image->path)}}" alt="" class="d-block w-100">    
                                     @else
                                         <img src="https://picsum.photos/700/600?a" alt="" class="d-block w-100">
                                     @endif                                    
                                 </div>                             
                             @endforeach
-                        </div> --}}
+                        </div>
+
+                        
                     </div>
                 </div>
                 <div class="container__informacion--ad col-12 col-md-6 position-relative">

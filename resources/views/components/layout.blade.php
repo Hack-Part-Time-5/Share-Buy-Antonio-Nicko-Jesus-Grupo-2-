@@ -7,6 +7,9 @@
     <title>{{$title ?? 'Share&Buy'}}</title>
     {{-- fontawesome --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    {{-- owlcarousel --}}
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/owl.theme.default.css">
     @livewireStyles
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <link rel="stylesheet" href="/css/style.css">
@@ -19,10 +22,12 @@
     <x-navbar/>
    
     @if (session()->has('message'))
-    <x-alert :type="session('message')['type']" :message="session('message')['text']"/>
+        <x-alert :type="session('message')['type']" :message="session('message')['text']"/>
     @endif
-     {{$slot}}
-     <x-footer/>
+    {{$slot}}
+    <x-footer/>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/owl.carousel.min.js"></script>
     @livewireScripts
     {{$script ?? ''}}
     
