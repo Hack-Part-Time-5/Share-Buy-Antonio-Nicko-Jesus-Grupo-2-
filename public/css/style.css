@@ -155,6 +155,20 @@ html{
 .entrega{
     font-size: 0.8em;
 }
+.icon__rrss--show{
+    width: 1em;
+}
+.container__protegemos--show{
+    border: solid 2px var(--gray--color);
+    border-radius: 2em;
+}
+.icon__escudo{
+    color: rgb(0, 171, 0);
+}
+.p__proteccion{
+    font-size: 0.8em;
+}
+
 /* ------------------------- */
 .linea--banner{
     background-color: var(--rose-color);
