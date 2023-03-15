@@ -338,6 +338,15 @@ width:25% !important;
 .loginLinkModal{
     padding: 0 4em 0 4em !important;
 }
+.recuperar_contraseña{
+    font-size: 14px !important;
+}
+.requisito_contraseña{
+    color:#aca8a8;
+    font-size: 11px !important;
+padding-left: 5px !important;
+padding-top: 5px !important;
+}
 /* .logoModal{
     width: 100px;
 } */

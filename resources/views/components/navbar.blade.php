@@ -70,9 +70,9 @@
                                     href="{{ route('register') }}"></a></p>
                                     {{-- BUTTON-LOGIN --}}
                                     <div class="mt-5 mb-5 d-flex justify-content-center">
-                                        {{-- <a class="text-center loginLinkModal nav-link active mx-3 navbar-register_button px-5 py-2 text-white  navbar-register__a"
-                                            aria-current="page" href="{{ route('login') }}">Iniciar sesión</a> --}}
-                                            <button type="submit" class="btn btn-info">Enter</button>
+                                        <button type="submit" class="text-center loginLinkModal nav-link active mx-3 navbar-register_button px-5 py-2 text-white  navbar-register__a"
+                                            aria-current="page">Iniciar sesión</a> 
+                                
                                     </div>        
                                 </form>
                             </div>                            
@@ -82,6 +82,80 @@
     </div>
     </div>
     </div>
+
+{{-- Modal register --}}
+<div class=" modal fade p-2" id="modal_register" tabindex="-1" role="dialog" aria-labelledby="modal_language_title"
+aria-hidden="true">
+<div class="my-modal my-modal_idioma modal-dialog modal-lg" role="document">
+    <div class="modal-content p-1">
+        <div class="buttonExitModal m-2">
+            <button type="button" class="btn-close float-end" name="button" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="d-flex justify-content-center my-2 py-1">
+            <div class="logoModal d-flex justify-content-center">
+                <img class="carrito_logo_modal" src="/img/icons/carrito_logo.svg" alt="logo de share & buy"
+                    class="logoModal">
+            </div>
+            <h4 class=" text-center" id="exModalLabel"><strong>Únete a Share&Buy</strong></h4>
+        </div>
+        <section class="login__modal--expand container-fluid p-2">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-12 d-flex flex-column align-items-center  offset-md-3">
+                        {{-- FORM TITLE --}}
+                        
+                        @if($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+                        {{-- FORM FIELDS --}}
+                        <form action="/register" method="POST" role="form" class="form-control p-2 border-0">
+                            @csrf
+                             {{-- NAOMBRE Y APELLIDOS--}}
+                             <div class="space-around my-2">
+                                <input type="text" name="name" id="name" class="form-control forms_field-input placeholder_login py-1" placeholder="Nombre y apellidos" data-rule="minlen:4">
+                                <div class="validate"></div>
+                            </div>
+                            
+                            {{-- EMAIL --}}
+                            <div class="space-around my-3">
+                                <input type="email" name="email" id="email" class="form-control forms_field-input placeholder_login py-1" placeholder="Correo electrónico" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                                <div class="validate"></div>
+                            </div>
+
+                            {{-- PASSWORD --}}
+                            <div class="space-around my-3">
+                                <input type="password" name="password" id="password"
+                                    class="form-control forms_field-input placeholder_login py-1 " placeholder="Contraseña">
+                                <div class="validate"></div>
+                                <div class="space-around mt-3 mb-1">
+                                    <input type="password" name="password_confirmation" id="password_confirmation" class="form-control forms_field-input placeholder_login py-1 " placeholder="Repite la contraseña">
+                                    <div class="validate"></div>
+                                </div>
+                                <p class="requisito_contraseña">*Al menos 8 caracteres</p>
+                            </div>
+                            <p class="recuperar_contraseña my-3 text-center"><u>¿Has olvidado tu contraseña?</u><a class=""
+                            href=""></a></p>
+
+                            {{-- BUTTON-CREAR CUENTA --}}
+                            <div class="mt-4 mb-4 d-flex justify-content-center">
+                                <button type="submit" class="text-center loginLinkModal nav-link active mx-3 navbar-register_button px-5 py-2 text-white  navbar-register__a"
+                                    aria-current="page">Crear Cuenta</button> 
+                        
+                            </div>        
+                        </form>
+                    </div>                            
+        </section>
+    </div>
+</div>
+</div>
+
     {{-- Modal Idioma --}}
     <div class=" modal fade p-2" id="modal_language" tabindex="-1" role="dialog" aria-labelledby="modal_language_title"
         aria-hidden="true">
@@ -122,7 +196,7 @@
     @guest
         @if(Route::has('register'))
             <div class="container__buton--subir">
-                <button type="button" class="w-100 py-1 navbar-register_button text-white" data-bs-toggle="modal" data-bs-target="#dialog1"><span class="nav__register--button d-flex justify-content-center align-items-center">{{ __('+ Sube tu producto') }}</span></button>
+                <button type="button" class="py-2 px-2 navbar-register_button text-white" data-bs-toggle="modal" data-bs-target="#dialog1"><span class="nav__register--button d-flex justify-content-center align-items-center">{{ __('+ Sube tu producto') }}</span></button>
             </div>
             <div class="modal fade p-2" id="dialog1">
                 <div class="my-modal modal-dialog modal-lg ">
@@ -136,24 +210,21 @@
                                 class="logoModal">
                         </div>
                         <div class="modal-header d-flex justify-content-center">
-                            <h4 class="modal-title  text-center" id="exModalLabel"><strong>Compra y vende en Share &
-                                    Buy</strong></h4>
+                            <h4 class="modal-title  text-center" id="exModalLabel"><strong>Compra y vende en Share&Buy</strong></h4>
                         </div>
                         <div class="d-flex  mt-3 flex-column justify-content-center align-items-center">
                             <p class="fs-5">Consigue los mejores precios y gana</p>
                             <p class="fs-5">dinero con lo que no usas.</p>
                             <div class="mt-4 mb-3 d-flex justify-content-center">
-                                <a class="text-center loginLinkModal nav-link active mx-3 navbar-register_button px-5 py-2 text-white  navbar-register__a"
+                                <button  class="text-center loginLinkModal nav-link active mx-3 navbar-register_button px-5 py-2 text-white  navbar-register__a"
                                     aria-current="page" data-bs-toggle="modal" data-bs-target="#modal_login">Inicia
-                                    Sesión</a>
+                                    Sesión</button>
                             </div>
-                            <div class="mt-1 mb-2 d-flex justify-content-center">
-                                <a class="text-center loginLinkModal nav-link active mx-3 navbar-register_button px-5 py-2 text-white  navbar-register__a"
-                                    aria-current="page" href="{{ route('register') }}">Crear
-                                    cuenta</a>
-
+                            <div class="mt-1 mb-4 d-flex justify-content-center">
+                                <button class="text-center loginLinkModal nav-link active mx-3 navbar-register_button px-5 py-2 text-white  navbar-register__a"
+                                    aria-current="page" data-bs-toggle="modal" data-bs-target="#modal_register">Crear Cuenta</button>
                             </div>
-                        
+                            
     @endif
     @if(Route::has('login'))
         {{-- <li class="nav-item navbar-upload px-3">
