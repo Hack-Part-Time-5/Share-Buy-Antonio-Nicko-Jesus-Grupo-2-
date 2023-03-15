@@ -178,7 +178,9 @@ html{
 .p__proteccion{
     font-size: 0.8em;
 }
-
+.carousel__show{
+    background-color: var(--main-color) !important;
+}
 /* ------------------------- */
 .linea--banner{
     background-color: var(--rose-color);

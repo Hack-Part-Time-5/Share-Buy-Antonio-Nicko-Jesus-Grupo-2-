@@ -107,7 +107,7 @@
                     @endif --}}
                     <x-card_blog>  
                         @if ($ad->images()->count() > 0)
-                        <x-slot name='image'>{{Storage::url($ad->images()->first()->path)}}</x-slot>
+                        <x-slot name='image'>{{$ad->images()->first()->getUrl(400,400)}}</x-slot>
                         @else
                         <x-slot name='image'>{{'https://picsum.photos/700/600?a'}}</x-slot>    
                         @endif
