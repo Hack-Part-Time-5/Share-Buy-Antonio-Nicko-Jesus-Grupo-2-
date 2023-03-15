@@ -97,6 +97,10 @@ html{
 .placeholder_buscador{
     padding-left: 2em !important;
 }
+
+.placeholder_login {
+    padding-left: 1em !important;
+}
 /* searcher component */
 .buscador__show{
     background-color: rgba(219, 219, 219, 0.7);
@@ -157,6 +161,12 @@ html{
 }
 .icon__rrss--show{
     width: 1em;
+}
+.icon__rrss--footer{
+    width: 1.5em;
+}
+.icon__pago--footer{
+    width: 2em;
 }
 .container__protegemos--show{
     border: solid 2px var(--gray--color);
@@ -254,8 +264,9 @@ html{
     background-color: rgba(255, 255, 255, 0.7) !important;
 }
 .carrito_logo_modal{
-width: 3.5rem;
-margin-bottom: 0.7rem !important;
+width: 2.9rem;
+padding-right: 0.5rem !important;
+
 }
 .icon_like{
     width: 2em;

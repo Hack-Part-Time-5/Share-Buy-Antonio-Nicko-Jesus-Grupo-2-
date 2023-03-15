@@ -10,7 +10,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="lupa_buscador_icono bi bi-search" viewBox="0 0 16 16">
                             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
                           </svg>              
-                        <button type="button" class="navbar-register_button text-white px-4">{{__('Buscar')}}</button>                        
+                        <button type="button" class="navbar-register_button text-white px-4 py-2">{{__('Buscar')}}</button>                        
                     </div>                                                            
                 </div>  
                 <div class="mx-3">
@@ -28,7 +28,7 @@
                 </div>                                 
             </div>
             <div class="linea--banner mb-5 py-2 d-flex justify-content-center align-items-center">
-                <img src="\img\icons\info_icon.svg" alt="info" class="info_icon_home"><h6 class="m-0">{{__('Para tu tranquilidad Devolución gratuita en todos nuestros productos')}}</h6>
+                <img src="\img\icons\info_icon.svg" alt="info" class="info_icon_home"><h6 class="m-0">{{__('Para tu tranquilidad')}} <strong>{{__('Devolución gratuita')}}</strong></h6>
             </div>
         </div>
     </section>
@@ -127,13 +127,13 @@
                 @endforelse
             </div>                    
             <div class="d-flex justify-content-center">
-                <button class="navbar-register_button text-white px-3 mb-5">{{__('Ver más')}}</button>
+                <button class="navbar-register_button text-white px-3 py-2 mb-5">{{__('Ver más')}}</button>
             </div>
         </section>
         <section class="banner_secundario">
             <div class="pt-5 px-4 d-flex flex-column align-items-start">                
                     <h2 class="text-white">{{__('Encuentra los mejores artículos y')}} <br> {{__('si no los encuentras, véndelos tú')}}</h2>
-                    <button class="mt-5 navbar-register_button text-white px-3 mb-5"><a class="nav-link active mx-3 text-white  navbar-register__a" aria-current="page" href="{{route('login')}}">{{__('Regístrate')}}</a></button>
+                    <button class="mt-5 navbar-register_button text-white px-3 py-2 mb-5"><a class="nav-link active mx-3 text-white  navbar-register__a" aria-current="page" href="{{route('login')}}">{{__('Regístrate')}}</a></button>
                 
             </div>
         </section>
