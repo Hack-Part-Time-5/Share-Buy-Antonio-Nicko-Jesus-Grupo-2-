@@ -96,7 +96,7 @@ class CreateAd extends Component
         $this->body = "";
         $this->category = "";
         $this->price = "";
-        $this->images = "";
+        $this->images = [];
     }
     public function render()
     {

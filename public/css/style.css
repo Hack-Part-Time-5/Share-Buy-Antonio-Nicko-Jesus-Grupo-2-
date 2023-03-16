@@ -316,7 +316,31 @@ padding-right: 0.5rem !important;
     height: 2rem;
     padding: 2.5rem;
 }
+.boton_imagenes{
+    border-style: dotted !important;
+    border-width: 3px;
+    border-radius: 5px;
+    border-color: #FF385C;
+    background-color: #ff385d1e;
+    width: 134px;
+    height: 145px;
+}
+.boton_imagenes_empty{
+    border-style: dotted !important;
+    border-width: 3px;
+    border-radius: 5px;
+    border-color: #d5d2ca;
+    background-color: #f3f8f8;
+    width: 134px;
+    height: 145px; 
+}
+.aviso_imagenes{
+    background-color: #f6b5c7;
+}
+.info_icon_img{
+    width:  55px !important;
 
+}
 /* MODAL */
 .my-modal{
     position: sticky !important;
