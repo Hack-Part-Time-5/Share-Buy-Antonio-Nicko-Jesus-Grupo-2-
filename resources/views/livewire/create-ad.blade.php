@@ -6,15 +6,15 @@
     @endif
     <form wire:submit.prevent="store">
         @csrf
-        <div class="container d-flex justify-content-center m-auto">
-            <div class="row justify-content-center m-2 p-2">
-                <div class="card  m-2 p-2">
-                    <div class="mb-4">
+        <div class="container d-flex justify-content-center m-auto ">
+            <div class="row justify-content-center m-2">
+                <div class="card  m-2 p-2   ">
+                    <div class="mb-4 mx-1 ">
                         <h5><strong>Información del producto</strong></h5>
                     </div>
                     <div class="form-group mb-3">
-                        <label for="category" class="form-label"><strong>Categoría</strong></label>
-                        <select wire:model.defer="category" id="category" class="form-control">
+                        <label for="category" class="form-label mb-2"><strong>Categoría</strong></label>
+                        <select wire:model.defer="category" id="category" class="form-control placeholder_categoria">
                             <option value="">Escoge una categoría</option>
                             @foreach($categories as $category )
                                 <option value="{{ $category->id }}">{{ $category->name }}</option>
@@ -31,7 +31,7 @@
                     </select>
                 </div> --}}
                 <div class="mb-3">
-                    <label for="price" class="form-label"><strong>Precio</strong></label>
+                    <label for="price" class="form-label mb-2"><strong>Precio</strong></label>
                     <input wire:model="price" type="number" class="form-control @error('price') is-invalid @enderror">
                     @error('price')
                         {{ $message }}
@@ -47,7 +47,7 @@
             </select>
           </div> --}}
                 <div class="mb-3">
-                    <label for="title" class="form-label"><strong>¿Qué estás vendiendo?</strong></label>
+                    <label for="title" class="form-label mb-2"><strong>¿Qué estás vendiendo?</strong></label>
                     <input wire:model="title" type="text" class="form-control @error('title') is-invalid @enderror">
                     @error('title')
                         {{ $message }}
@@ -55,8 +55,8 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="body" class="form-label"><strong>Descripción</strong></label>
-                    <textarea wire:model="body" cols="30" rows="15"
+                    <label for="body" class="form-label mb-2"><strong>Descripción</strong></label>
+                    <textarea wire:model="body" cols="20" rows="8"
                         class="form-control @error('body') is-invalid @enderror"></textarea>
                     @error('body')
                         {{ $message }}
@@ -64,14 +64,11 @@
                 </div>
             </div>
     </form>
-    <div class="card mt-4">
-        <div class="header">
-            <h5>Imágenes</h5>
+    <div class="card  m-2">
+        <div class="header mt-2 mb-4 mx-3">
+            <h5><strong> Imágenes</strong></h5>
         </div>
         <div class="mb-3">
-
-
-
             <div class="container-fluid">
                 {{-- <div class="row">
                     <div class="col">
@@ -92,7 +89,7 @@
                     </div>
                 </div> --}}
                 <input type="file" wire:model="temporary_images" name="images" multiple="true"
-                    class="form-control shadow @error('temporary_images.*') is-invalid @enderror">
+                    class="form-control p-4 border-0 input_boton  @error('temporary_images.*') is-invalid @enderror">
                 @error('temporary_images.*')
                     <p class="text-danger mt-2">{{ $message }}</p>
                 @enderror
@@ -100,13 +97,13 @@
             @if(!empty($images))
                 <div class="row">
                     <div class="col-12">
-                        <p>{{ __('Vista previa') }}</p>
-                        <div class="row">
+                        <p class="mx-2 my-2 justify-content-center"><i>{{ __('Vista previa') }}</i></p>
+                        <div class="row ">
                             @foreach($images as $key=>$image )
-                                <div class="col-12 col-md-4">
-                                    <img src="{{ $image->temporaryUrl() }}" alt="" class="img-fluid">
-                                    <button type="button" class="btn btn-danger"
-                                        wire:click="removeImage({{ $key }})">{{ __('Eliminar') }}</button>
+                                <div class="col-12 col-md-3 ">
+                                    <img src="{{ $image->temporaryUrl() }}" alt="" class="img-fluid grid_imagenes_subir ">
+                                    <button type="button" class="btn btn-danger mx-1 my-1 mt-2 p-1"
+                                        wire:click="removeImage({{ $key }})">🗑 {{ __('Eliminar') }}</button>
                                 </div>
                             @endforeach
                         </div>
@@ -114,13 +111,13 @@
                 </div>
             @endif
         </div>
-        <div class="container-fluid aviso_imagenes p-3 m-2">
+        <div class="container-fluid aviso_imagenes py-3 mt-4">
             <div class="row d-flex align-items-center ">
                 <div class="col-2 ">
                     <img class="info_icon_img" src="\img\icons\info_icon.svg" alt="">
                 </div>
                 <div class="col-10">
-                    <p>4 imágenes obligatorias. Máximo 10MB</p>
+                    <p>3 imágenes obligatorias. Máximo 10MB</p>
                     <p>Sólo se permites fotografías en formato .jpg</p>
                     <p>No se permite fotografías con caras</p>
                 </div>
@@ -128,7 +125,7 @@
         </div>
     </div>
     <div class="d-flex justify-content">
-        <button type="submit" class="navbar-register_button text-white px-3 py-2 mt-5 mb-5">Subir producto</button>
+        <button type="submit" class="navbar-register_button text-white px-3 py-2 mt-4 mb-3">Subir producto</button>
     </div>
 </div>
 </div>

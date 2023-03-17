@@ -338,9 +338,26 @@ padding-right: 0.5rem !important;
     background-color: #f6b5c7;
 }
 .info_icon_img{
-    width:  55px !important;
-
+    width:  45px !important;
+    display:block;
+margin:auto  !important;
 }
+.grid_imagenes_subir{
+    height: 250px !important;
+
+    width: 250px !important;
+    
+    object-fit:cover !important;
+}
+
+.input_boton{
+    border-radius: 25px !important;
+    color: #FF385C !important;
+}
+.placeholder_categoria{
+    color: #696768 !important;
+}
+
 /* MODAL */
 .my-modal{
     position: sticky !important;
