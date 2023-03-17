@@ -1,4 +1,4 @@
-<div class="position-relative p-2" style="width: 18rem;">        
+<div class="position-relative p-2 cards_home_anuncios" style="width: 18rem;">        
     <a class="a_cards" href="{{$show ?? ''}}">
         <div class="position-relative container__img--card2">                                                
             <img src="{{$img ?? 'https://picsum.photos/700/600?a'}}" class="card-img-top img__card" alt="...">

@@ -93,7 +93,7 @@
         </section> --}}
         <section class="ads2 d-flex flex-column justify-content-center">
             <h2 class="mx-5">{{__('Subidos recientemente')}}</h2>
-            <div class="row mt-5 cards_home_anuncios m-auto">        
+            <div class="row mt-5 m-auto">        
                 @forelse ($ads as $ad)
                 <div class="position-relative d-flex justify-content-center col-12 col-md-6 col-xl-3 justify-content-center">
                     {{-- <div class="fondo_icon icono_fav_card">
@@ -139,7 +139,7 @@
         </section>
         <section class="blogs">
             <h2 class="mx-5 mt-5">{{__('Últimos artículos')}}</h2>
-            <div class="row cards_home_anuncios mt-4  ">
+            <div class="row mt-4  ">
                 <div class="d-flex justify-content-center col-12 col-md-6 col-xl-3 m-auto">
                     <x-card_blog2>
                         <x-slot name='title'>Blog 1</x-slot>
