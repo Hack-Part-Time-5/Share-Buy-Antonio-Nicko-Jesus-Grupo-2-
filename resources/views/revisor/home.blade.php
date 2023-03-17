@@ -1,110 +1,114 @@
 <x-layout>
-	<x-slot name='title'> Share and Buy - Revisor Home </x-slot>
+	<x-slot name='title'>Sube tu producto</x-slot>
+    <div class="container d-flex flex-column align-items-center m-auto my-3">
+        <h1>{{$user ?? ''}}  Anuncios por revisar</h1>
+
+    </div>
+	<x-slot name='title'> Share&Buy-Revisor Home </x-slot>
     @if ($ad)
-	<div class='container my-5 py-5'>
-		<div class='row'>
-			<div class='col-12 col-md-8 offset-md-2'>
-				<div class="card">
-					<div class="card-header">
-						Anuncio #{{$ad->id}}
-					</div>
+	<div class="container d-flex justify-content-center m-auto ">
+		<div class='row justify-content-center'>
+			<div class='col-12 col-md-8'>
+				<div class="card m-2 p-2 ">
 					<div class="card-body">
-						<div class="row">
-							<div class="col-md-3">
-								<b>{{__('Imagenes')}}</b>
+						<div class="row ">
+							<div class="col-md-9">
+								<p class=""> <strong>Id <font color="#FF385C">#{{$ad->id}}</strong></font></p>
+							</div>
+							<div class="header mt-4 mb-4">
+								<h5><strong> Imágenes</strong></h5>
 							</div>
 							<div class="col-9">
 								<div class="row">
 									@forelse ($ad->images as $image)
 										<div class="col-md-4">
-											<img src="{{$image->getUrl(500,500)}}" alt="..." class="img-fluid">
+											<img src="{{$image->getUrl(500,500)}}" alt="..." class="img-fluid grid_imagenes_subir">
 										</div>
 									@empty
 										<div class="col-12">
-											<b>{{__('No hay imagenes')}}</b>
+											<b>{{__('No hay imágenes')}}</b>
 										</div>
 									@endforelse	
 								</div>
 							</div>
-						</div>
-						<hr>
-						<div class="row">
-							<div class="col-md-3">
-								<b>Usuario</b>
+						</div>	
+						<div class=" row">
+							<div class="header mt-4 mb-1 ">
+									<h5><strong> Usuario</strong></h5>
 							</div>
 							<div class="col-md-9">
-								#{{$ad->user->id}} - {{$ad->user->name}} - {{$ad->user->email}}
+								Id <strong><font color="#FF385C">#{{$ad->user->id}}</strong></font> - {{$ad->user->name}} -<u> {{$ad->user->email}}</u>
 							</div>
 						</div>
 					</div>
-					<hr>
-					<div class="row">
-						<div class="col-md-3">
-							<b>Título</b>
+					<div class=" row">
+						<div class="header mt-4 mb-1 ">
+								<h5><strong>Título</strong></h5>
 						</div>
 						<div class="col-md-9">
 							{{$ad->title}}
 						</div>
 					</div>
-					<hr>
+					
 					<div class="row">
-						<div class="col-md-3">
-							<b>Precio</b>
+						<div class="header mt-4 mb-1 ">
+							<h5><strong>Precio</strong></h5>
 						</div>
 						<div class="col-md-9">
-							{{$ad->price}}
+							{{$ad->price}}€
 						</div>
 					</div>
-					<hr>
-					<div class="row">
-						<div class="col-md-3">
-							<b>Descripción</b>
-						</div>
-						<div class="col-md-9">
-							{{$ad->body}}
-						</div>
-					</div>
-					<hr>
-					<div class="row">
-						<div class="col-md-3">
-							<b>Categoría</b>
+						<div class="row">
+						<div class="header mt-4 mb-1">
+							<h5><strong>Categoría</strong></h5>
 						</div>
 						<div class="col-md-9">
 							{{$ad->category->name}}
 						</div>
 					</div>
-					<hr>
 					<div class="row">
-						<div class="col-md-3">
-							<b>Fecha de creación</b>
+						<div class="header mt-4 mb-1 ">
+							<h5><strong>Descripción</strong></h5>
 						</div>
 						<div class="col-md-9">
-							{{$ad->created_at}}
+							{{$ad->body}}
 						</div>
 					</div>
+					<div class="row">
+						<div class="header mt-4 mb-1">
+							<h5><strong>Fecha de creación</strong></h5>
+						</div>
+						<div class="col-md-9">
+							<i>{{$ad->created_at->format('d/m/Y')}}</i>
+						</div>
+					</div>
+				
 				</div>
+				
 			</div>
-			<div class="row my-3">
-				<div class="col-6">
-					<form action="{{route('revisor.ad.reject',$ad)}}" method="POST">
-						@csrf
-						@method('PATCH')
-						<button type="submit" class="btn btn-danger">Rechazar</button>
-					</form>
-				</div>
-				<div class="col-6 text-end">
-					<form action="{{route('revisor.ad.accept',$ad)}}" method="POST">
-					
-						@csrf
-						@method('PATCH')
-						<button type="submit" class="btn btn-success">Aceptar</button>
-					</form>
-				</div>
+			
+			<div class="container_botones d-flex mt-3">
+				
+				<form action="{{route('revisor.ad.accept',$ad)}}" method="POST">
+					@csrf
+					@method('PATCH')
+					<button type="submit" class="btn btn_aceptar btn-success">Aceptar</button>
+				</form>
+				<form action="{{route('revisor.ad.reject',$ad)}}" method="POST">
+					@csrf
+					@method('PATCH')
+					<button type="submit" class="btn btn_rechazar btn-danger">Rechazar</button>
+				</form>
 			</div>
+			
+		</div>
 		</div>
 	</div>
-</div>
 @else
-	<h3 class="text-center">{{__('No hay más anuncios para revisar, vuelve más tarde, gracias 😊')}} </h3>
+	<h3 class="text-center">{{__('No hay más anuncios, vuelve más tarde, gracias 😊')}} </h3>
 @endif
+</div>
+</div>
 </x-layout>
+
+

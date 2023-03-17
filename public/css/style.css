@@ -53,8 +53,33 @@ html{
     background-color: var(--main-color);
     border-radius: 2em !important; 
     border: 2px solid var(--main-color) !important;
+    font-weight:bold !important;
  
 }
+.navbar-register_button:hover {
+    color: var(--main-color) !important;
+    background-color: #ffffffc6;
+    font-weight:bold !important;
+}
+.navbar-login_button{
+    border: 2px solid var(--main-color) !important;
+    border-radius: 20em !important; 
+    border: 2px solid var(--main-color) !important;
+    background-color: #fff;
+    font-weight:bold !important;
+    color: var(--main-color) !important;
+}
+ 
+.navbar-login_button:hover {
+    
+    background-color: var(--main-color);
+    color:white !important;
+    border-radius: 2em !important; 
+    border: 2px solid var(--main-color) !important;
+    font-weight:bold;
+}
+
+
 .navbar-upload{
     border: 2px solid var(--main-color) !important;
     border-radius: 20em !important; 
@@ -161,6 +186,12 @@ html{
     background-color: var(--main-color) !important;
     color: white !important;
 }
+
+.btn__comprar:hover {
+    color: #141415 !important;
+    background-color: #fff;
+    font-weight:bold;
+}
 .cantidad__productos{
     font-size: 0.7em;
 }
@@ -177,7 +208,7 @@ html{
     width: 2em;
 }
 .container__protegemos--show{
-    border: solid 2px var(--gray--color);
+    border: solid 1px var(--gray--color);
     border-radius: 2em;
 }
 .icon__escudo{
@@ -255,9 +286,15 @@ html{
 
 }
 
-/* .cards_home_anuncios{
-    max-width: 60%;
-} */
+.cards_home_anuncios{
+    transition: transform 1s;
+}
+
+.cards_home_anuncios:hover{
+    transition: transform 1s;
+    transform: scale(1.1, 1.1);
+}
+
 /* cards */
 .icono_fav_card{
     position: absolute;
@@ -309,6 +346,25 @@ padding-right: 0.5rem !important;
     border-radius: 35px;
     font-size: 24px;
     line-height: 1.33;
+}
+
+.btn_aceptar{
+    padding: 5px 10px !important;
+    border-radius: 5px !important;
+    font-size: 15px !important;
+   margin-right: 25px !important;
+}
+.btn_rechazar{
+    padding: 5px 10px !important;
+    border-radius: 5px !important;
+    font-size: 15px !important;
+    
+}
+
+.container_botones {
+    display:flex !important;
+    justify-content: center !important;
+
 }
 
 .info_icon_home{

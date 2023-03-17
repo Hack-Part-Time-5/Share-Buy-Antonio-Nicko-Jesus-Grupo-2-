@@ -74,7 +74,7 @@
                     </div>
                     <div class="my-2 d-flex align-items-center">
                         <b><i class="bi bi-truck me-2"></i></b>
-                        <span class="entrega"><b>Entrega en 3-7 dias</b></span>
+                        <span class="entrega"><b>Entrega en 3-5 días</b></span>
                     </div>
                     <div class="container__compartelo d-flex align-items-center">
                         <p>Compartelo</p>
@@ -84,18 +84,18 @@
                     </div>
                     <div class="container__show--info my-2 d-flex justify-content-end"><a href="#" class="navbar-register_button btn px-3 btn__comprar">{{__('Comprar')}}</a></div>                    
                 </div>
-                <div class="container__protegemos--show col-12 col-md-6 px-4 py-2 mt-3">
+                <div class="container__protegemos--show col-12 col-md-6 px-4 py-3 mt-3">
                     <div class="d-flex">
-                        <i class="bi bi-shield-check me-1 icon__escudo"></i>
+                        <i class="bi bi-shield-check me-2 my-1 icon__escudo"></i>
                         <p><b>Protegemos tus compras</b></p><br>
                     </div>
-                    <div class="d-flex my-3">
+                    <div class="d-flex my-1">
                         <i class="bi me-1 bi-check2"></i>
-                        <p class="p__proteccion">Garantia de reembolso si el producto no es como se describe.</p>
+                        <p class="p__proteccion">Garantía de reembolso si el producto no es como se describe.</p>
                     </div>                    
                     <div class="d-flex">
                         <i class="bi me-1 bi-check2"></i>
-                        <p class="p__proteccion">El vendedor recibe el pago cuando confirmas que el envio ha ido bien.</p>
+                        <p class="p__proteccion">El vendedor recibe el pago cuando confirmas que el envío ha ido bien.</p>
                     </div>
                     
                 </div>

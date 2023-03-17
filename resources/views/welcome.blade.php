@@ -133,13 +133,13 @@
         <section class="banner_secundario">
             <div class="pt-5 px-4 d-flex flex-column align-items-start">                
                     <h2 class="text-white">{{__('Encuentra los mejores artículos y')}} <br> {{__('si no los encuentras, véndelos tú')}}</h2>
-                    <button class="mt-5 navbar-register_button text-white px-3 py-2 mb-5"><a class="nav-link active mx-3 text-white  navbar-register__a" aria-current="page" href="{{route('login')}}">{{__('Regístrate')}}</a></button>
+                    <button class="mt-5 navbar-register_button text-white px-3 py-2 mb-5"><a class="nav-link active mx-3 " aria-current="page" href="{{route('login')}}">{{__('Regístrate')}}</a></button>
                 
             </div>
         </section>
         <section class="blogs">
             <h2 class="mx-5 mt-5">{{__('Últimos artículos')}}</h2>
-            <div class="row cards_home_anuncios m-auto  ">
+            <div class="row cards_home_anuncios mt-4  ">
                 <div class="d-flex justify-content-center col-12 col-md-6 col-xl-3 m-auto">
                     <x-card_blog2>
                         <x-slot name='title'>Blog 1</x-slot>

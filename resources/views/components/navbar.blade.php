@@ -16,7 +16,7 @@
                 <a href="" class="">Favoritos</a>
             </div>
             <div class="navbar-nav mb-2 mb-lg-0 me-0 d-flex justify-content-end ">
-                <a href="" class="">Iniciar sesion</a>
+                <a href="" class="">Iniciar sesión</a>
             </div>
         </div>
     </div> 
@@ -215,13 +215,13 @@ aria-hidden="true">
                         <div class="d-flex  mt-3 flex-column justify-content-center align-items-center">
                             <p class="fs-5">Consigue los mejores precios y gana</p>
                             <p class="fs-5">dinero con lo que no usas.</p>
-                            <div class="mt-4 mb-3 d-flex justify-content-center">
-                                <button  class="text-center loginLinkModal nav-link active mx-3 navbar-register_button px-5 py-2 text-white  navbar-register__a"
+                            <div class="mt-5 mb-3 d-flex justify-content-center">
+                                <button  class="text-center loginLinkModal nav-link active mx-3 navbar-login_button px-5 py-2"
                                     aria-current="page" data-bs-toggle="modal" data-bs-target="#modal_login">Inicia
                                     Sesión</button>
                             </div>
                             <div class="mt-1 mb-4 d-flex justify-content-center">
-                                <button class="text-center loginLinkModal nav-link active mx-3 navbar-register_button px-5 py-2 text-white  navbar-register__a"
+                                <button class="text-center loginLinkModal nav-link active mx-3 navbar-register_button px-5 py-2 text-white"
                                     aria-current="page" data-bs-toggle="modal" data-bs-target="#modal_register">Crear Cuenta</button>
                             </div>
                             
@@ -239,20 +239,21 @@ aria-hidden="true">
             @if(Auth::user()->is_revisor)
                 <div class="my-2">
                     <a class="dropdown-item" href="{{ route('revisor.home') }}">
-                        {{ __('Revisor') }}<span class="badge ms-2 rounded-pill text-black">{{ \App\Models\Ad::TobeRevisionedCount() }}</span>
+                        {{ __('Anuncios por revisar') }}<span class="badge ms-2 rounded-pill text-danger">{{ \App\Models\Ad::TobeRevisionedCount() }}</span>
                     </a>
                 </div>
             @endif
+
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{{ route('ads.create') }}">Sube tu anuncio
+                    </a>
+            </li>
             <div class="my-2">
                 <form id="logoutForm" action="{{ route('logout') }}" method="POST">
                     @csrf
                 </form>
                 <a id="logoutBtn" class="dropdown-item" href="#">{{ __('Salir') }}</a>
             </div>
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{{ route('ads.create') }}">Create
-                    Ad</a>
-            </li>
             @endguest
         </div>
     </div>
