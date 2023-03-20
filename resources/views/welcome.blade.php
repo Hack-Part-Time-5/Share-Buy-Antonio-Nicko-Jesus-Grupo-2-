@@ -35,14 +35,15 @@
     <div class="container m-auto  d-lg-flex flex-column justify-content-center">        
         <section class="categories">
            
-            <div class="categorias flex-column d-none d-md-flex justify-content-center">            
-            <h2 class="mx-5 d-none d-sm-block">{{__('Descubre nuestras categorías')}}</h2>
-            <div class="categorias mt-5 d-none d-md-flex justify-content-center align-items-center flex-column">            
-                <div class="categorias-carrousel d-flex justify-content-center  mb-5 ">
+            <div class=" flex-column d-none d-md-flex justify-content-center">            
+            <h2 class="mx-1 d-none d-sm-block">{{__('Descubre nuestras categorías')}}</h2>
+            <div class="mt-5 d-none d-md-flex justify-content-center align-items-center flex-column">            
+                <div class="owl-carousel ">
                     @foreach ($categories as $category)
-                        <div class="d-flex flex-column justify-content-center align-items-center">                        
-                            <li class="category__list-item mx-3"><a href="{{route('category.ads', $category)}}" class="category-items d-flex justify-content-center flex-column"><img src="{{$category->img}}" class="categories_icons d-block text-center m-auto" alt=""><span class="text-center">{{__($category->name)}}</span></a></li>
-                        </div>                   
+                        <div class="d-flex flex-column ">                         
+                            <div><a href="{{route('category.ads', $category)}}" class="category-items d-flex  flex-column"><img src="{{$category->img}}" class="categories_icons m-auto" alt=""><span class="text-center m-auto">{{__($category->name)}}</span></a>
+                        </div> 
+                    </div>                  
                     @endforeach                
                 </div>            
             </div>
@@ -91,8 +92,8 @@
                 <button class="navbar-register_button text-white px-3 mb-5">Ver mas</button>
             </div>
         </section> --}}
-        <section class="ads2 d-flex flex-column justify-content-center">
-            <h2 class="mx-5">{{__('Subidos recientemente')}}</h2>
+        <section class="ads2 mt-5 d-flex flex-column justify-content-center">
+            <h2 class="mx-5 mt-5">{{__('Subidos recientemente')}}</h2>
             <div class="row mt-5 m-auto">        
                 @forelse ($ads as $ad)
                 <div class="position-relative d-flex justify-content-center col-12 col-md-6 col-xl-3 justify-content-center">

@@ -30,7 +30,7 @@ class ResizeImage implements ShouldQueue
     /**
      * Execute the job.
      */
-    public function handle()//: void
+    public function handle()
     {
         $w = $this->w;
         $h = $this->h;
