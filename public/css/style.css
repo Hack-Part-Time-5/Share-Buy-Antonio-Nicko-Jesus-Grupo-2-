@@ -13,9 +13,12 @@ body{
 }
 h1{
     font-weight: 700;
+    font-size: 35px !important;
 }
 h2{
     font-weight: bold !important;
+    font-size: 28px !important;
+    color: #253238 !important;
 }
 html{
     height: 100%;
@@ -90,6 +93,7 @@ html{
     color: var(--main-color) !important;
 }
 
+/* banner */
 .banner{
 
     background-image: url("/img/home_header_1.png");
@@ -103,14 +107,13 @@ html{
     left: 75vw;
     width: 280px !important;
 }
-/* .container__buscador{
-    max-height: 5px;
-} */
+
 .buscador_banner{
-    width: 25em !important;    
+    width: 30em !important;  
+    height: 2.5em;  
     border-radius: 20em !important;
     border: none;
-    padding: .20em 0.6em;
+    padding: .20em 0.6em ;
     background-color: rgba(255, 255, 255, 0.7);
 }
 /* .placeholder_buscador::placeholder{
@@ -128,12 +131,13 @@ html{
 }
 
 .placeholder_buscador{
-    padding-left: 2em !important;
+    padding-left: 3em !important;
 }
 
 .placeholder_login {
     padding-left: 1em !important;
 }
+
 /* searcher component */
 .buscador__show{
     background-color: rgba(219, 219, 219, 0.7);
@@ -157,6 +161,7 @@ html{
     border: none !important;
     color: black !important;
 }
+
 /* -------------------- */
 /* vista de show */
 .titulo__ad{
@@ -166,7 +171,11 @@ html{
 .container__show--info a{
     text-decoration: none !important;
     color: black;
+    font-size: 14px !important;
 }
+
+
+
 .precio{
     font-size: larger;
 }
@@ -241,6 +250,12 @@ html{
     height: 35px !important;
     
 } 
+.categories_icons:hover{
+   filter: invert(38%) sepia(25%) saturate(7486%) hue-rotate(328deg) brightness(101%) contrast(105%);
+/* filter: invert(100%); */
+    cursor: pointer;
+  }
+
 .owl-carousel{
     max-width: 1450px;
 }
@@ -276,10 +291,26 @@ html{
 .category-items{
     color: black;
     list-style: none;
-    text-decoration: none !important;
-
-    
+    text-decoration: none !important;   
 }
+.category-items:hover{
+    color: var(--main-color);
+    list-style: none;
+    text-decoration: none !important;   
+}
+
+/* .category-items_hover{
+    color: var(--main-color);
+    list-style: none;
+    text-decoration: none !important;   
+}
+
+.category-items_hover:hover{
+    color: var(--main-color);
+    list-style: none;
+    text-decoration: none !important;   
+} */
+
 .category__list-item{
     list-style: none;
     text-decoration: none !important;
@@ -313,6 +344,10 @@ html{
 }
 .category__icon--tag{
     width: 1.9em;
+}
+.category__icon--tag:hover{
+    width: 1.9em;
+    
 }
 
 /* banner secundario */

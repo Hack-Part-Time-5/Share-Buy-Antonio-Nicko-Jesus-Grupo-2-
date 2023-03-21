@@ -249,7 +249,7 @@ aria-hidden="true">
     @else                    
     <div class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-            aria-expanded="false"><strong>¡Hola {{ Auth::user()->name }}!</strong></a>
+            aria-expanded="false"><strong><font color="#253238">¡Hola {{ Auth::user()->name }}!</font></strong></a>
         <div class="dropdown-menu px-2" aria-labelledby="navbarDropdown">
             @if(Auth::user()->is_revisor)
                 <div class="my-2">
