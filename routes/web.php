@@ -19,7 +19,7 @@ use App\Http\Controllers\RevisorController;
 
 Route::get('/', [PublicController::class, 'index'])->name('home');
 
-Route::view('/avisolegal',  'avisolegal');
+// Route::get('/avisolegal', [PublicController::class,'avisolegal'])->name('avisolegal');
 
 
 Route::get('/ads/create', [AdController::class,'create'])->name('ads.create');

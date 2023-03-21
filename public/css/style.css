@@ -182,25 +182,34 @@ html{
     border-radius: 100%;
     background-color: #ff385c;
 }
+
 .btn__comprar{
     background-color: var(--main-color) !important;
-    color: white !important;
+    border-radius: 2em !important; 
+    border: 2px solid var(--main-color) !important;
+    font-weight:bold !important;
+ 
+}
+.btn__comprar:hover {
+    color: var(--main-color) !important;
+    background-color: #ffffffc6 !important;
+    font-weight:bold !important;
 }
 
-.btn__comprar:hover {
-    color: #141415 !important;
-    background-color: #fff;
-    font-weight:bold;
-}
+
+
+
 .cantidad__productos{
     font-size: 0.7em;
 }
 .entrega{
-    font-size: 0.8em;
+    font-size: 1em;
 }
+
 .icon__rrss--show{
-    width: 1em;
+    width: 1.5em;
 }
+
 .icon__rrss--footer{
     width: 1.5em;
 }
@@ -303,7 +312,7 @@ html{
     font-size: .8em !important;
 }
 .category__icon--tag{
-    width: 1.8em;
+    width: 1.9em;
 }
 
 /* banner secundario */

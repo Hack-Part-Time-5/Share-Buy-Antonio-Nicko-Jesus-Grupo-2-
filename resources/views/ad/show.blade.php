@@ -58,10 +58,10 @@
                     <div class="container__show--info my-2"><p class="titulo__ad">{{$ad->title}}</p></div>
                     <div class="container__show--info my-2"><strong class="precio">{{$ad->price}}€</strong></div>
                     <div class="container__show--info my-2">
-                        <a href="{{route('category.ads',$ad->category)}}" class="btn btn-primary category__tag rounded-pill px-3 py-1 mx-1"><img src="{{$ad->category->img}}" alt="" class="me-1 category__icon--tag">{{__($ad->category->name)}}</a>
+                        <a href="{{route('category.ads',$ad->category)}}" class="btn btn-primary category__tag rounded-pill px-2 py-1"><img src="{{$ad->category->img}}" alt="" class="me-1 category__icon--tag">{{__($ad->category->name)}}</a>
                     </div>
-                    <div class="container__show--info my-2"><p>{{$ad->body}}</p></div>
-                    <div class="container__show--info my-2"><span>{{__('Fecha de publicacion: ')}}</span><b>{{$ad->created_at->format('d/m/Y')}}</b></div>
+                    <div class="container__show--info my-2 mt-4"><p>{{$ad->body}}</p></div>
+                    {{-- <div class="container__show--info my-2 mt-4"><span>{{__('Fecha de publicación: ')}}</span><b>{{$ad->created_at->format('d/m/Y')}}</b></div> --}}
                     <div class="d-none  d-lg-flex container__show--info container__show--infoUser my-2">
                         <div class="mx-2"><div class="container__photo--user d-flex justify-content-center align-items-center text-white">
                             <span>Foto</span>
@@ -72,17 +72,17 @@
                         <span class="cantidad__productos text-muted">3 productos</span>
                     </div>                        
                     </div>
-                    <div class="my-2 d-flex align-items-center">
-                        <b><i class="bi bi-truck me-2"></i></b>
+                    <div class="my-2 d-flex align-items-center mt-4 mb-5">
+                        <b><i class=" bi bi-truck me-2"></i></b>
                         <span class="entrega"><b>Entrega en 3-5 días</b></span>
                     </div>
                     <div class="container__compartelo d-flex align-items-center">
-                        <p>Compartelo</p>
-                        <img src="/img/icons/icons_RRSS/fb_icon.svg" alt="Facebook icon" class="icon__rrss--show mx-1">
-                        <img src="/img/icons/icons_RRSS/instagram_icon.svg" alt="instagram icon" class="icon__rrss--show mx-1">
-                        <img src="/img/icons/icons_RRSS/youtube_icon.svg" alt="youtube icon" class="icon__rrss--show mx-1">
+                        <p class=" me-2">Compártelo</p>
+                        <a href="https://www.facebook.com/" target="_blank"><img src="/img/icons/icons_RRSS/Full_colour/fb.svg" alt="Facebook icon" class="icon__rrss--show mx-1"></a>
+                        <a href="https://twitter.com/" target="_blank"><img src="/img/icons/icons_RRSS/Full_colour/twitter.svg" alt="instagram icon" class="icon__rrss--show mx-1"></a>
+                        <a href="mailto:info@shareandbuy.com" target="_blank"><img src="/img/icons/icons_RRSS/Full_colour/mail.svg" alt="youtube icon" class="icon__rrss--show mx-1"></a>
                     </div>
-                    <div class="container__show--info my-2 d-flex justify-content-end"><a href="#" class="navbar-register_button btn px-3 btn__comprar">{{__('Comprar')}}</a></div>                    
+                    <div class="container__show--info my-2 d-flex justify-content-end"><a href="#" class="btn px-3 text-white btn__comprar">{{__('Comprar')}}</a></div>                    
                 </div>
                 <div class="container__protegemos--show col-12 col-md-6 px-4 py-3 mt-3">
                     <div class="d-flex">

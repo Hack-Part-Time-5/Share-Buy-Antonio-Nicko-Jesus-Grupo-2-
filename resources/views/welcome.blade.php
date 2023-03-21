@@ -35,9 +35,9 @@
     <div class="container m-auto  d-lg-flex flex-column justify-content-center">        
         <section class="categories">
            
-            <div class=" flex-column d-none d-md-flex justify-content-center">            
+            <div class=" flex-column d-flex justify-content-center">            
             <h2 class="mx-1 d-none d-sm-block">{{__('Descubre nuestras categorías')}}</h2>
-            <div class="mt-5 d-none d-md-flex justify-content-center align-items-center flex-column">            
+            <div class="mt-5 d-flex justify-content-center align-items-center flex-column">            
                 <div class="owl-carousel ">
                     @foreach ($categories as $category)
                         <div class="d-flex flex-column ">                         

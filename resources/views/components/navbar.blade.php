@@ -164,7 +164,7 @@ aria-hidden="true">
                 <div class="buttonExitModal m-2">
                     <button type="button" class="btn-close float-end" name="button" data-bs-dismiss="modal"></button>
                 </div>
-                <div class="modal-header">
+                <div class="modal-header d-flex justify-content-center">
                     <h5 class="m-3" id="modal_language_title">Selecciona tu idioma</h5>
                 </div>
                 <div class="modal-body justify-content-center d-flex m-3">
