@@ -13,3 +13,5 @@ tareas frontend:
 
 --crear la vista de lisrtado.
 --terminar el modal
+-crear un slider para las imagenes  de la vista show en mobile.
+-modificar la vista show en mobile.

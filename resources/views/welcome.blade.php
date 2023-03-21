@@ -5,17 +5,19 @@
             <div class="banner d-none d-lg-flex justify-content-center m-auto  align-items-center text-white">                                
                 <div class="d-flex flex-column flex-wrap">
                     <h1 class="text-center mb-3"> {{__('Compra y vende en un solo click')}}</h1>
-                    <div class="d-flex flex-wrap position-relative container__buscador">
-                        <input type="text" placeholder=" {{__('Empieza tu búsqueda')}}" class="buscador_banner placeholder_buscador mx-3">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="lupa_buscador_icono bi bi-search" viewBox="0 0 16 16">
+                    <div class="d-flex flex-wrap justify-content-center position-relative container__buscador">                        
+                        <form action="{{route('search')}}" method="GET" role="search">
+                            <input type="search" placeholder=" {{__('Empieza tu búsqueda')}}" class=" buscador_banner placeholder_buscador mx-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="lupa_buscador_icono bi bi-search" viewBox="0 0 16 16">
                             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
-                          </svg>              
-                        <button type="button" class="navbar-register_button text-white px-4 py-2">{{__('Buscar')}}</button>                        
+                            </svg>              
+                            <button type="submit" class="navbar-register_button text-white px-4 py-2">{{__('Buscar')}}</button>               
+                        </form>                                                         
                     </div>                                                            
                 </div>  
-                <div class="mx-3">
+                {{-- <div class="mx-3">
                     <img class="carrito_header d-none d-lg-block" src="/img/carrito_header.png" alt="imagen de carrito">
-                </div>                                  
+                </div> --}}                                  
             </div>
             {{-- codigo para responsive --}}
             <div class="row banner d-flex d-lg-none justify-content-center m-auto p-1  align-items-center text-white">                                
@@ -33,10 +35,9 @@
         </div>
     </section>
     <div class="container m-auto  d-lg-flex flex-column justify-content-center">        
-        <section class="categories">
-           
+        <section class="categories">           
             <div class=" flex-column d-flex justify-content-center">            
-            <h2 class="mx-1 d-none d-sm-block">{{__('Descubre nuestras categorías')}}</h2>
+            <h2 class="mx-1 d-block">{{__('Descubre nuestras categorías')}}</h2>
             <div class="mt-5 d-flex justify-content-center align-items-center flex-column">            
                 <div class="owl-carousel ">
                     @foreach ($categories as $category)
@@ -46,18 +47,7 @@
                     </div>                  
                     @endforeach                
                 </div>            
-            </div>
-            <div class="d-flex justify-content-center">
-                <li class="nav-item dropdown category__list-item mb-5 d-sm-none">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        {{__('Categorías')}}
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    @foreach ($categories as $category)
-                        <li><a href="{{route('category.ads', $category)}}" class="dropdown-item">{{__($category->name)}}</a></li>
-                    @endforeach
-                    </ul>
-                </li>                    
+            </div>                     
             </div>                    
         </section>
         {{-- <section class="ads">
@@ -93,7 +83,7 @@
             </div>
         </section> --}}
         <section class="ads2 mt-5 d-flex flex-column justify-content-center">
-            <h2 class="mx-5 mt-5">{{__('Subidos recientemente')}}</h2>
+            <h2 class=" mt-5">{{__('Subidos recientemente')}}</h2>
             <div class="row mt-5 m-auto">        
                 @forelse ($ads as $ad)
                 <div class="position-relative d-flex justify-content-center col-12 col-md-6 col-xl-3 justify-content-center">
@@ -134,7 +124,7 @@
         <section class="banner_secundario">
             <div class="pt-5 px-4 d-flex flex-column align-items-start">                
                     <h2 class="text-white">{{__('Encuentra los mejores artículos y')}} <br> {{__('si no los encuentras, véndelos tú')}}</h2>
-                    <button class="mt-5 navbar-register_button text-white px-3 py-2 mb-5"><a class="nav-link active mx-3 " aria-current="page" href="{{route('login')}}">{{__('Regístrate')}}</a></button>
+                    <button class="mt-5 navbar-register_button text-white px-3 py-2 mb-5"><a class="nav-link active mx-3 " aria-current="page" data-bs-toggle="modal" data-bs-target="#dialog1">{{__('Regístrate')}}</a></button>
                 
             </div>
         </section>

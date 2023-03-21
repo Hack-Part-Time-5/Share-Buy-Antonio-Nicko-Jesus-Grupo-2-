@@ -120,7 +120,7 @@ html{
     background-position:  0rem center ;   
 } */
 .lupa_buscador_icono{
-    left: 29px;
+    left: 60px;
     z-index: 1;
     position: absolute;
     top: 50%;
@@ -303,7 +303,7 @@ html{
 
 .a_category_name{
     text-decoration: none !important;
-    color: rgb(70, 70, 70);   
+    color: rgb(37, 37, 37);   
 }
 .category__tag{
     font-weight: 300 !important;
@@ -325,11 +325,11 @@ html{
 }
 
 .cards_home_anuncios{
-    transition: transform 1s;
+    transition: transform .5s ease;
 }
 
 .cards_home_anuncios:hover{
-    transition: transform 1s;
+    transition: transform .5s;
     transform: scale(1.1, 1.1);
 }
 
@@ -342,8 +342,8 @@ html{
     height: 2.5em;
     z-index: 1;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
     border-radius: 100%;
 }
 .fondo_icon{
@@ -356,6 +356,9 @@ padding-right: 0.5rem !important;
 }
 .icon_like{
     width: 2em;
+    position: absolute;
+    top: 8px;
+    left: 4.5px;
 }
 /* .img__card{
     
@@ -460,7 +463,7 @@ margin:auto  !important;
     margin: auto !important;
     transform: translate(0%, 10%) !important; 
     margin: auto;
-    width: 30% !important;
+    width: 40% !important;
     border-radius: 20em !important;
 }
 
@@ -486,9 +489,10 @@ padding-top: 5px !important;
     width: 100px;
 } */
 /* medias */
-@media  (min-with: 425px ) {
+@media  (max-width: 425px ) {
     .my-modal{
-        margin: 10%;
+        /* margin: 100% !important; */
+        width: 100% !important;
     }
     
 } 

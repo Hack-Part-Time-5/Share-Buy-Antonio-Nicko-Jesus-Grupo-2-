@@ -7,9 +7,10 @@ use App\Models\Image;
 use App\Models\Category;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-
+use Laravel\Scout\Searchable;
 class Ad extends Model
 {
+    use HasFactory, Searchable;
     protected $fillable = ['title', 'body', 'price'];
     use HasFactory;
 
@@ -34,5 +35,13 @@ class Ad extends Model
     public function images()
     {
         return $this->hasMany(Image::class);
+    }
+
+    public function toSearchableArray()
+    {
+        return [
+            'title'=>$this->title,
+            'body'=>$this->body,
+        ];
     }
 }

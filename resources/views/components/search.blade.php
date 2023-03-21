@@ -3,8 +3,11 @@
             <div class="d-flex justify-content-center searcher__container m-auto">
                 <div class=" container__form--show d-flex justify-content-center w-75 my-4 flex-wrap">
                     <div class="d-flex d-lg-none justify-content-center flex-wrap position-relative container__buscador">
-                        <input type="text" placeholder=" {{__('Empieza tu búsqueda')}}" class="buscador__show placeholder_buscador mx-3 mb-3 ">                    
-                        <button type="button" class="navbar-register_button text-white px-4">{{__('Buscar')}}</button>                        
+                        <form action="{{route('search')}}" method="GET" role="search" class="d-flex flex-column justify-content-center align-items-center">
+                            <input type="search" placeholder=" {{__('Empieza tu búsqueda')}}" class="buscador__show placeholder_buscador mx-3 mb-3 ">                    
+                            <button type="submit" class="navbar-register_button text-white px-4">{{__('Buscar')}}</button>                        
+                        </form>
+                        
                     </div>
                     <div class="justify-content-start w-100 d-none d-lg-flex flex-nowrap position-relative container__buscador">
                         <input type="text" placeholder=" {{__('Empieza tu búsqueda')}}" class="w-75 buscador__show buscador_banner placeholder_buscador mx-3">                    

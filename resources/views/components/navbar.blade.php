@@ -1,4 +1,4 @@
-<nav class="navbar   navbar-expand-lg mx-1 bg-body-tertiary d-flex p-2 px-sm-5">
+<nav class="navbar container m-auto navbar-expand-lg  bg-body-tertiary d-flex py-2 ">
     <div class="d-flex flex-nowrap container-fluid justify-content-between">
         <a class="navbar-brand letra_logo" href="{{ route('home') }}">
             <img  src="/img/icons/share&buy_logo.svg" alt="logo de share&buy">
@@ -20,6 +20,20 @@
             </div>
         </div>
     </div> 
+    <div class="container__buton--subir d-flex justify-content-end">
+        <div class="d-none d-lg-flex buttons w-100 align-items-center me-3 justify-content-end">
+            <div class="nav-item mx-1">
+                <a class="nav-link active" aria-current="page" data-bs-toggle="modal" data-bs-target="#dialog1"><img src="/img/icons/login_icon.svg" class="icon__nav" alt="Log in"></a>
+            </div>
+            <div class="nav-item mx-1">
+                <a class="nav-link active" aria-current="page"><img src="/img/icons/fav_icon .svg" class="icon__nav" alt="favoritos"></a>
+            </div>
+            <div class="nav-item mx-1">
+                <a class="nav-link active" aria-current="page" data-bs-toggle="modal"
+                    data-bs-target="#modal_language"><img src="/img/icons/language_icon.svg" class="icon__nav" alt="Language"></a>
+            </div>
+            
+        </div>
         
     {{-- Modal login --}}
     <div class=" modal fade p-2" id="modal_login" tabindex="-1" role="dialog" aria-labelledby="modal_language_title"
@@ -180,23 +194,24 @@ aria-hidden="true">
                 </div>
             </div>
         </div>
-    </div>
-    <div class="d-none d-lg-flex buttons w-100 align-items-center me-3 justify-content-end">
-        <div class="nav-item mx-1">
-            <a class="nav-link active" aria-current="page" data-bs-toggle="modal" data-bs-target="#dialog1"><img src="/img/icons/login_icon.svg" class="icon__nav" alt="Log in"></a>
-        </div>
-        <div class="nav-item mx-1">
-            <a class="nav-link active" aria-current="page"><img src="/img/icons/fav_icon .svg" class="icon__nav" alt="favoritos"></a>
-        </div>
-        <div class="nav-item mx-1">
-            <a class="nav-link active" aria-current="page" data-bs-toggle="modal"
-                data-bs-target="#modal_language"><img src="/img/icons/language_icon.svg" class="icon__nav" alt="Language"></a>
-        </div>
-    </div>
+    </div>    
     @guest
         @if(Route::has('register'))
-            <div class="container__buton--subir">
-                <button type="button" class="py-2 px-2 navbar-register_button text-white" data-bs-toggle="modal" data-bs-target="#dialog1"><span class="nav__register--button d-flex justify-content-center align-items-center">{{ __('+ Sube tu producto') }}</span></button>
+            <div class="container__buton--subir d-flex justify-content-end">
+                <div class="d-none d-lg-flex buttons w-100 align-items-center me-3 justify-content-end">
+                    <div class="nav-item mx-1">
+                        <a class="nav-link active" aria-current="page" data-bs-toggle="modal" data-bs-target="#dialog1"><img src="/img/icons/login_icon.svg" class="icon__nav" alt="Log in"></a>
+                    </div>
+                    <div class="nav-item mx-1">
+                        <a class="nav-link active" aria-current="page"><img src="/img/icons/fav_icon .svg" class="icon__nav" alt="favoritos"></a>
+                    </div>
+                    <div class="nav-item mx-1">
+                        <a class="nav-link active" aria-current="page" data-bs-toggle="modal"
+                            data-bs-target="#modal_language"><img src="/img/icons/language_icon.svg" class="icon__nav" alt="Language"></a>
+                    </div>
+                    <button type="button" class="ms-3 p-2 navbar-register_button text-white" data-bs-toggle="modal" data-bs-target="#dialog1"><span class="nav__register--button d-flex justify-content-center align-items-center">{{ __('+ Sube tu producto') }}</span></button>
+                </div>
+                
             </div>
             <div class="modal fade p-2" id="dialog1">
                 <div class="my-modal modal-dialog modal-lg ">
@@ -213,8 +228,8 @@ aria-hidden="true">
                             <h4 class="modal-title  text-center" id="exModalLabel"><strong>Compra y vende en Share&Buy</strong></h4>
                         </div>
                         <div class="d-flex  mt-3 flex-column justify-content-center align-items-center">
-                            <p class="fs-5">Consigue los mejores precios y gana</p>
-                            <p class="fs-5">dinero con lo que no usas.</p>
+                            <p class="fs-5 text-center">Consigue los mejores precios y gana dinero con lo que no usas.</p>
+                            
                             <div class="mt-5 mb-3 d-flex justify-content-center">
                                 <button  class="text-center loginLinkModal nav-link active mx-3 navbar-login_button px-5 py-2"
                                     aria-current="page" data-bs-toggle="modal" data-bs-target="#modal_login">Inicia
@@ -225,7 +240,7 @@ aria-hidden="true">
                                     aria-current="page" data-bs-toggle="modal" data-bs-target="#modal_register">Crear Cuenta</button>
                             </div>
                             
-    @endif
+        @endif
     @if(Route::has('login'))
         {{-- <li class="nav-item navbar-upload px-3">
                         <a class="nav-link active mx-3 navbar-upload__a" aria-current="page" href="#"></a>

@@ -7,6 +7,7 @@ use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Route;
 use Illuminate\Routing\Controller;
+use Laravel\Scout\Searchable;
 
 class PublicController extends Controller
 {
@@ -26,4 +27,20 @@ class PublicController extends Controller
       session()->put('locale', $locale);
       return redirect()->back();
     }
+    public function search(Request $request)
+    {
+      $q = $request->input('q');
+      $ads = Ad::search($q)
+        ->where('is_accepted', true)
+        ->get();
+      return view('search_results', compact('q', 'ads'));  
+      
+    }
 } 
+ 
+
+/*  public function search($q)
+    {
+      dd(Ad::search($q)->get());
+    }
+} */ 

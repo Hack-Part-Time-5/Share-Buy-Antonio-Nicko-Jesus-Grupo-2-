@@ -41,3 +41,7 @@ Route::get('/revisor/{user}/make', [RevisorController::class, 'makeRevisor'])->m
 // ruta para los idiomas
 
 Route::post('/locale/{locale}', [PublicController::class,'setLocale'])->name('locale.set');
+
+Route::get("/search",[PublicController::class, 'search'])->name('search');
+
+/* Route::get("/search"{q}, [PublicController::class, 'search'])->name('search'); */

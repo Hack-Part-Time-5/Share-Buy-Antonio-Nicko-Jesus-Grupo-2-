@@ -1,4 +1,4 @@
-<div class="position-relative p-2 cards_home_anuncios" style="width: 18rem;">
+<div class="m-auto position-relative p-2 cards_home_anuncios" style="width: 18rem;">
     <div class="fondo_icon icono_fav_card">
         <a href="#"><img src="/img/icons/fav_icon_grey.svg" alt="" class="icon_like"></a>
     </div>  
