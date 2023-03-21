@@ -80,6 +80,7 @@
                 <button class="navbar-register_button text-white px-3 mb-5">Ver mas</button>
             </div>
         </section> --}}
+        <a href="{{route('ads.index')}}">Todas las categorias</a>
         <section class="ads2 mt-5 d-flex flex-column justify-content-center">
             <h2 class=" mt-5">{{__('Subidos recientemente')}}</h2>
             <div class="row mt-5 m-auto">        
