@@ -11,6 +11,14 @@ class Image extends Model
 {
     use HasFactory;
     protected $fillable = ['path'];
+    protected $cast = [
+        'labels'=>'array'
+        
+    ];
+    public function getLabels()
+        {
+            return $this->labels? $this->labels: [];
+        }
 
     public function ads()
     {
