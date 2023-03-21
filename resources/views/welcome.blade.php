@@ -120,11 +120,20 @@
             </div>
         </section>
         <section class="banner_secundario">
+            
             <div class="pt-5 px-4 d-flex flex-column align-items-start">                
-                    <h2 class="text-white">{{__('Encuentra los mejores artículos y')}} <br> {{__('si no los encuentras, véndelos tú')}}</h2>
-                    <button class="mt-5 navbar-register_button text-white px-3 py-2 mb-5"><a class="nav-link active mx-3 " aria-current="page" data-bs-toggle="modal" data-bs-target="#dialog1">{{__('Regístrate')}}</a></button>
+                <h2 class="text-white">{{__('Encuentra los mejores artículos y')}} <br> {{__('si no los encuentras, véndelos tú')}}</h2>
+                @guest
+                    @if(Route::has('login'))
+                        <button class="mt-5 navbar-register_button text-white px-3 py-2 mb-5"><a class="nav-link active" aria-current="page" data-bs-toggle="modal" data-bs-target="#dialog1">{{__('Registrate')}}</a></button>                    
+                    @endif
+                    @else    
+                        <a href="{{route('ads.create')}}" class="log-subeTuProducto"><button type="button" class="ms-3 my-5 p-2 navbar-register_button log-subeTuProducto text-white"><span class="nav__register--button d-flex justify-content-center align-items-center ">{{ __('+ Sube tu producto') }}</span></button></a>       
+                @endguest
+                
                 
             </div>
+                        
         </section>
         <section class="blogs">
             <h2 class="mx-5 mt-5">{{__('Últimos artículos')}}</h2>

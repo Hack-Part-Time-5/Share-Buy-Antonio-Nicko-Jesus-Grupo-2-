@@ -3,7 +3,8 @@
 namespace App\Jobs;
 use App\Models\Image;
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldBeUnique;
+use Illuminate\Queue\SerializesModels;
+use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
@@ -15,18 +16,15 @@ class GoogleVisionLabelImage implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
     private $image_id;
-
-    /**
+    /
      * Create a new job instance.
-     * 
-     * @return void
      */
     public function __construct($image_id)
     {
         $this->image_id=$image_id;
     }
 
-    /**
+    /
      * Execute the job.
      */
     public function handle(): void

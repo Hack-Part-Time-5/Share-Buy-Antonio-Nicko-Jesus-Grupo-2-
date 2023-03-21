@@ -81,7 +81,13 @@ html{
     border: 2px solid var(--main-color) !important;
     font-weight:bold;
 }
-
+.log-subeTuProducto{
+    text-decoration: none !important;
+    color: white !important;
+}
+.log-subeTuProducto:hover{
+    color: var(--main-color) !important;
+}
 
 .navbar-upload{
     border: 2px solid var(--main-color) !important;
