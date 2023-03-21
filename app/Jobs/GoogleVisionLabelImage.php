@@ -4,6 +4,7 @@ namespace App\Jobs;
 
 use App\Models\Image;
 use Illuminate\Bus\Queueable;
+use GuzzleHttp\Promise\Create;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -18,17 +19,17 @@ class GoogleVisionLabelImage implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
     private $image_id;
-    /
-     * Create a new job instance.
-     */
+    
+        /* Create a new job instance. */
+    
     public function __construct($image_id)
     {
         $this->image_id = $image_id;
     }
 
-    /
-     * Execute the job.
-     */
+    
+        /* Execute the job. */
+    
     public function handle(): void
     {
     $i = Image::find($this->image_id);

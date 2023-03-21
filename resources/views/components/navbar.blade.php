@@ -20,21 +20,7 @@
             </div>
         </div>
     </div> 
-    <div class="container__buton--subir d-flex justify-content-end">
-        <div class="d-none d-lg-flex buttons w-100 align-items-center me-3 justify-content-end">
-            <div class="nav-item mx-1">
-                <a class="nav-link active" aria-current="page" data-bs-toggle="modal" data-bs-target="#dialog1"><img src="/img/icons/login_icon.svg" class="icon__nav" alt="Log in"></a>
-            </div>
-            <div class="nav-item mx-1">
-                <a class="nav-link active" aria-current="page"><img src="/img/icons/fav_icon .svg" class="icon__nav" alt="favoritos"></a>
-            </div>
-            <div class="nav-item mx-1">
-                <a class="nav-link active" aria-current="page" data-bs-toggle="modal"
-                    data-bs-target="#modal_language"><img src="/img/icons/language_icon.svg" class="icon__nav" alt="Language"></a>
-            </div>
-            
-        </div>
-        
+    <div class="container__buton--subir d-flex justify-content-end">                
     {{-- Modal login --}}
     <div class=" modal fade p-2" id="modal_login" tabindex="-1" role="dialog" aria-labelledby="modal_language_title"
         aria-hidden="true">
@@ -246,7 +232,17 @@ aria-hidden="true">
                         <a class="nav-link active mx-3 navbar-upload__a" aria-current="page" href="#"></a>
                     </li> --}}
     @endif
-    @else                    
+    @else    
+    <div class="d-none d-lg-flex buttons w-100 align-items-center me-3 justify-content-end">        
+        <div class="nav-item mx-1">
+            <a class="nav-link active" aria-current="page"><img src="/img/icons/fav_icon .svg" class="icon__nav" alt="favoritos"></a>
+        </div>
+        <div class="nav-item mx-1">
+            <a class="nav-link active" aria-current="page" data-bs-toggle="modal"
+                data-bs-target="#modal_language"><img src="/img/icons/language_icon.svg" class="icon__nav" alt="Language"></a>
+        </div> 
+        <a href="{{route('ads.create')}}" class="log-subeTuProducto"><button type="button" class="ms-3 p-2 navbar-register_button log-subeTuProducto text-white"><span class="nav__register--button d-flex justify-content-center align-items-center ">{{ __('+ Sube tu producto') }}</span></button></a>       
+    </div>                
     <div class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
             aria-expanded="false"><strong><font color="#253238">¡Hola {{ Auth::user()->name }}!</font></strong></a>
@@ -270,6 +266,8 @@ aria-hidden="true">
                 <a id="logoutBtn" class="dropdown-item" href="#">{{ __('Salir') }}</a>
             </div>
             @endguest
+            
         </div>
     </div>
+    
 </nav>
