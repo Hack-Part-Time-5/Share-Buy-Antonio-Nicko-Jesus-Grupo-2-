@@ -24,6 +24,22 @@
 										<div class="col-md-4">
 											<img src="{{$image->getUrl(500,500)}}" alt="..." class="img-fluid grid_imagenes_subir">
 										</div>
+										<div class="col-md-8">
+											Adult : <i class="bi bi-circle-fill {{ $image->adult }}"></i> [{{ $image->adult }}]
+											<br>
+											Spoof : <i class="bi bi-circle-fill {{ $image->spoof }}"></i> [{{ $image->spoof }}]
+											<br>
+											Medical : <i class="bi bi-circle-fill {{ $image->medical }}"></i> [{{ $image->medical }}]
+											<br>
+											Violence : <i class="bi bi-circle-fill {{ $image->violence }}"></i> [{{ $image->violence }}]
+											<br>
+											Racy : <i class="bi bi-circle-fill {{ $image->racy }}"></i> [{{ $image->racy }}]
+											<br>
+											
+											id: {{ $image->id }} <br>
+											path: {{ $image->path }} <br>
+											url: {{ Storage:: url($image->path) }} <br>
+										</div>
 									@empty
 										<div class="col-12">
 											<b>{{__('No hay imágenes')}}</b>

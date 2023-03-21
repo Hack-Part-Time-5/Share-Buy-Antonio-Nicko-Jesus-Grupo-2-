@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Jobs\ResizeImage;
+use App\Jobs\GoogleVisionSafeSearchImage;
 use App\Models\Ad;
 use Livewire\Component;
 use Livewire\WithFileUploads;
@@ -65,6 +66,7 @@ class CreateAd extends Component
                     'path' =>$image->store($newFileName, 'public')
                 ]);
                 dispatch(new ResizeImage($newImage->path, 500,500));
+                dispatch(new GoogleVisionSafeSearchImage($newImage->id));
             }
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
         }
