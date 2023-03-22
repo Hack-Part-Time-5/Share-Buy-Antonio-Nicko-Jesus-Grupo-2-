@@ -8,14 +8,14 @@ use App\Models\Category;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Laravel\Scout\Searchable;
-//use Maize\Markable\Markable;
-//use Maize\Markable\Models\Favorite;
+use Maize\Markable\Markable;
+use Maize\Markable\Models\Favorite;
 
 
 
 class Ad extends Model
 {
-    //use Markable;
+    use Markable;
     use HasFactory, Searchable;
 
                 

@@ -57,4 +57,13 @@ Route::get("/search", [PublicController::class, 'search'])->name('search');
 
 Route::get('list', [PublicController::class, 'list'])->name('list');
 
+
 Route::get('contact', [PublicController::class, 'contact'])->name('contact');
+
+
+
+Route::post('favorite-add/{id}', [PublicController::class, 'favoriteAdd'])->name('favorite.add');
+
+Route::delete('favorite-remove/{id}', [PublicController::class, 'favoriteRemove'])->name('favorite.remove');
+
+Route::get('wishlist', [PublicController::class, 'wishlist'])->name('wishlist');

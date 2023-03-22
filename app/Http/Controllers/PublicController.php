@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Routing\Route;
 use Laravel\Scout\Searchable;
 use Illuminate\Routing\Controller;
+use Maize\Markable\Models\Favorite;
 
 class PublicController extends Controller
 {
@@ -71,6 +72,37 @@ class PublicController extends Controller
     {
       $ads = $user->ads()->get();
       return view('ad.by-user', compact ('user', 'ads'));
+    }
+
+
+
+
+
+
+
+    public function wishlist()
+    {
+        $ads = Ad::whereHasFavorite(auth()->user())->get(); 
+        return view('wishlist',compact('ads'));
+    } 
+    public function favoriteAdd($id)
+    {
+        $ad = Ad::find($id);
+        $user = auth()->user();
+        Favorite::add($ad, $user);
+        session()->flash('success', 'Producto añadido a favoritos correctamente!');
+
+        return redirect()->route('wishlist');
+        
+    }
+    public function favoriteRemove($id)
+    {
+        $ad = Ad::find($id);
+        $user = auth()->user();
+        Favorite::remove($ad, $user);
+        session()->flash('success', 'Product is Remove to Favorite Successfully !');
+
+        return redirect()->route('wishlist');
     }
 } 
 

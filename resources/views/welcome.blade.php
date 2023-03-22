@@ -103,7 +103,8 @@
                         <x-slot name='category'>{{__($ad->category->name)}}</x-slot>
                         <x-slot name='categoryLink'>{{route('category.ads',$ad->category)}}</x-slot> 
                         <x-slot name='categoryName'>{{__($ad->category->name)}}</x-slot>                        
-                        <x-slot name='title'>{{$ad->title}}</x-slot>                        
+                        <x-slot name='title'>{{$ad->title}}</x-slot>  
+                        <x-slot name='favorite'>{{ route('favorite.add', $ad->id) }}</x-slot>                    
                         <x-slot name='price'>{{$ad->price}}€</x-slot>
                     </x-card_blog>       
                 </div>
