@@ -21,7 +21,24 @@ class PublicController extends Controller
       $ads = $category->ads()->where('is_accepted',true)->latest()->paginate(8);
       return view('ad.by-category', compact('category', 'ads'));
     }
+
+    public function avisolegal(){
+      return view ('avisolegal');
+    }
+
+    public function terminos(){
+      return view ('terminos');
+    }
+
+    public function politicaprivacidad(){
+      return view ('politicaprivacidad');
+    }
     
+    public function cookies(){
+      return view ('cookies');
+    }
+    
+
     public function setLocale($locale)
     {
       session()->put('locale', $locale);

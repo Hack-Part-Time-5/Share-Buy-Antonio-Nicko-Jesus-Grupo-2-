@@ -3,7 +3,7 @@
         <div class="row py-5 my-5 border-top">
             <div class="col mb-3 p-2 gx-5">
                 <img src="/img/icons/logo_footer.svg" alt="">
-                <p class="nav-item mb-2">©Copyright 2023</p>
+                <p class="nav-item mb-2">© Copyright 2023</p>
                 <div class="row">
                 <div class="col mt-2">
                     <h5 class="mb-2">Somos personas como tú</h5>
@@ -40,14 +40,14 @@
             <div class="col mb-2 mt-3 px-5">
                 <h5>Legal</h5>
                 <ul class="nav flex-column my-3">
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Aviso legal </a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Condiciones de uso</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Política de privacidad</a>
+                    <li class="nav-item mb-2"><a href="{{route('avisolegal')}}" class="nav-link p-0 text-muted">Aviso legal </a></li>
+                    <li class="nav-item mb-2"><a href="{{route('terminos')}}" class="nav-link p-0 text-muted">Condiciones de uso</a></li>
+                    <li class="nav-item mb-2"><a href="{{route('politicaprivacidad')}}" class="nav-link p-0 text-muted">Política de privacidad</a>
                     </li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Cookies</a></li>
+                    <li class="nav-item mb-2"><a href="{{route('cookies')}}" class="nav-link p-0 text-muted">Política de Cookies</a></li>
                 </ul>
                 <div>
-                    <h5>Nuestros métodos de pago</h5>
+                    <h5 class="mb-3">Nuestros métodos de pago</h5>
                     <div class="container__compartelo d-flex align-items-center">
                         <img src="\img\icons\iconos_pago\VISA_icon .svg" alt="" class="icon__pago--footer mx-1">
                         <img src="\img\icons\iconos_pago\mastercard_icon  .svg" alt="" class="icon__pago--footer mx-1">

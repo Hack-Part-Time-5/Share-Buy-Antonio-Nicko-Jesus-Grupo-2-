@@ -356,6 +356,13 @@ html{
     
 }
 
+.table_cookies td {
+   padding: 1em !important;
+border: 1px solid #e1dbdb !important;
+border-bottom-width: 2px !important; 
+}
+
+
 /* banner secundario */
 .banner_secundario{
     background-image: url(/img/banner_home2.png);
