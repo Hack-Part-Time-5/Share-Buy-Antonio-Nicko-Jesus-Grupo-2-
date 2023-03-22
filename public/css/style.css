@@ -145,12 +145,13 @@ html{
 }
 
 /* searcher component */
+
 .buscador__show{
-    background-color: rgba(219, 219, 219, 0.7);
-    border-radius: 20em !important;
+    background-color: rgba(219, 219, 219, 0.7) !important;
+    /* border-radius: 20em !important;
     border: none;
     padding: .20em 0.6em;
-    width: 100% !important;
+    width: 100% !important; */
     
 }
 
@@ -412,8 +413,16 @@ padding-right: 0.5rem !important;
 .icon_like{
     width: 2em;
     position: absolute;
-    top: 8px;
-    left: 4.5px;
+    top: -4.5px;
+    left: 0.5px;
+}
+.button_icon-like{
+    background: none;
+    border: none;
+}
+.like-boost{
+    font-size: x-large;
+    color: #555554;
 }
 /* .img__card{
     
