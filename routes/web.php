@@ -49,11 +49,11 @@ Route::get('/revisor/{user}/make', [RevisorController::class, 'makeRevisor'])->m
 
 Route::post('/locale/{locale}', [PublicController::class,'setLocale'])->name('locale.set');
 
-Route::get("/search",[PublicController::class, 'search'])->name('search');
+/* Route::get("/search",[PublicController::class, 'search'])->name('search'); */
 
 
 
-/* Route::get("/search"{q}, [PublicController::class, 'search'])->name('search'); */
+Route::get("/search", [PublicController::class, 'search'])->name('search'); 
 
 Route::get('list', [PublicController::class, 'list'])->name('list');
 

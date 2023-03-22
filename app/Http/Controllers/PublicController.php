@@ -51,9 +51,13 @@ class PublicController extends Controller
       $ads = Ad::search($q)
         ->where('is_accepted', true)
         ->get();
-      return view('search_results', compact('q', 'ads'));  
+      return view('ad.search_results', compact('q', 'ads'));  
       
-    }
+    } 
+    /* public function search($q)
+    {
+      dd(Ad::search($q)->get());
+    } */
     public function list()
     {
       $ads = Ad::where('is_accepted',true)->orderBy('created_at', 'desc')->get();
@@ -71,8 +75,5 @@ class PublicController extends Controller
 } 
 
 
-/*  public function search($q)
-    {
-      dd(Ad::search($q)->get());
-    }
-} */ 
+
+ 
