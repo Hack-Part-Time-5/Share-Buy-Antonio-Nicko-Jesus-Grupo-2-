@@ -29,6 +29,10 @@ Route::get('/ads/create', [AdController::class,'create'])->name('ads.create');
 
 Route::get('/category/{category:name}/ads', [PublicController::class, 'adsByCategory'])->name('category.ads');
 
+Route::get('/user/{user:name}/ads', [PublicController::class, 'adsByUser'])->name('user.ads');
+
+
+
 Route::get('/ads/{ad}', [AdController::class, 'show'])->name("ads.show");
 
 // ruta para la homepage del revisor

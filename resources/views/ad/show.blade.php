@@ -68,7 +68,7 @@
                         </div>
                     </div> --}}
                         <div>
-                            <span><strong><font color="#ff385c">Vendedor</font></strong> <br>{{$ad->user->name}}</span>
+                            <a href="{{route('user.ads', $ad->user)}}" class="text-decoration-none"><span><strong><font color="#ff385c">Vendedor</font></strong> <br>{{$ad->user->name}}</span></a>
                             <span class="cantidad__productos text-muted"><br>3 productos</span>
                         </div>                        
                     </div>

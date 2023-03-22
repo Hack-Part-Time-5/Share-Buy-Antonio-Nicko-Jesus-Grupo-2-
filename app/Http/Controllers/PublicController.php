@@ -3,11 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\Ad;
+use App\Models\User;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Route;
-use Illuminate\Routing\Controller;
 use Laravel\Scout\Searchable;
+use Illuminate\Routing\Controller;
 
 class PublicController extends Controller
 {
@@ -61,6 +62,11 @@ class PublicController extends Controller
     public function contact()
     {
       return view('contact');
+    }
+    public function adsByUser(User $user)
+    {
+      $ads = $user->ads()->get();
+      return view('ad.by-user', compact ('user', 'ads'));
     }
 } 
 
