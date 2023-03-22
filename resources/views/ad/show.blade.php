@@ -67,10 +67,10 @@
                             <span>Foto</span>
                         </div>
                     </div> --}}
-                    <div>
-                        <span><strong><font color="#ff385c">Vendedor</font></strong> <br>{{$ad->user->name}}</span>
-                        <span class="cantidad__productos text-muted"><br>3 productos</span>
-                    </div>                        
+                        <div>
+                            <span><strong><font color="#ff385c">Vendedor</font></strong> <br>{{$ad->user->name}}</span>
+                            <span class="cantidad__productos text-muted"><br>3 productos</span>
+                        </div>                        
                     </div>
                     <div class="my-2 d-flex align-items-center mt-4 mb-5">
                         <b><i class=" bi bi-truck me-2"></i></b>
@@ -78,16 +78,19 @@
                     </div>
                     
                     <div class="container d-flex align-items-center">
-                        <div class="row">
+                        <div class="row w-100">
                             <div class="col container__compartelo ">
-                        <p class=" me-2">Compártelo</p>
-                        <a href="https://www.facebook.com/" target="_blank"><img src="/img/icons/icons_RRSS/Full_colour/fb.svg" alt="Facebook icon" class="icon__rrss--show mx-1"></a>
-                        <a href="https://twitter.com/" target="_blank"><img src="/img/icons/icons_RRSS/Full_colour/twitter.svg" alt="instagram icon" class="icon__rrss--show mx-1"></a>
-                        <a href="mailto:info@shareandbuy.com" target="_blank"><img src="/img/icons/icons_RRSS/Full_colour/mail.svg" alt="youtube icon" class="icon__rrss--show mx-1"></a>
+                                <p class=" me-2">Compártelo</p>
+                                <a href="https://www.facebook.com/" target="_blank"><img src="/img/icons/icons_RRSS/Full_colour/fb.svg" alt="Facebook icon" class="icon__rrss--show mx-1"></a>
+                                <a href="https://twitter.com/" target="_blank"><img src="/img/icons/icons_RRSS/Full_colour/twitter.svg" alt="instagram icon" class="icon__rrss--show mx-1"></a>
+                                <a href="mailto:info@shareandbuy.com" target="_blank"><img src="/img/icons/icons_RRSS/Full_colour/mail.svg" alt="youtube icon" class="icon__rrss--show mx-1"></a>
+                            </div>
+                            <div class="col justify-content-end pe-4">
+                                <div class="container__show--info my-2 d-flex justify-content-end">
+                                    <a href="#" class="btn px-4 py-1 text-white btn__comprar">{{__('Comprar')}}</a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col justify-content-end ">
-                        <div class="container__show--info my-2 d-flex justify-content-end"><a href="#" class="btn px-4 py-1 text-white btn__comprar">{{__('Comprar')}}</a></div>
-                    </div></div>
                     </div>
                                         
                 </div>

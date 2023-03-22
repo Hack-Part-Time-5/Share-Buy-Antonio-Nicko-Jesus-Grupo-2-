@@ -52,3 +52,5 @@ Route::get("/search",[PublicController::class, 'search'])->name('search');
 /* Route::get("/search"{q}, [PublicController::class, 'search'])->name('search'); */
 
 Route::get('list', [PublicController::class, 'list'])->name('list');
+
+Route::get('contact', [PublicController::class, 'contact'])->name('contact');
