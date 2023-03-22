@@ -23,6 +23,7 @@ class RevisorController extends Controller
         $ad = Ad::where('is_accepted',null)
 		->orderBy('created_at','desc')
 		->first();
+		//dd($ad->images[0]->labels);
 		return view('revisor.home',compact('ad'));
     }
 
