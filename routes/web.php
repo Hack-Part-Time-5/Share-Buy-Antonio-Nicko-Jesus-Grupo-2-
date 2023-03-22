@@ -48,4 +48,4 @@ Route::get("/search",[PublicController::class, 'search'])->name('search');
 
 /* Route::get("/search"{q}, [PublicController::class, 'search'])->name('search'); */
 
-Route::get ('/ads', [PublicController::class, 'index'])->name('ads.index');
+Route::get('list', [PublicController::class, 'list'])->name('list');

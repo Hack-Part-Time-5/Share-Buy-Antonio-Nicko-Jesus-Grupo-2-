@@ -79,9 +79,10 @@
             <div class="d-flex justify-content-center">
                 <button class="navbar-register_button text-white px-3 mb-5">Ver mas</button>
             </div>
-        </section> --}}        
-        <section class="ads2 mt-3 d-flex flex-column justify-content-center">
-            <h2 class=" mt-5">{{__('Subidos recientemente')}}</h2>
+        </section> --}}
+        
+        <section class="ads2 mt-5 d-flex flex-column justify-content-center">
+            <h2 class=" mt-3">{{__('Todos los anuncios')}}</h2>
             <div class="row mt-5 m-auto">        
                 @forelse ($ads as $ad)
                 <div class="position-relative d-flex justify-content-center col-12 col-md-6 col-xl-3 justify-content-center">
@@ -116,7 +117,7 @@
                 @endforelse
             </div>                    
             <div class="d-flex justify-content-center">
-                <a href="{{route('list')}}"><button class="navbar-register_button text-white px-3 py-2 mb-5">{{__('Ver más')}}</button></a>
+                <a href="{{route('home')}}"><button class="navbar-register_button text-white px-3 py-2 mb-5">{{__('Volver')}}</button></a>
             </div>
         </section>
         <section class="banner_secundario">
@@ -129,11 +130,13 @@
                     @endif
                     @else    
                         <a href="{{route('ads.create')}}" class="log-subeTuProducto"><button type="button" class="ms-3 my-5 p-2 navbar-register_button log-subeTuProducto text-white"><span class="nav__register--button d-flex justify-content-center align-items-center ">{{ __('+ Sube tu producto') }}</span></button></a>       
-                @endguest                                
+                @endguest
+                
+                
             </div>
                         
         </section>
-        <section class="blogs">
+        {{-- <section class="blogs">
             <h2 class="mx-5 mt-5">{{__('Últimos artículos')}}</h2>
             <div class="row mt-4  ">
                 <div class="d-flex justify-content-center col-12 col-md-6 col-xl-3 m-auto">
@@ -161,6 +164,6 @@
                     </x-card_blog>                
                 </div>            
             </div>    
-        </section>         
+        </section> --}}         
     </div>
 </x-layout>
