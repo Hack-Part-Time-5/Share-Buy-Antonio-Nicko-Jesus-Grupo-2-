@@ -14,7 +14,7 @@
                         <button type="button" class="ms-3 navbar-register_button text-white px-4">{{__('Buscar')}}</button>                        
                     </div>      
                 </div>        
-                <div class=" container__buttons--show d-none d-lg-flex justify-content-center  my-4">
+                <div class="container__buttons--show d-none d-lg-flex justify-content-center  my-4">
                     <div class="dropdown mx-3 {{-- d-none --}} d-xl-block">
                         <button class="btn btn-secondary dropdown__button--filtros dropdown-toggle px-3 rounded-pill" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Filtros

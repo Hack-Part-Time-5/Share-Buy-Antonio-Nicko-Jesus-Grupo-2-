@@ -195,7 +195,7 @@ aria-hidden="true">
                         <a class="nav-link active" aria-current="page" data-bs-toggle="modal"
                             data-bs-target="#modal_language"><img src="/img/icons/language_icon.svg" class="icon__nav" alt="Language"></a>
                     </div>
-                    <button type="button" class="ms-3 p-2 navbar-register_button text-white" data-bs-toggle="modal" data-bs-target="#dialog1"><span class="nav__register--button d-flex justify-content-center align-items-center">{{ __('+ Sube tu producto') }}</span></button>
+                    <button  type="button" class="ms-3 p-2 navbar-register_button text-white" data-bs-toggle="modal" data-bs-target="#dialog1"><span class="nav__register--button d-flex justify-content-center align-items-center">{{ __('+ Sube tu producto') }}</span></button>
                 </div>
                 
             </div>
@@ -241,7 +241,7 @@ aria-hidden="true">
             <a class="nav-link active" aria-current="page" data-bs-toggle="modal"
                 data-bs-target="#modal_language"><img src="/img/icons/language_icon.svg" class="icon__nav" alt="Language"></a>
         </div> 
-        <a href="{{route('ads.create')}}" class="log-subeTuProducto"><button type="button" class="ms-3 p-2 navbar-register_button log-subeTuProducto text-white"><span class="nav__register--button d-flex justify-content-center align-items-center ">{{ __('+ Sube tu producto') }}</span></button></a>       
+        <a href="{{route('ads.create')}}" class="log-subeTuProducto"><button type="button" class="ms-3 p-2 navbar-register_button log-subeTuProducto text-white"><span class=" nav__register--button d-flex justify-content-center align-items-center ">{{ __('+ Sube tu producto') }}</span></button></a>       
     </div>                
     <div class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"

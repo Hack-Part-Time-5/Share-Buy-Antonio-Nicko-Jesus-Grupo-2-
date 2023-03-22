@@ -1,53 +1,8 @@
 <x-layout>
     <x-slot name='title'>Share&Buy - ads</x-slot>
-    <section class="hero container-fluid">
-        <div class="d-flex flex-column row justify-content-center">
-            <div class="banner d-none d-lg-flex justify-content-center m-auto  align-items-center text-white">                                
-                <div class="d-flex flex-column flex-wrap">
-                    <h1 class="text-center mb-3"> {{__('Compra y vende en un solo click')}}</h1>
-                    <div class="d-flex flex-wrap justify-content-center position-relative container__buscador">                        
-                        <form action="{{route('search')}}" method="GET" role="search">
-                            <input type="search" placeholder=" {{__('Empieza tu búsqueda')}}" class=" buscador_banner placeholder_buscador mx-5">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FF385C" class="lupa_buscador_icono bi bi-search" viewBox="0 0 16 16">
-                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
-                            </svg>              
-                            <button type="submit" class="navbar-register_button text-white px-4 py-2">{{__('Buscar')}}</button>               
-                        </form>                                                         
-                    </div>                                                            
-                </div>  
-                                                
-            </div>
-            {{-- codigo para responsive --}}
-            <div class="row banner d-flex d-lg-none justify-content-center m-auto p-1  align-items-center text-white">                                
-                <div class="row d-flex flex-column flex-wrap">
-                    <h1 class="text-center mb-3"> {{__('Compra y vende en un solo click')}}</h1>
-                    <div class="d-flex justify-content-center flex-wrap position-relative">
-                        <input type="text" placeholder=" {{__('Empieza tu búsqueda')}}" class="buscador_banner placeholder_buscador ">                    
-                        <button type="button" class="navbar-register_button text-white">{{__('Buscar')}}</button>                        
-                    </div>                                                            
-                </div>                                 
-            </div>
-            <div class="linea--banner mb-5 py-2 d-flex justify-content-center align-items-center">
-                <img src="\img\icons\info_icon.svg" alt="info" class="info_icon_home"><h6 class="m-0">{{__('Para tu tranquilidad')}} <strong><font color="#253238">{{__('Devolución gratuita')}}</font></strong></h6>
-            </div>
-        </div>
-    </section>
+    
     <div class="container m-auto  d-lg-flex flex-column justify-content-center">        
-        <section class="categories">           
-            <div class=" flex-column d-flex justify-content-center">            
-            <h2 class="mx-1 d-block">{{__('Descubre nuestras categorías')}}</h2>
-            <div class="mt-5 d-flex justify-content-center align-items-center flex-column">            
-                <div class="owl-carousel">
-                    @foreach ($categories as $category)
-                        <div class="d-flex flex-column ">                         
-                            <div><a href="{{route('category.ads', $category)}}" class=" category-items d-flex  flex-column"><img src="{{$category->img}}" class="categories_icons m-auto" alt=""><span class="text-center m-auto pt-2">{{__($category->name)}}</span></a>
-                        </div> 
-                    </div>                  
-                    @endforeach                
-                </div>            
-            </div>                     
-            </div>                    
-        </section>
+        <x-search/>
         {{-- <section class="ads">
             <div class="row cards_home_anuncios m-auto">        
                 @forelse ($ads as $ad)
@@ -120,10 +75,11 @@
                 <a href="{{route('home')}}"><button class="navbar-register_button text-white px-3 py-2 mb-5">{{__('Volver')}}</button></a>
             </div>
         </section>
-        <section class="banner_secundario">
+        <section class="banner_secundarioList">
             
             <div class="pt-5 px-4 d-flex flex-column align-items-start">                
-                <h2 class="text-white">{{__('Encuentra los mejores artículos y')}} <br> {{__('si no los encuentras, véndelos tú')}}</h2>
+                <h2 class="text-white px-3">{{__('Encuentra los mejores artículos y')}}</h2> 
+                <h2 class="text-white mt-3 px-3">  {{__('si no los encuentras, véndelos tú')}}</h2>
                 @guest
                     @if(Route::has('login'))
                         <button class="mt-5 navbar-register_button text-white px-3 py-2 mb-5"><a class="nav-link active" aria-current="page" data-bs-toggle="modal" data-bs-target="#dialog1">{{__('Registrate')}}</a></button>                    
@@ -134,7 +90,7 @@
                 
                 
             </div>
-                        
+                
         </section>
         {{-- <section class="blogs">
             <h2 class="mx-5 mt-5">{{__('Últimos artículos')}}</h2>
@@ -164,6 +120,21 @@
                     </x-card_blog>                
                 </div>            
             </div>    
-        </section> --}}         
+        </section> --}}    
+        <section class="categories mt-5">           
+            <div class=" flex-column d-flex justify-content-center mt-5">            
+            <h2 class="mx-1 d-block">{{__('Descubre nuestras categorías')}}</h2>
+            <div class="mt-5 d-flex justify-content-center align-items-center flex-column">            
+                <div class="owl-carousel">
+                    @foreach ($categories as $category)
+                        <div class="d-flex flex-column ">                         
+                            <div><a href="{{route('category.ads', $category)}}" class=" category-items d-flex  flex-column"><img src="{{$category->img}}" class="categories_icons m-auto" alt=""><span class="text-center m-auto pt-2">{{__($category->name)}}</span></a>
+                        </div> 
+                    </div>                  
+                    @endforeach                
+                </div>            
+            </div>                     
+            </div>                    
+        </section>     
     </div>
 </x-layout>
