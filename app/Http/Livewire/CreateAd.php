@@ -89,7 +89,7 @@ class CreateAd extends Component
 
         Auth::user()->ads()->save($ad);
  */
-        session()->flash('message', 'Ad created successfully');
+        session()->flash('message', 'Anuncio creado correctamente');
 
         $this->cleanForm();
 
