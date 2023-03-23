@@ -1,11 +1,10 @@
 <div class="m-auto position-relative p-2 cards_home_anuncios" style="width: 18rem;">
     <div class="fondo_icon icono_fav_card">
-        {{-- <a href="{{$favorit ?? ''}}"><img src="/img/icons/fav_icon_grey.svg" alt="" class="icon_like"></a> --}}
-        <form action="{{$favorite ?? ''}}" method="POST"
-            enctype="multipart/form-data">
-            @csrf                                    
-            <button class="p-2 icon_like button_icon-like"><i class="bi bi-heart like-boost"></i></button>                                  
-        </form>        
+        {{-- <a href="{{$favorit ?? ''}}"><img src="/img/icons/fav_icon_grey.svg" alt="" class="icon_like"></a> --}}                    
+            <form action="{{$favorite ?? ''}}" method="POST" enctype="multipart/form-data">
+                    @csrf                                    
+                    <button class="p-2 icon_like button_icon-like"><i class="bi bi-heart like-boost"></i></button>                                  
+            </form>                                                       
     </div>  
     <span class="m-2 category_name text-white"><a href="{{$categoryLink ?? ''}}" class="a_category_name">{{$categoryName ?? ''}}</a></span>                      
     <a class="a_cards" href="{{$show ?? ''}}">

@@ -10,6 +10,7 @@ use Illuminate\Routing\Route;
 use Laravel\Scout\Searchable;
 use Illuminate\Routing\Controller;
 use Maize\Markable\Models\Favorite;
+use PhpParser\Node\Stmt\If_;
 
 class PublicController extends Controller
 {
@@ -87,12 +88,22 @@ class PublicController extends Controller
     } 
     public function favoriteAdd($id)
     {
+      if ($user = auth()->user()) {
         $ad = Ad::find($id);
         $user = auth()->user();
         Favorite::add($ad, $user);
         session()->flash('success', 'Producto añadido a favoritos correctamente!');
-
         return redirect()->route('wishlist');
+      }else {
+        return redirect()->route('login');
+      }
+      /* $ad = Ad::find($id);
+      $user = auth()->user();
+      Favorite::add($ad, $user);
+      session()->flash('success', 'Producto añadido a favoritos correctamente!');
+
+      return redirect()->route('wishlist');
+         */
         
     }
     public function favoriteRemove($id)
