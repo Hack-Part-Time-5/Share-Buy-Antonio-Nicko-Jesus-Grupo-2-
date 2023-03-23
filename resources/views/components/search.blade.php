@@ -28,7 +28,7 @@
                     </div>      
                 </div>        
                 <div class="container__buttons--show d-none d-lg-flex justify-content-center  my-4">
-                    <div class="dropdown mx-3 {{-- d-none --}} d-xl-block">
+                    {{-- <div class="dropdown mx-3 d-xl-block">
                         <button class="btn btn-secondary dropdown__button--filtros dropdown-toggle px-3 rounded-pill" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Filtros
                         </button>
@@ -37,18 +37,25 @@
                         <li><a class="dropdown-item" href="#">Another action</a></li>
                         <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>
-                    </div>
-                    <div class="dropdown mx-3 d-none d-lg-block">
+                    </div> --}}
+                    <div class=" mx-5 d-none d-lg-block">
+                        
                         <button class="btn btn-secondary dropdown__button--moda dropdown-toggle px-3 rounded-pill" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Moda
+                            Categorías
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
+                            @foreach ($categories as $category)
+                        <div class="d-flex flex-column ">                         
+                            <div><a href="{{route('category.ads', $category)}}" class=" category-items d-flex  flex-column"><img src="{{$category->img}}" class="categories_icons m-auto" alt=""><span class="text-center m-auto pt-2">{{__($category->name)}}</span></a>
+                        </div> 
+                    </div>                  
+                    @endforeach   
+                    
                     </div>
-                    <div class="dropdown mx-3 d-none d-lg-block">
+
+
+                    
+                    {{-- <div class="dropdown mx-3 d-none d-lg-block">
                         <button class="btn btn-secondary dropdown__button--filtros dropdown-toggle px-3 rounded-pill" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Precio
                         </button>
@@ -57,8 +64,8 @@
                             <li><a class="dropdown-item" href="#">Another action</a></li>
                             <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>
-                    </div>
-                    <div class="dropdown mx-3 d-none d-lg-block">
+                    </div> --}}
+                    {{-- <div class="dropdown mx-3 d-none d-lg-block">
                         <button class="btn btn-secondary dropdown__button--filtros dropdown-toggle px-3 rounded-pill" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Estado
                         </button>
@@ -67,7 +74,7 @@
                             <li><a class="dropdown-item" href="#">Another action</a></li>
                             <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>

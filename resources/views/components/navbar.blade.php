@@ -117,7 +117,7 @@ aria-hidden="true">
                         {{-- FORM FIELDS --}}
                         <form action="/register" method="POST" role="form" class="form-control p-2 border-0">
                             @csrf
-                             {{-- NAOMBRE Y APELLIDOS--}}
+                             {{-- NOMBRE Y APELLIDOS--}}
                              <div class="space-around my-2">
                                 <input type="text" name="name" id="name" class="form-control forms_field-input placeholder_login py-1" placeholder="Nombre y apellidos" data-rule="minlen:4">
                                 <div class="validate"></div>
@@ -181,6 +181,7 @@ aria-hidden="true">
             </div>
         </div>
     </div>    
+    
     @guest
         @if(Route::has('register'))
             <div class="container__buton--subir d-flex justify-content-end">
@@ -227,15 +228,17 @@ aria-hidden="true">
                             </div>
                             
         @endif
+        
     @if(Route::has('login'))
         {{-- <li class="nav-item navbar-upload px-3">
                         <a class="nav-link active mx-3 navbar-upload__a" aria-current="page" href="#"></a>
                     </li> --}}
-    @endif
+    
+                    @endif
     @else    
     <div class="d-none d-lg-flex buttons w-100 align-items-center me-3 justify-content-end">        
         <div class="nav-item mx-1">
-            <a class="nav-link active" aria-current="page"><img src="/img/icons/fav_icon .svg" class="icon__nav" alt="favoritos"></a>
+            <a class="nav-link active" href="{{route('wishlist')}}" aria-current="page"><img src="/img/icons/fav_icon .svg" class="icon__nav" alt="favoritos"></a>
         </div>
         <div class="nav-item mx-1">
             <a class="nav-link active" aria-current="page" data-bs-toggle="modal"
