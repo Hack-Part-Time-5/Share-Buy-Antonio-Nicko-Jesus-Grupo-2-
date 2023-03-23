@@ -5,7 +5,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h1 class="mt-4 text-center">{{ __('Resultado de tu búsqueda:') }} {{ $q }}</h1>
+                    <h1 class="my-5 text-center">{{ __('Resultado de tu búsqueda:') }} {{ $q }}</h1>
                 </div>
                 <div class="container">
                     <div class="row justify-content-center ">
