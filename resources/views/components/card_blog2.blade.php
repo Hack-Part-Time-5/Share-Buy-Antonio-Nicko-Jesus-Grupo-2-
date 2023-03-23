@@ -5,7 +5,6 @@
         </div>            
         <div class="card-body my-4 px-1">
         <h5 class="card-title">{{$title ?? 'blog'}}</h5>
-        <h6 class="card-subtitle mb-2 text-muted mt-2">{{$price ?? ''}}</h6>
         <p class="card-text">{{$body ?? ''}}</p>      
         </div>
     </a>

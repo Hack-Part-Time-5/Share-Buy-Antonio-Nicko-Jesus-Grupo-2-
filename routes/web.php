@@ -67,3 +67,7 @@ Route::post('favorite-add/{id}', [PublicController::class, 'favoriteAdd'])->name
 Route::delete('favorite-remove/{id}', [PublicController::class, 'favoriteRemove'])->name('favorite.remove');
 
 Route::get('wishlist', [PublicController::class, 'wishlist'])->name('wishlist');
+
+// blog
+
+Route::get('blog1', [PublicController::class, 'blog1'])->name('blog1');

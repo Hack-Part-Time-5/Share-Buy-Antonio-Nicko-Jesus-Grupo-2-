@@ -103,9 +103,11 @@ html{
 .banner{
 
     background-image: url("/img/home_header_1.png");
-    min-height: 20vh;
+    min-height: 26vh;
     
 }
+
+
 
 .carrito_header{
     /* position: absolute; */     
@@ -122,6 +124,18 @@ html{
     padding: .20em 0.6em ;
     background-color: rgba(255, 255, 255, 0.7);
 }
+.buscador_banner_list{
+
+    width: 30em !important;  
+    height: 2.5em;  
+    border-radius: 20em !important;
+    border:#44152c !important;
+    padding: .20em 0.6em ;
+    background-color: rgba(187, 185, 185, 0.306);
+
+}
+
+
 /* .placeholder_buscador::placeholder{
     background-image: url(/img/icons/search_icon.svg);
     background-size: 15px 15px;
@@ -379,6 +393,13 @@ border-bottom-width: 2px !important;
     background-size: cover;
 
 }
+.banner_segundo_home{
+    background-image: url(/img/banner_listado2.png);
+    min-width: 60%;
+    min-height: 30vh;
+    background-size: cover;
+
+}
 
 .cards_home_anuncios{
     transition: transform .5s ease;
@@ -402,6 +423,17 @@ border-bottom-width: 2px !important;
     align-items: center; */
     border-radius: 100%;
 }
+.boton_eliminar{
+    color: #5c5858;
+    border-radius: 225px !important;
+    border: #e2062e !important;
+}
+.boton_eliminar:hover{
+    color: #FF385C ;
+    border-radius: 225px !important;
+    border: #FF385C !important;
+}
+
 .fondo_icon{
     background-color: rgba(255, 255, 255, 0.7) !important;
 }
@@ -518,6 +550,8 @@ padding-right: 0.5rem !important;
 .aviso_imagenes{
     background-color: #f6b5c7;
 }
+
+
 .info_icon_img{
     width:  45px !important;
     display:block;
@@ -625,6 +659,19 @@ width:25% !important;
 padding-left: 5px !important;
 padding-top: 5px !important;
 }
+
+/* Blog */
+.blog_img{
+    border-radius: 23px !important;
+}
+
+.p_blog{
+    font-size: 15px !important;
+}
+.a_blog{
+    color: #FF385C !important;
+}
+
 
 /* boton animado */
 

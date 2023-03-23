@@ -78,7 +78,8 @@
             <div class="d-flex justify-content-center">
                 <button class="navbar-register_button text-white px-3 mb-5">Ver mas</button>
             </div>
-        </section> --}}        
+        </section> --}}   
+             
         <section class="ads2 mt-3 d-flex flex-column justify-content-center">
             <h2 class=" mt-5">{{__('Subidos recientemente')}}</h2>
             <div class="row mt-5 m-auto">        
@@ -135,9 +136,90 @@
         </section>
         <section class="blogs">
             <h2 class="mx-5 mt-5">{{__('Últimos artículos')}}</h2>
-            <div class="row mt-4  ">
-                <div class="d-flex justify-content-center col-12 col-md-6 col-xl-3 m-auto">
-                    <x-card_blog2>
+            
+            <div class="card-group mt-5  ">
+                <div class="card mx-5 border-0  mb-5">
+                  <img class="card-img-top blog_img cards_home_anuncios" src="\img\img_blog_2.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title mt-3">¿Cómo vender en Share&Buy?</h5>
+                    <p class="card-text mt-2 p_blog">Si te estas preguntando cómo vender en Share&Buy y qué pasos debes seguir para publicar tu primer anuncio, has llegado al sitio indicado....</p>
+                    <a href="{{route('blog1')}}" class="a_blog">Leer más</a>
+                  </div>
+                </div>
+                <div class="card mx-5 border-0  mb-5 ">
+                  <img class="card-img-top blog_img cards_home_anuncios" src="\img\img_blog_1.jpg" alt="Card image cap">
+                  <div class="card-body ">
+                    <h5 class="card-title mt-3">¿Cómo funciona Share&Buy?</h5>
+                    <p class="card-text mt-2 p_blog">Para explicar que es Share&Buy, primero tenemos que saber que la venta de los artículos en línea no es una idea nueva...</p>
+                    <a href="#" class="a_blog">Leer más</a>
+                  </div>
+                </div>
+                <div class="card mx-5 border-0  mb-5">
+                  <img class="card-img-top blog_img cards_home_anuncios" src="\img\img_blog_3.jpg" alt="Card image cap">
+                  <div class="card-body ">
+                    <h5 class="card-title mt-3">¿Qué es Share&Buy?</h5>
+                    <p class="card-text mt-2 p_blog">Si te estas preguntando cómo vender en Share&Buy y qué pasos debes seguir para publicar tu primer anuncio, has llegado al sitio indicado....</p>
+                    <a href="#" class="a_blog">Leer más</a>
+                  </div>
+                </div>
+              </div>
+              <section class="banner_segundo_home">
+            
+                <div class="pt-5 px-4 d-flex flex-column align-items-start">                
+                    <h2 class="text-white">{{__('Estamos aquí')}} <br> {{__('para ti')}}</h2>
+                    
+                    <div class="mt-5 mb-5">
+            <a href="{{route('contact')}}"><button  type="button" class=" ms-1 p-2 navbar-register_button text-white" ><span class="nav__register--button d-flex justify-content-center align-items-center">{{ __('Contáctanos') }}</span></button></a>     
+        </div>        
+                                                  
+                </div>
+                            
+            </section>
+              </div>  
+         
+       
+        </section> 
+         
+    </div>
+</x-layout>          
+              
+                                                            
+                        
+                                                    
+                        
+                                                            
+                        
+                                                            
+                        
+                                                            
+    
+            
+            
+            {{-- <div class="d-flex flex-row justify-content-center m-auto">
+                    <div class="card">
+                        <img src="https://i.pinimg.com/736x/87/2b/46/872b463134db6ed9bb62c59dc2191a2e.jpg" class="card-img-top img__card" alt="...">
+                    <h3>sdasdsads</h3>
+                    <h6>sdsddsdas</h6>
+                    
+                    </div>
+                    <div class="card">
+                        <img src="https://i.pinimg.com/736x/87/2b/46/872b463134db6ed9bb62c59dc2191a2e.jpg" class="card-img-top img__card" alt="...">
+                        <h3>sdasdsads</h3>
+                        <h6>sdsddsdas</h6>
+                    </div>
+                    <div class="card">
+                        <img src="https://i.pinimg.com/736x/87/2b/46/872b463134db6ed9bb62c59dc2191a2e.jpg" class="card-img-top img__card" alt="...">
+                        <h3>sdasdsads</h3>
+                        <h6>sdsddsdas</h6>
+                    </div>
+                    <div class="card">
+                        <img src="https://i.pinimg.com/736x/87/2b/46/872b463134db6ed9bb62c59dc2191a2e.jpg" class="card-img-top img__card" alt="...">
+                        <h3>sdasdsads</h3>
+                        <h6>sdsddsdas</h6>
+                    </div> --}}
+                    {{-- <x-card_blog2>
+                        <div class="position-relative container__img--card2">                                                
+                            <img src="https://i.pinimg.com/736x/87/2b/46/872b463134db6ed9bb62c59dc2191a2e.jpg" class="card-img-top img__card" alt="...">
                         <x-slot name='title'>Blog 1</x-slot>
                         <x-slot name='body'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </x-slot>
                     </x-card_blog>
@@ -159,12 +241,4 @@
                         <x-slot name='title'>Blog 4</x-slot>
                         <x-slot name='body'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </x-slot>
                     </x-card_blog>                
-                </div>            
-            </div>    
-        </section>   
-        <div class="">
-            <a href="{{route('contact')}}"><button  type="button" class=" ms-4 p-2 navbar-register_button text-white" ><span class="nav__register--button d-flex justify-content-center align-items-center">{{ __('Contáctanos') }}</span></button></a>     
-        </div>
-        
-    </div>
-</x-layout>
+                </div>             --}}

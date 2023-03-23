@@ -5,7 +5,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <h1 class="mt-5">Lista de Favoritos</h1>                        
+                            <h1 class="mt-5">Tus Favoritos ❤️</h1>                        
                         </div>
                         <div class="container">
                             <div class="row justify-content-center mt-5">
@@ -29,7 +29,7 @@
                                             <form action="{{ route('favorite.remove',$ad->id) }}" method="POST" style="display: inline-block;">
                                                 <input type="hidden" name="_method" value="DELETE">
                                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                                <input type="submit" class="px-4 py-2 text-white bg-red-700 rounded" value="Delete">
+                                                <input type="submit" class="px-2 py-1 boton_eliminar" value="❌ Borrar">
                                             </form>      
                                         </div>                                         
                                     </div>

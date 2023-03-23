@@ -41,6 +41,9 @@ class PublicController extends Controller
       return view ('cookies');
     }
     
+    public function blog1(){
+      return view ('blog1');
+    }
 
     public function setLocale($locale)
     {
@@ -116,6 +119,8 @@ class PublicController extends Controller
         return redirect()->route('wishlist');
     }
 } 
+
+
 
 
 

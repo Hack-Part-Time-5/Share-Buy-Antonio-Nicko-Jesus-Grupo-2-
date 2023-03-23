@@ -6,7 +6,7 @@
         <div class="container d-flex flex-column align-items-center">
             <div class="row">
                 <div class="col-12 my-5">
-                    <h1>Todos los productos de: {{$user->name}}</h1>
+                    <h1>Todos los productos de <font color="#FF385C"> {{$user->name}}</font></h1>
                 </div>
             </div>   
             <div class="container">
