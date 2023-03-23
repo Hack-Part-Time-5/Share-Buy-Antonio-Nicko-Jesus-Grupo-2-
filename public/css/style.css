@@ -510,6 +510,61 @@ margin:auto  !important;
     color: #696768 !important;
 }
 
+/* pagina contacto */
+.contact-page .form-contact {
+    box-shadow: 0 0 4px 2px #00000030;
+}
+
+.row1{
+position: relative;
+}
+
+ .info-contact {
+    width: 40% !important;
+    padding: 0 20px !important;
+    position: relative !important;
+}
+
+.white-box {
+    position: relative !important;
+    top: -70px;
+    background: #fcfcfc !important;
+    margin: 0 50px !important;
+    padding: 15px !important;
+}
+.social-media{
+width: 25px !important;
+}
+
+.contacta-icon{
+    width: 5px !important;
+    
+    }
+.title_contact {
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+ .line {
+    width: 50px;
+    height: 5px;
+    background: var(--main-color);
+    border-radius: 5px;
+    margin: 4px 15px !important;
+
+}
+
+.text-required{
+        font-size: 14px !important;
+        margin: 10px 0 !important;
+}
+.group-inputs {
+    display: flex !important;
+    flex-wrap:wrap !important;
+}
+.half {
+    width: 50% !important;
+    
+}
 /* MODAL */
 .my-modal{
     position: sticky !important;
