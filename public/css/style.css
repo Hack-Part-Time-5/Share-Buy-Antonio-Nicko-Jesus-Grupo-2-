@@ -520,7 +520,7 @@ margin:auto  !important;
 }
 
 /* pagina contacto */
-.contact-page .form-contact {
+.form-contact {
     box-shadow: 0 0 4px 2px #00000030;
 }
 
@@ -564,8 +564,9 @@ width: 25px !important;
 
 .text-required{
         font-size: 14px !important;
-        margin: 10px 0 !important;
+        
 }
+
 .group-inputs {
     display: flex !important;
     flex-wrap:wrap !important;
