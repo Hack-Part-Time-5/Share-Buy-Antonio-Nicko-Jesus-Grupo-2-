@@ -23,3 +23,9 @@ $('.owl-carousel').owlCarousel({
         }
     }
 });
+
+let btnEsconder = document.getElementById("esconder");
+
+    btnEsconder.className += "icon-esconder";
+
+
