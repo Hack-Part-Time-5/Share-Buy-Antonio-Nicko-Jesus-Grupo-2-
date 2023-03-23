@@ -405,6 +405,26 @@ border-bottom-width: 2px !important;
 .fondo_icon{
     background-color: rgba(255, 255, 255, 0.7) !important;
 }
+
+.icon-esconder{
+    display: none !important;
+}
+.cambiaColor {
+    
+    color:  #555554 ;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .cambiaColor:hover{
+    color: var(--main-color);
+  }
+  .cambiaColorActive{
+    color: var(--main-color) !important;
+  }
+
+  
 .carrito_logo_modal{
 width: 2.9rem;
 padding-right: 0.5rem !important;
