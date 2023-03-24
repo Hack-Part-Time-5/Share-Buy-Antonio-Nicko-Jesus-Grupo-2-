@@ -38,7 +38,7 @@
                         <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>
                     </div> --}}
-                    <div class=" mx-5 d-none d-lg-block">
+                    {{-- <div class=" mx-5 d-none d-lg-block">
                         
                         <button class="btn btn-secondary dropdown__button--moda dropdown-toggle px-3 rounded-pill" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Categorías
@@ -51,8 +51,41 @@
                     </div>                  
                     @endforeach   
                     
-                    </div>
+                    </div> --}}
 
+                    <div class=" mx-5 d-none d-lg-block">
+                        <button class="btn btn-secondary dropdown__button--moda dropdown-toggle px-4 py-2 rounded-pill" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Categorías
+                        </button>
+                        <ul class="dropdown-menu">
+                            <div class="container mt-3">
+                                <div class="row">
+                                  <div class="col">
+                                    <div class="">
+                                        <a href="http://127.0.0.1:8000/category/Moda/ads" class="btn m-3 button_grid_categories" type="button">
+                                            <img src="\img\icons\icons_categories\coleccionismo.svg" class="icon_grid"><div class="text-center">Moda</div></a>
+                                    </div>
+                                    </div>
+                                  <div class="col">
+                                    <div class="">
+                                        <a href="http://127.0.0.1:8000/category/Moda/ads" class="btn m-3 button_grid_categories" type="button">
+                                            <img src="\img\icons\icons_categories\coleccionismo.svg" class="icon_grid"><div class="text-center">Moda</div></a>
+                                    </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="">
+                                            <a href="http://127.0.0.1:8000/category/Moda/ads" class="btn m-3 button_grid_categories" type="button">
+                                                <img src="\img\icons\icons_categories\coleccionismo.svg" class="icon_grid"><div class="text-center">Moda</div></a>
+                                        </div>
+                                        </div>
+
+
+
+
+
+                                    </div>
+                                </div>
+                            </div>
 
                     
                     {{-- <div class="dropdown mx-3 d-none d-lg-block">

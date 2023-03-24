@@ -5,7 +5,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h1 class="my-5 text-center">{{ __('Resultado de tu búsqueda:') }} {{ $q }}</h1>
+                    <h1 class="my-5 text-center">{{ __('Resultado de tu búsqueda') }}<font color="#FF385C"> {{ $q }}</font></h1>
                 </div>
                 <div class="container">
                     <div class="row justify-content-center ">
@@ -28,8 +28,8 @@
                         
                         @empty
                         <div class="col-12">
-                            <h2>oops it seems that there is nothing in this category</h2>
-                            <a href="{{route('ads.create')}}" class="btn btn-success">sell your first item</a> o <a href="{{route('home')}}" class="btn btn-primary">Come back home</a>
+                            <h2> Ups! parece que no se ha encontrado ningún producto 😅</h2>
+                            <a href="{{route('ads.create')}}" class="btn btn-success mt-5 py-1 px-2">+ Vende tu primer producto</a><a href="{{route('home')}}" class="btn btn-primary mx-3 mt-5 py-1 px-2">⬅ Volver</a>
                         </div>
                         @endforelse
                     </div> 

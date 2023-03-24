@@ -1,5 +1,6 @@
 <x-layout>
-    <x-slot name='title'>Share&Buy - {{$ads}} ads</x-slot>
+    <x-slot name='title'>Share&Buy-Favoritos</x-slot>
+    {{-- {{$ads}} --}}
     <div class="container m-auto">
                 <x-search/>
                 <div class="container">

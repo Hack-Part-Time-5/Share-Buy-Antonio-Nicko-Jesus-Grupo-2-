@@ -1,7 +1,7 @@
 <div>
     @if(session()->has('message'))
-        <div class="alert col-8 py-2 alert-success text-center" role="alert">
-            {{ session('message') }}
+        <div class="alert m-auto col-2 alert-success text-center px-4 py-4" role="alert">
+            <strong >✔ {{ session('message') }}</strong>
         </div>
     @endif
     <form wire:submit.prevent="store">
@@ -97,12 +97,12 @@
             @if(!empty($images))
                 <div class="row">
                     <div class="col-12">
-                        <p class="mx-2 my-2 justify-content-center"><i>{{ __('Vista previa') }}</i></p>
+                        <p class="mx-4 my-3 justify-content-center"><i>{{ __('Vista previa') }}</i></p>
                         <div class="row ">
                             @foreach($images as $key=>$image )
                                 <div class="col-12 col-md-3 ">
-                                    <img src="{{ $image->temporaryUrl() }}" alt="" class="img-fluid grid_imagenes_subir ">
-                                    <button type="button" class="btn btn-danger mx-1 my-1 mt-2 p-1"
+                                    <img src="{{ $image->temporaryUrl() }}" alt="" class="img-fluid img-border my-2 mx-5 grid_imagenes_subir ">
+                                    <button type="button" class="btn btn-danger mx-5 my-1 mt-2 p-1"
                                         wire:click="removeImage({{ $key }})">🗑 {{ __('Eliminar') }}</button>
                                 </div>
                             @endforeach
@@ -117,7 +117,7 @@
                     <img class="info_icon_img" src="\img\icons\info_icon.svg" alt="">
                 </div>
                 <div class="col-10">
-                    <p>3 imágenes obligatorias. Máximo 10MB</p>
+                    <p>3 imágenes obligatorias. Máximo 20MB</p>
                     <p>Sólo se permites fotografías en formato .jpg</p>
                     <p>No se permite fotografías con caras</p>
                 </div>
@@ -125,7 +125,7 @@
         </div>
     </div>
     <div class="d-flex justify-content">
-        <button type="submit" class="navbar-register_button text-white px-3 py-2 mt-4 mb-3">Subir producto</button>
+        <button type="submit"  class="navbar-register_button text-white px-3 py-2 mt-4 mb-3">Subir producto</button>
     </div>
 </div>
 </div>
