@@ -24,8 +24,23 @@ $('.owl-carousel').owlCarousel({
     }
 });
 
-let btnEsconder = document.getElementById("esconder");
-
-    btnEsconder.className += "icon-esconder";
-
-
+/* function selectImage(src) {
+    var selectedImage = document.getElementById("selected-image");
+    selectedImage.src = src;
+  }
+  $(document).ready(function() {
+    // Iniciar el slider
+    $("#myCarousel").carousel();
+    
+    // Pausar el slider al hacer hover
+    $("#myCarousel").hover(function() {
+      $(this).carousel('pause');
+    }, function() {
+      $(this).carousel('cycle');
+    });
+  }); */
+  
+/*   function selectImage(src) {
+    var selectedImage = document.getElementById("selected-image");
+    selectedImage.src = src;
+  }         */
