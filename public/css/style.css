@@ -564,21 +564,26 @@ padding-right: 0.5rem !important;
     background-color: #f6b5c7;
 }
 
-
+/* GRID CATEGORIAS SEARCH */
 .icon_grid{
-    width: 55px !important;
+    width: 40px !important;
+}
+.p-title{
+    font-size:13px !important ;
 }
 .button_grid_categories{
     width: 100px !important;
+    
     border-radius: 15px !important;
     padding-top: 15px !important;
     padding-bottom: 15px !important;
-    border-color: #696768 !important;
+    border-color: #9c999a !important;
     
 }
 .button_grid_categories:hover{
-    
-    filter:red !important;
+    background-color: var(--rose-color) !important;;
+    list-style: none;
+    text-decoration: none !important;  
     
 }
 

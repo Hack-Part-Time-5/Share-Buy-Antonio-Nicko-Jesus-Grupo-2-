@@ -28,87 +28,80 @@
                     </div>      
                 </div>        
                 <div class="container__buttons--show d-none d-lg-flex justify-content-center  my-4">
-                    {{-- <div class="dropdown mx-3 d-xl-block">
-                        <button class="btn btn-secondary dropdown__button--filtros dropdown-toggle px-3 rounded-pill" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Filtros
-                        </button>
-                        <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </div> --}}
-                    {{-- <div class=" mx-5 d-none d-lg-block">
-                        
-                        <button class="btn btn-secondary dropdown__button--moda dropdown-toggle px-3 rounded-pill" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Categorías
-                        </button>
-                        <ul class="dropdown-menu">
-                            @foreach ($categories as $category)
-                        <div class="d-flex flex-column ">                         
-                            <div><a href="{{route('category.ads', $category)}}" class=" category-items d-flex  flex-column"><img src="{{$category->img}}" class="categories_icons m-auto" alt=""><span class="text-center m-auto pt-2">{{__($category->name)}}</span></a>
-                        </div> 
-                    </div>                  
-                    @endforeach   
-                    
-                    </div> --}}
-
-                    <div class=" mx-5 d-none d-lg-block">
+                    <div class=" mx-5">
                         <button class="btn btn-secondary dropdown__button--moda dropdown-toggle px-4 py-2 rounded-pill" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Categorías
                         </button>
                         <ul class="dropdown-menu">
-                            <div class="container mt-3">
-                                <div class="row">
+                            <div class="container mt-3 mb-3">
+                                <div class="row ">
                                   <div class="col">
                                     <div class="">
                                         <a href="http://127.0.0.1:8000/category/Moda/ads" class="btn m-3 button_grid_categories" type="button">
-                                            <img src="\img\icons\icons_categories\coleccionismo.svg" class="icon_grid"><div class="text-center">Moda</div></a>
+                                            <img src="\img\icons\icons_categories\Moda.svg" class="icon_grid"><div class="text-center"><p class="mt-1 p-title">Moda</p></div></a>
                                     </div>
                                     </div>
                                   <div class="col">
                                     <div class="">
-                                        <a href="http://127.0.0.1:8000/category/Moda/ads" class="btn m-3 button_grid_categories" type="button">
-                                            <img src="\img\icons\icons_categories\coleccionismo.svg" class="icon_grid"><div class="text-center">Moda</div></a>
+                                        <a href="http://127.0.0.1:8000/category/Deporte/ads" class="btn m-3 button_grid_categories" type="button">
+                                            <img src="\img\icons\icons_categories\Deporte.svg" class="icon_grid"><div class="text-center"><p class="mt-1 p-title">Deporte</p></div></a>
                                     </div>
                                     </div>
                                     <div class="col">
                                         <div class="">
-                                            <a href="http://127.0.0.1:8000/category/Moda/ads" class="btn m-3 button_grid_categories" type="button">
-                                                <img src="\img\icons\icons_categories\coleccionismo.svg" class="icon_grid"><div class="text-center">Moda</div></a>
+                                            <a href="http://127.0.0.1:8000/category/Coleccionismo/ads" class="btn m-3 button_grid_categories" type="button">
+                                                <img src="\img\icons\icons_categories\coleccionismo.svg" class="icon_grid"><div class="text-center"><p class="mt-1 p-title">Coleccionismo</p></div></a>
                                         </div>
                                         </div>
+                                        <div class="col">
+                                              <div class="">
+                                                  <a href="http://127.0.0.1:8000/category/Electrónica/ads" class="btn m-3 button_grid_categories" type="button">
+                                                      <img src="\img\icons\icons_categories\electronica.svg" class="icon_grid"><div class="text-center"><p class="mt-1 p-title">Electrónica</p></div></a>
+                                              </div>
+                                              </div>
+                                             <div class="col">
+                                          <div class="">
+                                              <a href="http://127.0.0.1:8000/category/Hogar%20y%20Jardín/ads" class="btn m-3 button_grid_categories" type="button">
+                                                  <img src="\img\icons\icons_categories\hogar_y_jardin.svg" class="icon_grid"><div class="text-center"><p class="mt-1 p-title">Hogar y jardín</p></div></a>
+                                          </div>
+                                          </div> 
+                                        <div class="col">
+                                          <div class="">
+                                              <a href="http://127.0.0.1:8000/category/electrodomesticos/ads" class="btn m-3 button_grid_categories" type="button">
+                                                  <img src="\img\icons\icons_categories\electrodomesticos.svg" class="icon_grid"><div class="text-center"><p class="mt-1 p-title">Maquinaria</p></div></a>
+                                          </div>
+                                          </div>
+                                          <div class="col">
+                                            <div class="">
+                                                <a href="http://127.0.0.1:8000/category/inmobiliaria/ads" class="btn m-3 button_grid_categories" type="button">
+                                                    <img src="\img\icons\icons_categories\instrumentos_musicales.svg" class="icon_grid"><div class="text-center"><p class="mt-1 p-title">Música</p></div></a>
+                                            </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="">
+                                                    <a href="http://127.0.0.1:8000/category/Motor%20y%20accesorios/ads" class="btn m-3 button_grid_categories" type="button">
+                                                        <img src="\img\icons\icons_categories\motoryaccesorios.svg" class="icon_grid"><div class="text-center"><p class="mt-1 p-title">Motor y accesorios</p></div></a>
+                                                </div>
+                                                </div>
 
-
-
-
-
-                                    </div>
+                                                <div class="col">
+                                                    <div class="">
+                                                        <a href="http://127.0.0.1:8000/category/servicios/ads" class="btn m-3 button_grid_categories" type="button">
+                                                            <img src="\img\icons\icons_categories\servicios.svg" class="icon_grid"><div class="text-center"><p class="mt-1 p-title">Servicios</p></div></a>
+                                                    </div>
+                                                    </div>
+                                                  <div class="col">
+                                                    <div class="">
+                                                        <a href="http://127.0.0.1:8000/category/Videojuegos/ads" class="btn m-3 button_grid_categories" type="button">
+                                                            <img src="\img\icons\icons_categories\videojuegos.svg" class="icon_grid"><div class="text-center"><p class="mt-1 p-title">Videojuegos</p></div></a>
+                                                    </div>
+                                                    </div>
+                                            </div>
+                                            
                                 </div>
                             </div>
-
-                    
-                    {{-- <div class="dropdown mx-3 d-none d-lg-block">
-                        <button class="btn btn-secondary dropdown__button--filtros dropdown-toggle px-3 rounded-pill" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Precio
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </div> --}}
-                    {{-- <div class="dropdown mx-3 d-none d-lg-block">
-                        <button class="btn btn-secondary dropdown__button--filtros dropdown-toggle px-3 rounded-pill" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Estado
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </div> --}}
                 </div>
+                
             </div>
         </div>
         <hr>
