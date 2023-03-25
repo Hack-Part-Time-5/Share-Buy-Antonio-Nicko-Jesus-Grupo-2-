@@ -139,33 +139,29 @@ html{
 .pre-footer {
     display: flex !important;
     float: left !important;
-    width: 100% !important;
-    margin: 30px 0 !important;
+  
+    
 }
 
 .pre-footer .pre-footer-row .pre-footer-item .pre-footer-item-logo img {
-    height: 60px !important;
+    height: 50px !important;
 }
 
 .row1 {
     width: 1085px !important;
-    margin: auto !important;
-    padding: 0 !important;
-    position: relative !important;
+ 
 }
 
 .pre-footer .pre-footer-row .pre-footer-item {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    margin-bottom: 20px !important;
-    flex: 1 !important;
+    
+   
 }
-.obfuscateLink {
-    cursor: pointer !important;
-}
+
 .pre-footer .pre-footer-row .pre-footer-item .pre-footer-item-title {
-    font-size: 19px;
+    font-size: 18px !important;
     font-weight: 600;
 }
 
@@ -246,6 +242,147 @@ a[href^=tel] {
     color: black;
     font-size: 14px !important;
 }
+
+/* about us */
+
+.img_x {
+    width: 100%; /* need to overwrite inline dimensions */
+    height: auto;
+  }
+  h2 {
+    margin-bottom: .5em;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 1em;
+  }
+  
+  
+  /* hover styles */
+  .lenguaje-listing {
+    position: relative;
+  }
+  
+  .lenguaje-image {
+    line-height: 0;
+    overflow: hidden;
+  }
+  
+  .lenguaje-image img {
+    filter: blur(0px);
+    transition: filter 0.3s ease-in;
+    transform: scale(1.1);
+  }
+  
+  .lenguaje-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity .5s;
+    background: rgba(90,0,10,0.4);
+    color: white;
+    
+    /* position the text in t’ middle*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .lenguaje-listing:hover .lenguaje-title {
+    opacity: 1;
+  }
+  
+  .lenguaje-listing:hover .lenguaje-image img {
+    filter: blur(2px);
+  }
+  
+  
+  /* for touch screen devices */
+  @media (hover: none) { 
+    .lenguaje-title {
+      opacity: 1;
+    }
+    .lenguaje-image img {
+      filter: blur(2px);
+    }
+  }
+
+
+
+.container_conoce{
+    margin-top: 255px !important;
+}
+.items_about_us{
+text-decoration: none !important;
+font-size: 25px !important;
+}
+
+
+.video_aboutus{
+    border-radius: 25px !important;
+}
+
+.img_team_team{
+    /* transition: transform .3s ease; */
+    border: transparent !important;
+  
+}
+
+/* .img_team_team:hover{
+    transition: transform .3s;
+    transform: scale(1.1, 1.1);
+    border-radius: 10px !important;
+    border:1px solid  !important;
+    border-color: var(--main-color)!important;
+    
+}  */
+
+.item:before {
+  position: absolute;
+  bottom: 0;
+  content: "";
+  display: block;
+  width: 0;
+  height: 5px;
+  background-color: var(--main-color);
+  transition: all .3s;
+}
+
+.item:hover:before {
+  width: 100%;
+}
+
+.uno:before {
+  left: 0;
+}
+
+
+/* .anima:hover{
+ 
+ animation-duration: 2s;
+    animation-name: slidein;
+  }
+  
+  @keyframes slidein {
+    from {
+      width: 100%
+    }
+  
+    to {
+
+      width: 105%;
+    }
+  }
+     */
+
 
 
 
@@ -442,6 +579,13 @@ width: 35% !important;
     background-size: cover;
 
 }
+
+.banner_conocenos{
+    background-image: url(/img/banner_home2.png);
+  
+    background-size: cover;
+
+}
 .banner_secundarioList{
     background-image: url(/img/banner_listado.png);
     min-width: 60%;
@@ -458,11 +602,11 @@ width: 35% !important;
 }
 
 .cards_home_anuncios{
-    transition: transform .5s ease;
+    transition: transform .3s ease;
 }
 
 .cards_home_anuncios:hover{
-    transition: transform .5s;
+    transition: transform .3s;
     transform: scale(1.1, 1.1);
 }
 
@@ -703,6 +847,27 @@ width: 25px !important;
 
 }
 
+.animated {
+
+  }
+
+  .animated {
+    animation:
+      move-right 5s linear 0s,   /* Comienza a los 0s (no hay anterior) */
+      look-up 2.5s linear 5s,    /* Comienza a los 5s (5 de la anterior) */
+      move-left 5s linear 7.5s,  /* Comienza a los 7.5s (5 + 2.5 de la anterior) */
+      dissapear 2s linear 9.5s;  /* Comienza a los 9.5s (5 + 2.5 + 2 de la anterior) */
+  }
+
+.line_fotos {
+    width: 55px;
+    height: 5px;
+    background: var(--main-color);
+    border-radius: 5px;
+    margin: 5px !important;
+
+}
+
 .text-required{
         font-size: 14px !important;
         
@@ -778,9 +943,6 @@ padding-top: 5px !important;
   }
 
   
-
-
-
 /* .logoModal{
     width: 100px;
 } */

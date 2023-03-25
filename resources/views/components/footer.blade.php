@@ -1,5 +1,46 @@
 <footer>
-    <div class="container-fluid d-flex justify-content-center flex-column p-5">
+    <section class="pre-footer container-fluid d-flex m-auto justify-content-center">
+        <div class="row1 ">
+            <div class="pre-footer-row d-flex flex-wrap  justify-content-center ">
+                <div class="pre-footer-item m-2 ">
+                    <div class="pre-footer-item-logo">
+                        <img class=""  alt="FAQ" title="FAQ" src="\img\icons\pre-footer\thumb.svg">
+                    </div>
+                    <div class="pre-footer-item-title mt-2">
+                                                <span style="" class="obfuscateLink " data-ref="aHR0cHM6Ly9pbnNweXJpYS5jb20vZXMvc29wb3J0ZS9heXVkYS11c3Vhcmlvcw==">Centro de Ayuda</span>
+                                        </div>
+                    <div class="pre-footer-item-text">
+                                               <span style="" class="obfuscateLink link">Te respondemos</span>                                        
+                    </div>
+                </div>
+    
+                <div class="pre-footer-item m-2">
+                    <div class="pre-footer-item-logo">
+                        <img class="" data-src="\img\icons\pre-footer\heart.svg" alt="Llama" title="Llama" src="\img\icons\pre-footer\heart.svg">
+                    </div>
+                    <div class="pre-footer-item-title mt-2">
+                                                <a href="tel:+34660101016">+34 690141618</a>
+                                        </div>
+                    <div class="pre-footer-item-text">
+    
+                                                <a class="link" href="tel:+34660101016">Llama</a> o envía <a target="_blank" href="https://wa.me/+34690141618?text=hola%2C+estoy+interesad%40+en..."><img class="" alt="WhatsApp" title="WhatsApp" style="height: 19px;margin-bottom: -4px;" src="\img\icons\whatsapp.png"></a><br>
+                                        </div>
+                </div>
+    
+                <div class="pre-footer-item m-2" >
+                    <div class="pre-footer-item-logo">
+                        <img class=""  alt="Mail" title="Mail" src="\img\icons\pre-footer\mail.svg">
+                    </div>
+                    <div class="pre-footer-item-title mt-2">
+                        <span style="" class="obfuscateLink ">Envíanos un mail</span>
+                    </div>
+                    <div class="pre-footer-item-text">
+                        Estamos <span style="" class="obfuscateLink link" >aquí para ti</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container-fluid d-flex justify-content-center flex-column m-3">
         <div class="row justify-content-between pt-5 pb-0 mt-5 mb-0 px-2 border-top">
             <div class="col-12 col-md-3 mb-3 p-2 gx-5">
                 <img src="/img/icons/logo_footer.svg" alt="">
@@ -23,7 +64,7 @@
             <div class="col-12 col-md-3 mb-3 p-2 gx-5">
                 <h5>Share&Buy</h5>
                 <ul class="nav flex-column my-3 ">
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Conócenos</a></li>
+                    <li class="nav-item mb-2"><a href="{{route('aboutus')}}" class="nav-link p-0 text-muted">Conócenos</a></li>
                     <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Cómo funciona</a></li>
                     <li class="nav-item mb-2"><a href="{{route('revisor.become')}}"
                             class="nav-link p-0 m text-muted">Trabaja con nosotros</a></li>

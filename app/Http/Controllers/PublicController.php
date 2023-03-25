@@ -29,6 +29,10 @@ class PublicController extends Controller
       return view ('avisolegal');
     }
 
+    public function aboutus(){
+      return view ('aboutus');
+    }
+
     public function terminos(){
       return view ('terminos');
     }

@@ -169,59 +169,12 @@
                     <h2 class="text-white">{{__('Estamos aquí')}} <br> {{__('para ti')}}</h2>
                     
                     <div class="mt-5 mb-5">
-            <a href="{{route('contact')}}"><button  type="button" class=" ms-1 p-2 navbar-register_button text-white" ><span class="nav__register--button d-flex justify-content-center align-items-center">{{ __('Contáctanos') }}</span></button></a>     
-        </div>        
-                                                  
-                </div>
-                            
+            <a href="{{route('contact')}}"><button  type="button" class=" ms-1 p-2 navbar-register_button text-white" ><span class="nav__register--button d-flex justify-content-center align-items-center">{{ __('Contáctanos') }}</span></button></a>                                    
+                </div>         
             </section>
-            <section class="pre-footer mt-5">
-                <div class="row1">
-                    <div class="pre-footer-row">
-                        <div class="pre-footer-item">
-                            <div class="pre-footer-item-logo">
-                                <img class=""  alt="FAQ" title="FAQ" src="\img\icons\pre-footer\thumb.svg">
-                            </div>
-                            <div class="pre-footer-item-title mt-2">
-                                                        <span style="" class="obfuscateLink " data-ref="aHR0cHM6Ly9pbnNweXJpYS5jb20vZXMvc29wb3J0ZS9heXVkYS11c3Vhcmlvcw==">Preguntas y respuestas</span>
-                                                </div>
-                            <div class="pre-footer-item-text">
-                                                        Visita nuestro <span style="" class="obfuscateLink link">Centro de Ayuda</span>                                        
-                            </div>
-                        </div>
-            
-                        <div class="pre-footer-item">
-                            <div class="pre-footer-item-logo">
-                                <img class="" data-src="\img\icons\pre-footer\heart.svg" alt="Llama" title="Llama" src="\img\icons\pre-footer\heart.svg">
-                            </div>
-                            <div class="pre-footer-item-title mt-2">
-                                                        <a href="tel:+34660101016">+34 690141618</a>
-                                                </div>
-                            <div class="pre-footer-item-text">
-            
-                                                        <a class="link" href="tel:+34660101016">Llama</a> o envía <a target="_blank" href="https://wa.me/+34690141618?text=hola%2C+estoy+interesad%40+en..."><img class="" alt="WhatsApp" title="WhatsApp" style="height: 19px;margin-bottom: -4px;" src="\img\icons\whatsapp.png"></a><br>
-                                                </div>
-                        </div>
-            
-                        <div class="pre-footer-item">
-                            <div class="pre-footer-item-logo">
-                                <img class=""  alt="Mail" title="Mail" src="\img\icons\pre-footer\mail.svg">
-                            </div>
-                            <div class="pre-footer-item-title mt-2">
-                                <span style="" class="obfuscateLink ">Envíanos un mail</span>
-                            </div>
-                            <div class="pre-footer-item-text">
-                                Estamos <span style="" class="obfuscateLink link" >aquí</span> para ti                </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        
-        </div>  
          
-       
         </section> 
-         
+ 
     </div>
 </x-layout>          
               
