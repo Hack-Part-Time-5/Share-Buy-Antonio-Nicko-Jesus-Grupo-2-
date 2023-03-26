@@ -1,12 +1,12 @@
 <x-layout>
-    <x-slot name='title'>Share&Buy-Favoritos</x-slot>
+    <x-slot name='title'>Share&Buy-{{__('Favoritos')}}</x-slot>
     {{-- {{$ads}} --}}
     <div class="container m-auto">
                 <x-search/>
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <h1 class="mt-5">Tus Favoritos ❤️</h1>                        
+                            <h1 class="mt-5">{{__('Tus Favoritos')}} ❤️</h1>                        
                         </div>
                         <div class="container">
                             <div class="row justify-content-center mt-5">
@@ -38,7 +38,7 @@
                                 @empty
                                 <div class="col-12">
                                     <h2>{{__('Uy.. parece que no hay nada de esta categoría')}}</h2>
-                                    <a href="{{route('ads.create')}}" class="btn btn-success">Vende tu primer objeto</a> o <a href="{{route('home')}}" class="btn btn-primary">Vuelve a la home</a>
+                                    <a href="{{route('ads.create')}}" class="btn btn-success">{{__('Vende tu primer objeto')}}</a> {{__('o')}} <a href="{{route('home')}}" class="btn btn-primary">{{__('Vuelve a la home')}}</a>
                                 </div>
                                 @endforelse
                             </div> 

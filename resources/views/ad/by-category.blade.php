@@ -30,8 +30,8 @@
                     
                     @empty
                     <div class="col-12">
-                        <h2>oops it seems that there is nothing in this category</h2>
-                        <a href="{{route('ads.create')}}" class="btn btn-success">sell your first item</a> o <a href="{{route('home')}}" class="btn btn-primary">Come back home</a>
+                        <h2>{{__('Upps, parece que no hay nada en esta categoría')}}</h2>
+                        <a href="{{route('ads.create')}}" class="btn btn-success">{{__('vende tu primer artículo')}}</a> {{__('o')}} <a href="{{route('home')}}" class="btn btn-primary">{{__('Vuelve a la página de inicio')}}</a>
                     </div>
                     @endforelse
                 </div> 

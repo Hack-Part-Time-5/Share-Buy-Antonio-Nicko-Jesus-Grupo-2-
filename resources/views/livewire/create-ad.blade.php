@@ -10,12 +10,12 @@
             <div class="row justify-content-center m-2">
                 <div class="card  m-2 p-2   ">
                     <div class="mb-4 mx-1 ">
-                        <h5><strong>Información del producto</strong></h5>
+                        <h5><strong>{{__('Información del producto')}}</strong></h5>
                     </div>
                     <div class="form-group mb-3">
-                        <label for="category" class="form-label mb-2"><strong>Categoría</strong></label>
+                        <label for="category" class="form-label mb-2"><strong>{{__('Categoría')}}</strong></label>
                         <select wire:model.defer="category" id="category" class="form-control placeholder_categoria">
-                            <option value="">Escoge una categoría</option>
+                            <option value="">{{__('Escoge una categoría')}}</option>
                             @foreach($categories as $category )
                                 <option value="{{ $category->id }}">{{ $category->name }}</option>
                             @endforeach
@@ -31,7 +31,7 @@
                     </select>
                 </div> --}}
                 <div class="mb-3">
-                    <label for="price" class="form-label mb-2"><strong>Precio</strong></label>
+                    <label for="price" class="form-label mb-2"><strong>{{__('Precio')}}</strong></label>
                     <input wire:model="price" type="number" class="form-control @error('price') is-invalid @enderror">
                     @error('price')
                         {{ $message }}
@@ -47,7 +47,7 @@
             </select>
           </div> --}}
                 <div class="mb-3">
-                    <label for="title" class="form-label mb-2"><strong>¿Qué estás vendiendo?</strong></label>
+                    <label for="title" class="form-label mb-2"><strong>{{__('¿Qué estás vendiendo?')}}</strong></label>
                     <input wire:model="title" type="text" class="form-control @error('title') is-invalid @enderror">
                     @error('title')
                         {{ $message }}
@@ -55,7 +55,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="body" class="form-label mb-2"><strong>Descripción</strong></label>
+                    <label for="body" class="form-label mb-2"><strong>{{__('Descripción')}}</strong></label>
                     <textarea wire:model="body" cols="20" rows="8"
                         class="form-control @error('body') is-invalid @enderror"></textarea>
                     @error('body')
@@ -66,7 +66,7 @@
     </form>
     <div class="card  m-2">
         <div class="header mt-2 mb-4 mx-3">
-            <h5><strong> Imágenes</strong></h5>
+            <h5><strong> {{__('Imágenes')}}</strong></h5>
         </div>
         <div class="mb-3">
             <div class="container-fluid">
@@ -117,15 +117,15 @@
                     <img class="info_icon_img" src="\img\icons\info_icon.svg" alt="">
                 </div>
                 <div class="col-10">
-                    <p>3 imágenes obligatorias. Máximo 20MB</p>
-                    <p>Sólo se permites fotografías en formato .jpg</p>
-                    <p>No se permite fotografías con caras</p>
+                    <p>{{__('3 imágenes obligatorias. Máximo 20MB')}}</p>
+                    <p>{{__('Sólo se permites fotografías en formato .jpg')}}</p>
+                    <p>{{__('No se permite fotografías con caras')}}</p>
                 </div>
             </div>
         </div>
     </div>
     <div class="d-flex justify-content">
-        <button type="submit"  class="navbar-register_button text-white px-3 py-2 mt-4 mb-3">Subir producto</button>
+        <button type="submit"  class="navbar-register_button text-white px-3 py-2 mt-4 mb-3">{{__('Subir producto')}}</button>
     </div>
 </div>
 </div>

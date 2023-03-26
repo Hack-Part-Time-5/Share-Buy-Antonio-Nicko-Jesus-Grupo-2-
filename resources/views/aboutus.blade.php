@@ -1,15 +1,14 @@
 <x-layout>
-    <x-slot name='title'>Share&Buy - Conócenos ❤</x-slot>
+    <x-slot name='title'>Share&Buy - {{__('Conócenos')}} ❤</x-slot>
     <div class="container m-auto">
         <div class="row p-4 pb-5 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
             <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
-                <h1 class="display-4 fw-bold lh-1 text-body-emphasis">Conócenos</h1>
+                <h1 class="display-4 fw-bold lh-1 text-body-emphasis">{{__('Conócenos')}}</h1>
                 <h6 class="lead mt-4">
-                    <font color="#FF385C"> <strong>Share&Buy</strong></font> se ha convertido en una comunidad en la que
-                    cada día millones de personas compran y venden productos de segunda mano
+                    <font color="#FF385C"> <strong>Share&Buy</strong></font> {{__('se ha convertido en una comunidad en la que cada día millones de personas compran y venden productos de segunda mano')}}
                 </h6>
                 <h4 class="mt-5" style="font-family:cursive">
-                    Nuestra pasión, La programación</h4>
+                    {{__('Nuestra pasión, La programación')}}</h4>
             </div>
             <div class="video_aboutus col-lg-3 offset-lg-1 p-0 overflow-hidden ">
                 <video loop width="100%" height="100%" autoplay class="">
@@ -21,20 +20,20 @@
     </div>
 
     <div class="container m-auto ">
-        <h1 class="mt-5 text-center">Nuestra Historia en<font color="#FF385C"> Share&Buy</font>
+        <h1 class="mt-5 text-center">{{__('Nuestra Historia en')}}<font color="#FF385C"> Share&Buy</font>
         </h1>
         <section class="m-5">
 
-            <p class="mb-5 ">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+            <p class="mb-5 ">{{__('"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
                 laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
                 vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
                 sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
                 qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi
-                tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. </p>
+                tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. ')}}</p>
 
         </section>
         <div class="container mt-5">
-            <h2 class="mb-4 mt-5 text-center ">Nuestras fortalezas</h2>
+            <h2 class="mb-4 mt-5 text-center ">{{('Nuestras fortalezas')}}</h2>
         </div>
         <section class="pre-footer mb-5 container-fluid d-flex m-auto justify-content-center">
             <div class="row1 ">
@@ -44,10 +43,10 @@
                             <img class="" alt="profesionalidad" title="profesionalidad" src="\img\icons\about_us\1.svg">
                         </div>
                         <div class="items_about_us mt-2">
-                            <span style="">Profesionalidad</span>
+                            <span style="">{{__('Profesionalidad')}}</span>
                         </div>
                         <div class="pre-footer-item-text">
-                            <span style="">Máxima excelencia</span>
+                            <span style="">{{__('Máxima excelencia')}}</span>
                         </div>
                     </div>
                     <div class="pre-footer-item m-2">
@@ -55,10 +54,10 @@
                             <img class="" alt="Llama" title="Llama" src="\img\icons\about_us\2.svg">
                         </div>
                         <div class=" items_about_us  mt-2">
-                            <span style="">Profesionalidad</span>
+                            <span style="">{{__('Profesionalidad')}}</span>
                         </div>
                         <div class="pre-footer-item-text">
-                            <span style="">Máxima excelencia</span>
+                            <span style="">{{__('Máxima excelencia')}}</span>
                             <br>
                         </div>
                     </div>
@@ -67,10 +66,10 @@
                             <img class="" alt="Mail" title="Mail" src="\img\icons\about_us\3.svg">
                         </div>
                         <div class=" items_about_us  mt-2">
-                            <span style=" items_about_us">Profesionalidad</span>
+                            <span style=" items_about_us">{{__('Profesionalidad')}}</span>
                         </div>
                         <div class="pre-footer-item-text">
-                            <span style="">Máxima excelencia</span></div>
+                            <span style="">{{__('Máxima excelencia')}}</span></div>
                     </div>
                 </div>
             </div>

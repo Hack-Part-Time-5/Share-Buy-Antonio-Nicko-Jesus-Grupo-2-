@@ -1,5 +1,5 @@
 <x-layout>
-    <x-slot name='title'>Share&Buy-Detalle Producto</x-slot>    
+    <x-slot name='title'>Share&Buy-{{__('Detalle Producto')}}</x-slot>    
     <div class="container m-auto  d-lg-flex flex-column justify-content-center">        
         <x-search/>
         <div class="container px-3">
@@ -68,19 +68,19 @@
                         </div>
                     </div> --}}
                         <div>
-                            <a href="{{route('user.ads', $ad->user)}}" class="text-decoration-none"><span><strong><font color="#ff385c">Vendedor</font></strong> <br>{{$ad->user->name}}</span></a>
+                            <a href="{{route('user.ads', $ad->user)}}" class="text-decoration-none"><span><strong><font color="#ff385c">{{__('Vendedor')}}</font></strong> <br>{{$ad->user->name}}</span></a>
                             
                         </div>                        
                     </div>
                     <div class="my-2 d-flex align-items-center mt-4 mb-5">
                         <b><i class=" bi bi-truck me-2"></i></b>
-                        <span class="entrega"><b>Entrega en 3-5 días</b></span>
+                        <span class="entrega"><b>{{__('Entrega en 3-5 días')}}</b></span>
                     </div>
                     
                     <div class="container d-flex align-items-center">
                         <div class="row w-100">
                             <div class="col container__compartelo ">
-                                <p class=" me-2">Compártelo</p>
+                                <p class=" me-2">{{__('Compártelo')}}</p>
                                 <a href="https://www.facebook.com/" target="_blank"><img src="/img/icons/icons_RRSS/Full_colour/fb.svg" alt="Facebook icon" class="icon__rrss--show mx-1"></a>
                                 <a href="https://twitter.com/" target="_blank"><img src="/img/icons/icons_RRSS/Full_colour/twitter.svg" alt="instagram icon" class="icon__rrss--show mx-1"></a>
                                 <a href="mailto:info@shareandbuy.com" target="_blank"><img src="/img/icons/icons_RRSS/Full_colour/mail.svg" alt="youtube icon" class="icon__rrss--show mx-1"></a>
@@ -97,15 +97,15 @@
                 <div class="container__protegemos--show col-12 col-md-6 px-4 py-3 mt-3">
                     <div class="d-flex">
                         <i class="bi bi-shield-check me-2 my-1 icon__escudo"></i>
-                        <p><b>Protegemos tus compras</b></p><br>
+                        <p><b>{{__('Protegemos tus compras')}}</b></p><br>
                     </div>
                     <div class="d-flex my-1">
                         <i class="bi me-1 bi-check2"></i>
-                        <p class="p__proteccion">Garantía de reembolso si el producto no es como se describe.</p>
+                        <p class="p__proteccion">{{__('Garantía de reembolso si el producto no es como se describe.')}}</p>
                     </div>                    
                     <div class="d-flex">
                         <i class="bi me-1 bi-check2"></i>
-                        <p class="p__proteccion">El vendedor recibe el pago cuando confirmas que el envío ha ido bien.</p>
+                        <p class="p__proteccion">{{__('El vendedor recibe el pago cuando confirmas que el envío ha ido bien.')}}</p>
                     </div>
                     
                 </div>

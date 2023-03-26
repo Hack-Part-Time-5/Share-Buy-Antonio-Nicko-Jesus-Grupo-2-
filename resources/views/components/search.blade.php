@@ -30,7 +30,7 @@
                 <div class="container__buttons--show d-none d-lg-flex justify-content-center  my-4">
                     <div class=" mx-5">
                         <button class="btn btn-secondary dropdown__button--moda dropdown-toggle px-4 py-2 rounded-pill" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Categorías
+                            {{__('Categorías')}}
                         </button>
                         <ul class="dropdown-menu">
                             <div class="container mt-3 mb-3">
@@ -38,62 +38,62 @@
                                   <div class="col">
                                     <div class="">
                                         <a href="http://127.0.0.1:8000/category/Moda/ads" class="btn m-3 button_grid_categories" type="button">
-                                            <img src="\img\icons\icons_categories\Moda.svg" class="icon_grid"><div class="text-center"><p class="mt-1 p-title">Moda</p></div></a>
+                                            <img src="\img\icons\icons_categories\Moda.svg" class="icon_grid"><div class="text-center"><p class="mt-1 p-title">{{__('Moda')}}</p></div></a>
                                     </div>
                                     </div>
                                   <div class="col">
                                     <div class="">
                                         <a href="http://127.0.0.1:8000/category/Deporte/ads" class="btn m-3 button_grid_categories" type="button">
-                                            <img src="\img\icons\icons_categories\Deporte.svg" class="icon_grid"><div class="text-center"><p class="mt-1 p-title">Deporte</p></div></a>
+                                            <img src="\img\icons\icons_categories\Deporte.svg" class="icon_grid"><div class="text-center"><p class="mt-1 p-title">{{__('Deporte')}}</p></div></a>
                                     </div>
                                     </div>
                                     <div class="col">
                                         <div class="">
                                             <a href="http://127.0.0.1:8000/category/Coleccionismo/ads" class="btn m-3 button_grid_categories" type="button">
-                                                <img src="\img\icons\icons_categories\coleccionismo.svg" class="icon_grid"><div class="text-center"><p class="mt-1 p-title">Coleccionismo</p></div></a>
+                                                <img src="\img\icons\icons_categories\coleccionismo.svg" class="icon_grid"><div class="text-center"><p class="mt-1 p-title">{{__('Coleccionismo')}}</p></div></a>
                                         </div>
                                         </div>
                                         <div class="col">
                                               <div class="">
                                                   <a href="http://127.0.0.1:8000/category/Electrónica/ads" class="btn m-3 button_grid_categories" type="button">
-                                                      <img src="\img\icons\icons_categories\electronica.svg" class="icon_grid"><div class="text-center"><p class="mt-1 p-title">Electrónica</p></div></a>
+                                                      <img src="\img\icons\icons_categories\electronica.svg" class="icon_grid"><div class="text-center"><p class="mt-1 p-title">{{__('Electrónica')}}</p></div></a>
                                               </div>
                                               </div>
                                              <div class="col">
                                           <div class="">
                                               <a href="http://127.0.0.1:8000/category/Hogar%20y%20Jardín/ads" class="btn m-3 button_grid_categories" type="button">
-                                                  <img src="\img\icons\icons_categories\hogar_y_jardin.svg" class="icon_grid"><div class="text-center"><p class="mt-1 p-title">Hogar y jardín</p></div></a>
+                                                  <img src="\img\icons\icons_categories\hogar_y_jardin.svg" class="icon_grid"><div class="text-center"><p class="mt-1 p-title">{{__('Hogar y jardín')}}</p></div></a>
                                           </div>
                                           </div> 
                                         <div class="col">
                                           <div class="">
                                               <a href="http://127.0.0.1:8000/category/electrodomesticos/ads" class="btn m-3 button_grid_categories" type="button">
-                                                  <img src="\img\icons\icons_categories\electrodomesticos.svg" class="icon_grid"><div class="text-center"><p class="mt-1 p-title">Maquinaria</p></div></a>
+                                                  <img src="\img\icons\icons_categories\electrodomesticos.svg" class="icon_grid"><div class="text-center"><p class="mt-1 p-title">{{__('Maquinaria')}}</p></div></a>
                                           </div>
                                           </div>
                                           <div class="col">
                                             <div class="">
                                                 <a href="http://127.0.0.1:8000/category/inmobiliaria/ads" class="btn m-3 button_grid_categories" type="button">
-                                                    <img src="\img\icons\icons_categories\instrumentos_musicales.svg" class="icon_grid"><div class="text-center"><p class="mt-1 p-title">Música</p></div></a>
+                                                    <img src="\img\icons\icons_categories\instrumentos_musicales.svg" class="icon_grid"><div class="text-center"><p class="mt-1 p-title">{{__('Música')}}</p></div></a>
                                             </div>
                                             </div>
                                             <div class="col">
                                                 <div class="">
                                                     <a href="http://127.0.0.1:8000/category/Motor%20y%20accesorios/ads" class="btn m-3 button_grid_categories" type="button">
-                                                        <img src="\img\icons\icons_categories\motoryaccesorios.svg" class="icon_grid"><div class="text-center"><p class="mt-1 p-title">Motor y accesorios</p></div></a>
+                                                        <img src="\img\icons\icons_categories\motoryaccesorios.svg" class="icon_grid"><div class="text-center"><p class="mt-1 p-title">{{__('Motor y accesorios')}}</p></div></a>
                                                 </div>
                                                 </div>
 
                                                 <div class="col">
                                                     <div class="">
                                                         <a href="http://127.0.0.1:8000/category/servicios/ads" class="btn m-3 button_grid_categories" type="button">
-                                                            <img src="\img\icons\icons_categories\servicios.svg" class="icon_grid"><div class="text-center"><p class="mt-1 p-title">Servicios</p></div></a>
+                                                            <img src="\img\icons\icons_categories\servicios.svg" class="icon_grid"><div class="text-center"><p class="mt-1 p-title">{{__('Servicios')}}</p></div></a>
                                                     </div>
                                                     </div>
                                                   <div class="col">
                                                     <div class="">
                                                         <a href="http://127.0.0.1:8000/category/Videojuegos/ads" class="btn m-3 button_grid_categories" type="button">
-                                                            <img src="\img\icons\icons_categories\videojuegos.svg" class="icon_grid"><div class="text-center"><p class="mt-1 p-title">Videojuegos</p></div></a>
+                                                            <img src="\img\icons\icons_categories\videojuegos.svg" class="icon_grid"><div class="text-center"><p class="mt-1 p-title">{{__('Videojuegos')}}</p></div></a>
                                                     </div>
                                                     </div>
                                             </div>

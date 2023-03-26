@@ -1,5 +1,5 @@
 <x-layout>
-    <x-slot name='title'>Share&Buy -Listado de productos</x-slot>
+    <x-slot name='title'>Share&Buy -{{__('Listado de productos')}}</x-slot>
     
     <div class="container m-auto  d-lg-flex flex-column justify-content-center">        
         <x-search/>

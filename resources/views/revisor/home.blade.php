@@ -16,7 +16,7 @@
 								<p class=""> <strong>Id <font color="#FF385C">#{{$ad->id}}</strong></font></p>
 							</div>
 							<div class="header mt-4 mb-4">
-								<h5><strong> Imágenes</strong></h5>
+								<h5><strong> {{__('Imágenes')}}</strong></h5>
 							</div>
 							<div class="col-12">
 								<div class="row">
@@ -25,20 +25,20 @@
 											<img src="{{$image->getUrl(500,500)}}" alt="..." class="img-fluid img-border grid_imagenes_subir">
 										</div>
 										<div class="col-md-4 mx-2 mb-2">
-											<b>Clasificación</b><br>
-											<i>Adulto:</i> <i class="bi bi-circle-fill {{ $image->adult }}"></i> {{ $image->adult }}
+											<b>{{__('Clasificación')}}</b><br>
+											<i>{{__('Adulto')}}:</i> <i class="bi bi-circle-fill {{ $image->adult }}"></i> {{ $image->adult }}
 											<br>
-											<i>Contenido ofensivo:</i> <i class="bi bi-circle-fill {{ $image->spoof }}"></i> {{ $image->spoof }}
+											<i>{{__('Contenido ofensivo')}}:</i> <i class="bi bi-circle-fill {{ $image->spoof }}"></i> {{ $image->spoof }}
 											<br>
-											<i>Salud:</i> <i class="bi bi-circle-fill {{ $image->medical }}"></i> {{ $image->medical }}
+											<i>{{__('Salud')}}:</i> <i class="bi bi-circle-fill {{ $image->medical }}"></i> {{ $image->medical }}
 											<br>
-											<i>Violencia:</i> <i class="bi bi-circle-fill {{ $image->violence }}"></i> {{ $image->violence }}
+											<i>{{__('Violencia')}}:</i> <i class="bi bi-circle-fill {{ $image->violence }}"></i> {{ $image->violence }}
 											<br>
-											<i>Racismo:</i> <i class="bi bi-circle-fill {{ $image->racy }}"></i> {{ $image->racy }}
+											<i>{{__('Racismo')}}:</i> <i class="bi bi-circle-fill {{ $image->racy }}"></i> {{ $image->racy }}
 											<br><br>
 											</div>
 											<div class="col-md-3 mx-2">
-												<b>Etiquetas</b><br>
+												<b>{{__('Etiquetas')}}</b><br>
 											@foreach($image->labels as $label)
 											<a href="#" class="btn px-1 btn-light border mt-2 btn-sm m-auto "> {{$label}}</a>
 											@endforeach
@@ -58,7 +58,7 @@
 						</div>	
 						<div class=" row">
 							<div class="header mt-4 mb-1 ">
-									<h5><strong> Usuario</strong></h5>
+									<h5><strong> {{__('Usuario')}}</strong></h5>
 							</div>
 							<div class="col-md-9">
 								Id <strong><font color="#FF385C">#{{$ad->user->id}}</strong></font> - {{$ad->user->name}} -<u> {{$ad->user->email}}</u>
@@ -67,7 +67,7 @@
 					</div>
 					<div class=" row">
 						<div class="header mt-4 mb-1 ">
-								<h5><strong>Título</strong></h5>
+								<h5><strong>{{__('Título')}}</strong></h5>
 						</div>
 						<div class="col-md-9">
 							{{$ad->title}}
@@ -76,7 +76,7 @@
 					
 					<div class="row">
 						<div class="header mt-4 mb-1 ">
-							<h5><strong>Precio</strong></h5>
+							<h5><strong>{{__('Precio')}}</strong></h5>
 						</div>
 						<div class="col-md-9">
 							{{$ad->price}}€
@@ -84,7 +84,7 @@
 					</div>
 						<div class="row">
 						<div class="header mt-4 mb-1">
-							<h5><strong>Categoría</strong></h5>
+							<h5><strong>{{__('Categoría')}}</strong></h5>
 						</div>
 						<div class="col-md-9">
 							{{$ad->category->name}}
@@ -92,7 +92,7 @@
 					</div>
 					<div class="row">
 						<div class="header mt-4 mb-1 ">
-							<h5><strong>Descripción</strong></h5>
+							<h5><strong>{{__('Descripción')}}</strong></h5>
 						</div>
 						<div class="col-md-9">
 							{{$ad->body}}
@@ -100,7 +100,7 @@
 					</div>
 					<div class="row">
 						<div class="header mt-4 mb-1">
-							<h5><strong>Fecha de creación</strong></h5>
+							<h5><strong>{{__('Fecha de creación')}}</strong></h5>
 						</div>
 						<div class="col-md-9">
 							<i>{{$ad->created_at->format('d/m/Y')}}</i>
@@ -116,12 +116,12 @@
 				<form action="{{route('revisor.ad.accept',$ad)}}" method="POST">
 					@csrf
 					@method('PATCH')
-					<button type="submit" class="btn btn_aceptar btn-success">Aceptar</button>
+					<button type="submit" class="btn btn_aceptar btn-success">{{__('Aceptar')}}</button>
 				</form>
 				<form action="{{route('revisor.ad.reject',$ad)}}" method="POST">
 					@csrf
 					@method('PATCH')
-					<button type="submit" class="btn btn_rechazar btn-danger">Rechazar</button>
+					<button type="submit" class="btn btn_rechazar btn-danger">{{__('Rechazar')}}</button>
 				</form>
 			</div>
 			

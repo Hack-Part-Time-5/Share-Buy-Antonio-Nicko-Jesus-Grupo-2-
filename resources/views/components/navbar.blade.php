@@ -258,8 +258,7 @@ aria-hidden="true">
             @endif
 
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{{ route('ads.create') }}">Sube tu anuncio
-                    </a>
+                <a class="nav-link active" aria-current="page" href="{{ route('ads.create') }}">{{__('Sube tu anuncio')}}</a>
             </li>
             <div class="my-2">
                 <form id="logoutForm" action="{{ route('logout') }}" method="POST">
