@@ -1,7 +1,7 @@
 <x-layout>
 	<x-slot name='title'>Sube tu producto</x-slot>
     <div class="container d-flex flex-column align-items-center m-auto my-3">
-        <h1>{{$user ?? ''}}  Anuncios por revisar</h1>
+        <h1>{{$user ?? ''}}  {{__('Anuncios por revisar')}}</h1>
 
     </div>
 	<x-slot name='title'> Share&Buy-Revisor Home </x-slot>

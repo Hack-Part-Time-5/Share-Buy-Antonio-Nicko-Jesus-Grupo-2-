@@ -10,13 +10,13 @@
     <div class="d-block d-lg-none">
         <div class="collapse navbar-collapse col-6 justify-content-center " id="navbarSupportedContent">
             <div class="navbar-nav mb-2 mb-lg-0 me-0 d-flex">
-                <a href="" class="">Idioma</a>
+                <a href="" class="">{{__('Idioma')}}</a>
             </div>
             <div class="navbar-nav mb-2 mb-lg-0 me-0 d-flex justify-content-end ">
-                <a href="" class="">Favoritos</a>
+                <a href="" class="">{{__('Favoritos')}}</a>
             </div>
             <div class="navbar-nav mb-2 mb-lg-0 me-0 d-flex justify-content-end ">
-                <a href="" class="">Iniciar sesión</a>
+                <a href="" class="">{{__('Iniciar sesión')}}</a>
             </div>
         </div>
     </div> 
@@ -66,12 +66,12 @@
                                             class="form-control forms_field-input placeholder_login py-1 " placeholder="Contraseña">
                                         <div class="validate"></div>
                                     </div>
-                                    <p class="my-3 text-center"><u>¿Has olvidado tu contraseña?</u><a class=""
+                                    <p class="my-3 text-center"><u>{{__('¿Has olvidado tu contraseña?')}}</u><a class=""
                                     href="{{ route('register') }}"></a></p>
                                     {{-- BUTTON-LOGIN --}}
                                     <div class="mt-5 mb-5 d-flex justify-content-center">
                                         <button type="submit" class="text-center loginLinkModal nav-link active mx-3 navbar-register_button px-5 py-2 text-white  navbar-register__a"
-                                            aria-current="page">Iniciar sesión</a> 
+                                            aria-current="page">{{__('Iniciar sesión')}}</a> 
                                 
                                     </div>        
                                 </form>
@@ -97,7 +97,7 @@ aria-hidden="true">
                 <img class="carrito_logo_modal" src="/img/icons/carrito_logo.svg" alt="logo de share & buy"
                     class="logoModal">
             </div>
-            <h4 class=" text-center" id="exModalLabel"><strong>Únete a Share&Buy</strong></h4>
+            <h4 class=" text-center" id="exModalLabel"><strong>{{__('Únete a Share&Buy')}}</strong></h4>
         </div>
         <section class="login__modal--expand container-fluid p-2">
             <div class="container-fluid">
@@ -138,15 +138,15 @@ aria-hidden="true">
                                     <input type="password" name="password_confirmation" id="password_confirmation" class="form-control forms_field-input placeholder_login py-1 " placeholder="Repite la contraseña">
                                     <div class="validate"></div>
                                 </div>
-                                <p class="requisito_contraseña">*Al menos 8 caracteres</p>
+                                <p class="requisito_contraseña">{{__('*Al menos 8 caracteres')}}</p>
                             </div>
-                            <p class="recuperar_contraseña my-3 text-center"><u>¿Has olvidado tu contraseña?</u><a class=""
+                            <p class="recuperar_contraseña my-3 text-center"><u>{{__('¿Has olvidado tu contraseña?')}}</u><a class=""
                             href=""></a></p>
 
                             {{-- BUTTON-CREAR CUENTA --}}
                             <div class="mt-4 mb-4 d-flex justify-content-center">
                                 <button type="submit" class="text-center loginLinkModal nav-link active mx-3 navbar-register_button px-5 py-2 text-white  navbar-register__a"
-                                    aria-current="page">Crear Cuenta</button> 
+                                    aria-current="page">{{__('Crear Cuenta')}}</button> 
                         
                             </div>        
                         </form>
@@ -165,7 +165,7 @@ aria-hidden="true">
                     <button type="button" class="btn-close float-end" name="button" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-header d-flex justify-content-center">
-                    <h5 class="m-3" id="modal_language_title">Selecciona tu idioma</h5>
+                    <h5 class="m-3" id="modal_language_title">{{__('Selecciona tu idioma')}}</h5>
                 </div>
                 <div class="modal-body justify-content-center d-flex m-3">
                     <div class="nav-item px-2">
@@ -212,19 +212,18 @@ aria-hidden="true">
                                 class="logoModal">
                         </div>
                         <div class="modal-header d-flex justify-content-center">
-                            <h4 class="modal-title  text-center" id="exModalLabel"><strong>Compra y vende en Share&Buy</strong></h4>
+                            <h4 class="modal-title  text-center" id="exModalLabel"><strong>{{__('Compra y vende en Share&Buy')}}</strong></h4>
                         </div>
                         <div class="d-flex  mt-3 flex-column justify-content-center align-items-center">
-                            <p class="fs-5 text-center">Consigue los mejores precios y gana dinero con lo que no usas.</p>
+                            <p class="fs-5 text-center">{{__('Consigue los mejores precios y gana dinero con lo que no usas')}}.</p>
                             
                             <div class="mt-5 mb-3 d-flex justify-content-center">
                                 <button  class="text-center loginLinkModal nav-link active mx-3 navbar-login_button px-5 py-2"
-                                    aria-current="page" data-bs-toggle="modal" data-bs-target="#modal_login">Inicia
-                                    Sesión</button>
+                                    aria-current="page" data-bs-toggle="modal" data-bs-target="#modal_login">{{__('Inicia Sesión')}}</button>
                             </div>
                             <div class="mt-1 mb-4 d-flex justify-content-center">
                                 <button class="text-center loginLinkModal nav-link active mx-3 navbar-register_button px-5 py-2 text-white"
-                                    aria-current="page" data-bs-toggle="modal" data-bs-target="#modal_register">Crear Cuenta</button>
+                                    aria-current="page" data-bs-toggle="modal" data-bs-target="#modal_register">{{__('Crear Cuenta')}}</button>
                             </div>
                             
         @endif
