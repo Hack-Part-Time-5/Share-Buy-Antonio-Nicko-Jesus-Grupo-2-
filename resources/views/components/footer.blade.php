@@ -1,6 +1,6 @@
 <footer>
-    <section class="pre-footer container-fluid d-flex m-auto justify-content-center">
-        <div class="row1 ">
+    <section class="pre-footer container-fluid d-flex m-auto justify-content-center mt-2">
+        <div class="row1 mt-3 mb-5 ">
             <div class="pre-footer-row d-flex flex-wrap  justify-content-center ">
                 <div class="pre-footer-item m-2 ">
                     <div class="pre-footer-item-logo">
