@@ -163,23 +163,18 @@
                   </div>
                 </div>
               </div>
-              <section class="banner_segundo_home">
+              <section class="banner_segundo_home mb-5">
             
                 <div class="pt-5 px-4 d-flex flex-column align-items-start">                
                     <h2 class="text-white">{{__('Estamos aquí')}} <br> {{__('para ti')}}</h2>
                     
                     <div class="mt-5 mb-5">
-                        <a href="{{route('contact')}}"><button  type="button" class=" ms-1 p-2 navbar-register_button text-white" ><span class="nav__register--button d-flex justify-content-center align-items-center">{{ __('Contáctanos') }}</span></button></a>     
-                    </div>        
-                                                  
-                </div>
-                            
+            <a href="{{route('contact')}}"><button  type="button" class=" ms-1 p-2 navbar-register_button text-white" ><span class="nav__register--button d-flex justify-content-center align-items-center">{{ __('Contáctanos') }}</span></button></a>                                    
+                </div>         
             </section>
-              </div>  
          
-       
         </section> 
-         
+ 
     </div>
 </x-layout>          
               
