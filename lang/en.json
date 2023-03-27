@@ -11,7 +11,7 @@
     "Ver más": "See More",
     "To": "Cars",
     "Motos": "Motorcycles",
-    "Hogar y jardín": "Home and Garden",
+    "Hogar y Jardín": "Home and Garden",
     "Electrónica": "Tech",
     "Móviles": "Mobiles",
     "Ordenadores": "Computers",
@@ -135,5 +135,8 @@
     "Nuestra Historia en": "Our history in ",
     "Nuestras fortalezas": "Our strengths",
     "Profesionalidad": "Professionalism",
-    "Máxima excelencia": "Maximum excellence"
+    "Máxima excelencia": "Maximum excellence",
+    "Todas las categorías": "All categories",
+    "Electrodomésticos": "Electrical appliances",
+    "Inmobiliaria": "Real State"
 }
