@@ -576,7 +576,10 @@ display:grid !important;
 width: 100% !important;
 
 }
-
+.envianosUnMail{
+    text-decoration: none !important;
+    color: black !important;
+}
 /* banner secundario */
 .banner_secundario{
     background-image: url(/img/banner_home2.png);
