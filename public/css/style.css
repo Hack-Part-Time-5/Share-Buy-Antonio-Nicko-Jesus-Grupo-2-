@@ -330,6 +330,11 @@ font-size: 25px !important;
     border-radius: 25px !important;
 }
 
+.video_blog{
+    border-radius: 25px !important;
+    justify-content: center !important;
+}
+
 .img_team_team{
     /* transition: transform .3s ease; */
     border: transparent !important;

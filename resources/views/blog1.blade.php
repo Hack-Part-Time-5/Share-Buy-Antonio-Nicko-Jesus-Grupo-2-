@@ -20,13 +20,11 @@ Para ello puedes hacerlo siguiendo las siguientes guías según tu dispositivo, 
 <li>Descargar <a href="" class="a_blog"><strong>Share&Buy para PC</strong></li></a>
     <li>Descargar <a href="" class="a_blog"><strong>Share&Buy App (Cualquier dispositivo)</strong></li></a>
 <br><br>Veender en Share&Buy es tan fácil o incluso más que comprar artículos en la misma app. Para hacerlo y subir el primer artículo a la plataforma, esta te solicitará que sigas unos sencillos que te mostraremos a continuación.
-   <section class="justify-content-center">       
-<video   center loop width="50%" height="50%" autoplay class="mt-5">
+   <section class="text-center">       
+<video   center loop width="50%" height="50%" autoplay class="mt-5 video_blog">
     <source src="\video\aboutus.mp4" type="video/mp4">
   </video>
-  <video   center loop width="50%" height="50%" autoplay class="mt-5">
-    <source src="\video\aboutus.mp4" type="video/mp4">
-  </video>
+  
 </section> 
 
 
