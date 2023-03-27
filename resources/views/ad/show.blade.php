@@ -6,7 +6,7 @@
             <div class="row my-5">                
                 <div class=" d-md-block col-12 col-md-6 px-4">
                     {{-- carousel --}}                    
-                    <div  class="carousel slide d-block d-md-none" data-ride="carousel">                                        
+                    {{-- <div  class="carousel slide d-block d-md-none" data-ride="carousel">                                        
                         <div class="carousel-inner" role="listbox">                            
                             @foreach ($ad->images as $image )
                             <div class="item @if($loop->first) active @endif">
@@ -22,7 +22,10 @@
                           <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                           <span class="sr-only">İleri</span>
                         </a>
-                      </div>                    
+                      </div>   --}}                  
+                      <div class="d-block d-md-none">
+                        <img class="img-fluid" src="{{$ad->images()->first()->getUrl(500,500)}}" alt="">
+                      </div>                                
                     {{-- galeria --}}
                     <div class="container-fluid">
                         <div class="row">                          
@@ -57,7 +60,12 @@
                         }, function() {
                             $(this).carousel('cycle');
                         });
-                        });        
+                        });   
+                        
+                        
+                        /* carousel */
+
+
                       </script>
 
                     
