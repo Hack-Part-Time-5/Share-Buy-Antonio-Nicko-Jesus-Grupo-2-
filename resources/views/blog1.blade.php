@@ -2,11 +2,11 @@
     <x-slot name='title'>Blog-¿Cómo vender en Share&Buy?</x-slot>
         <div class="container m-auto">
         
-        <section class="m-2">
-        <h1 class="mb-2">¿Cómo vender <font color="#FF385C">en Share&Buy?</font></h1>
+        <section class="m-2 mt-4 ">
+        <h1 class="mb-5 mt-5 text-center">¿Cómo vender <font color="#FF385C">en Share&Buy?</font></h1>
         <p class="mb-5 mt-5">Si te estas preguntando cómo vender en Share&Buy y qué pasos debes seguir para publicar tu primer anuncio, has llegado al sitio indicado.<br>Aquí te presentamos la guía completa de como poner a la venta tus artículos en Share&Buy, diseñada tanto para principiantes como para otros usuarios que ya llevan usando la app durante algún tiempo, pero quieren aprender algunos trucos para aumentar sus ventas.</p>
             
-                <h3 class="mb-2">Guía de cómo vender en Share&Buy</h3>
+                <h3 class="mb-2 text-center">Guía de cómo vender en Share&Buy</h3>
                 <p class="mb-5">Seguro que tienes mil prendas que ya no utilizas o estás pensando en renovar tu viejo ordenador y comprarte uno nuevo. Share&Buy ha revolucionado la forma de vender los objetos de segunda mano.
 
                     Ahora con esta aplicación lo tienes muy fácil, vender todas esas cosas que tienes abandonadas y que no usas esta en tu mano a un solo clic. ¡Ponles un buen precio y consigue un dinero extra!<br>  
@@ -28,7 +28,7 @@ Para ello puedes hacerlo siguiendo las siguientes guías según tu dispositivo, 
 </section> 
 
 
-<h3 class="mb-5 mt-5">¿Cómo crear un anuncio en Share&Buy?</h3>
+<h3 class="mb-5 mt-5  text-center">¿Cómo crear un anuncio en Share&Buy?</h3>
             <p class="mb-5">Mira a tu alrededor y pregúntate para qué quieres tantas cosas. Si tu respuesta es “para nada”, ha llegado el momento de ponernos manos a la obra y empezar a usar Share&Buy.
 
                 La primera vez que accedas a la aplicación deberás darte de alta con tu cuenta. Puedes usar una red social, ya sea Twitter, Google o Facebook, o utilizar un correo electrónico (email).
