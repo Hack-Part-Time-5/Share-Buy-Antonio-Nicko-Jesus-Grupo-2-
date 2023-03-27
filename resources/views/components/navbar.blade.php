@@ -233,7 +233,7 @@ aria-hidden="true">
                         <a class="nav-link active mx-3 navbar-upload__a" aria-current="page" href="#"></a>
                     </li> --}}
     
-                    @endif
+    @endif
     @else    
     <div class="d-none d-lg-flex buttons w-100 align-items-center me-3 justify-content-end">        
         <div class="nav-item mx-1">
@@ -245,14 +245,14 @@ aria-hidden="true">
         </div> 
         <a href="{{route('ads.create')}}" class="log-subeTuProducto"><button type="button" class="ms-3 p-2 navbar-register_button log-subeTuProducto text-white"><span class=" nav__register--button d-flex justify-content-center align-items-center ">{{ __('+ Sube tu producto') }}</span></button></a>       
     </div>                
-    <div class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+    <div class="nav-item dropdown" >
+        <a class="nav-link dropdown-toggle"  href="#" role="button" data-bs-toggle="dropdown"
             aria-expanded="false"><strong><font color="#253238">¡Hola {{ Auth::user()->name }}!</font></strong></a>
-        <div class="dropdown-menu px-2" aria-labelledby="navbarDropdown">
+        <div class="dropdown-menu px-2 py-2" aria-labelledby="navbarDropdown">
             @if(Auth::user()->is_revisor)
                 <div class="my-2">
                     <a class="dropdown-item" href="{{ route('revisor.home') }}">
-                        {{ __('Anuncios por revisar') }}<span class="badge ms-2 rounded-pill text-danger">{{ \App\Models\Ad::TobeRevisionedCount() }}</span>
+                        {{ __('Anuncios por revisar') }}<span class="badge ms-1 rounded-pill text-danger">{{ \App\Models\Ad::TobeRevisionedCount() }}</span>
                     </a>
                 </div>
             @endif
