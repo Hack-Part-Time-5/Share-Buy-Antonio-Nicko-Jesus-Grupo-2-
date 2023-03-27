@@ -12,6 +12,8 @@
     {{-- owlcarousel --}}
     <link rel="stylesheet" href="/css/owl.carousel.min.css">
     <link rel="stylesheet" href="/css/owl.theme.default.css">
+    
+    
     @livewireStyles
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <link rel="stylesheet" href="/css/style.css">

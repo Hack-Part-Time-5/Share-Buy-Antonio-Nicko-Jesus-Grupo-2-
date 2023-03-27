@@ -3,30 +3,27 @@
     <div class="container m-auto  d-lg-flex flex-column justify-content-center">        
         <x-search/>
         <div class="container px-3">
-            <div class="row my-5">
-                <div class="col-12 col-md-6 px-4">
-                    {{-- <div id="adImages" class="carousel slide" data-bs-ride="true">
-                        <div class="carrousel-indicators">                            
-                        </div>
-                        <div class="carousel-inner carousel__show">
+            <div class="row my-5">                
+                <div class=" d-md-block col-12 col-md-6 px-4">
+                    {{-- carousel --}}                    
+                    <div  class="carousel slide d-block d-md-none" data-ride="carousel">                                        
+                        <div class="carousel-inner" role="listbox">                            
                             @foreach ($ad->images as $image )
-                                <div class="carousel-item  @if($loop->first) active  @endif  justify-content-center">
-                                    @if ($ad->images()->count() > 0)
-                                        <img src="{{$image->getUrl(500,500)}}" alt="" class="d-block w-100">                                    
-                                    @endif                                    
-                                </div>                             
-                            @endforeach
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#adImages" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#adImages" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>                     --}}
-
+                            <div class="item @if($loop->first) active @endif">
+                              <img src="{{$image->getUrl(500,500)}}">                            
+                            </div>    
+                            @endforeach                                                    
+                          </div>                                            
+                        <a class="left carousel-control" href=".carousel" role="button" data-slide="prev">
+                          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                          <span class="sr-only">Geri</span>
+                        </a>
+                        <a class="right carousel-control" href=".carousel" role="button" data-slide="next">
+                          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                          <span class="sr-only">İleri</span>
+                        </a>
+                      </div>                    
+                    {{-- galeria --}}
                     <div class="container-fluid">
                         <div class="row">                          
                           <div class="col-md-3 d-none d-md-block">
@@ -38,7 +35,7 @@
                             @endforeach                                                            
                             </div>
                           </div>
-                          <div class="col-md-9 h-100 d-flex align-items-center ">
+                          <div class="d-none d-md-block  col-md-9 h-100 d-flex align-items-center ">
                             <img id="selected-image" src="{{$ad->images()->first()->getUrl(500,500)}}" class="img-fluid">
                           </div>
                         </div>
@@ -48,7 +45,19 @@
                         function selectImage(src) {
                           var selectedImage = document.getElementById("selected-image");
                           selectedImage.src = src;
-                        }
+                        }         
+                        /* slide */      
+                        $(document).ready(function() {
+                        // Iniciar el slider
+                        $("#myCarousel").carousel();
+                        
+                        // Pausar el slider al hacer hover
+                        $("#myCarousel").hover(function() {
+                            $(this).carousel('pause');
+                        }, function() {
+                            $(this).carousel('cycle');
+                        });
+                        });        
                       </script>
 
                     
