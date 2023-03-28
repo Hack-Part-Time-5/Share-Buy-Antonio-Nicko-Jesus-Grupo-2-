@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="mt-4 container contact-page m-auto  d-flex">
+    <div class="mt-4 container contact-page m-auto justify-content-center  d-flex">
         <div class="row1">
             <h2 class="title text-center">
                 <img src="\img\icons\contacta_icon.svg" class="contacta_icon" alt="icono de contacto">

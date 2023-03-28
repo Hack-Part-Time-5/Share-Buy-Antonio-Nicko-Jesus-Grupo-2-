@@ -31,9 +31,12 @@
                     <div class="pre-footer-item-logo">
                         <img class=""  alt="Mail" title="Mail" src="\img\icons\pre-footer\mail.svg">
                     </div>
-                    <div class="pre-footer-item-title mt-2">
-                        <span style="" class="obfuscateLink ">{{__('Envíanos un mail')}}</span>
-                    </div>
+                    <a class="envianosUnMail" href="{{route('contact')}}">
+                        <div class="pre-footer-item-title mt-2">
+                            <span style="" class="obfuscateLink ">{{__('Envíanos un mail')}}</span>
+                        </div>
+                    </a>
+                    
                     <div class="pre-footer-item-text">
                         {{__('Estamos')}} <span style="" class="obfuscateLink link" >{{__('aquí para ti')}}</span></div>
                 </div>
