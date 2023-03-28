@@ -4,7 +4,7 @@
         <div class="d-flex flex-column row justify-content-center">
             <div class="banner d-none d-lg-flex justify-content-center m-auto  align-items-center text-white">                                
                 <div class="d-flex flex-column flex-wrap">
-                    <h1 class="text-center mb-3"> {{__('Compra y vende en un solo click')}}</h1>
+                    <h1 class="text-center mb-3"> {{__('Modificación')}}</h1>
                     <div class="d-flex flex-wrap justify-content-center position-relative container__buscador">                        
                         <form action="{{route('search')}}" method="GET" role="search">
                             <input type="search" placeholder=" {{__('Empieza tu búsqueda')}}" class=" buscador_banner placeholder_buscador mx-2" name="q" aria-label="Search">
@@ -19,7 +19,7 @@
             {{-- codigo para responsive --}}
             <div class="row banner d-flex d-lg-none justify-content-center m-auto p-1  align-items-center text-white">                                
                 <div class="row d-flex flex-column flex-wrap">
-                    <h1 class="text-center mb-3"> {{__('Compra y vende en un solo click')}}</h1>
+                    <h1 class="text-center mb-3"> {{__('Modificación')}}</h1>
                     <div class="d-flex justify-content-center flex-wrap position-relative">
                         <input type="text" placeholder=" {{__('Empieza tu búsqueda')}}" class="buscador_banner placeholder_buscador ">                    
                         <button type="button" class="navbar-register_button text-white">{{__('Buscar')}}</button>                        
