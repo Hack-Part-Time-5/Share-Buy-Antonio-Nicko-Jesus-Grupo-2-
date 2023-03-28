@@ -1,5 +1,5 @@
 <x-layout>
-    <x-slot name='title'>Share&Buy - ads</x-slot>
+    <x-slot name='title'>Share&Buy - Inicio</x-slot>
     <section class="hero container-fluid">
         <div class="d-flex flex-column row justify-content-center">
             <div class="banner d-none d-lg-flex justify-content-center m-auto  align-items-center text-white">                                
@@ -7,8 +7,8 @@
                     <h1 class="text-center mb-3"> {{__('Compra y vende en un solo click')}}</h1>
                     <div class="d-flex flex-wrap justify-content-center position-relative container__buscador">                        
                         <form action="{{route('search')}}" method="GET" role="search">
-                            <input type="search" placeholder=" {{__('Empieza tu búsqueda')}}" class=" buscador_banner placeholder_buscador mx-5" name="q" aria-label="Search">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FF385C" class="lupa_buscador_icono bi bi-search" viewBox="0 0 16 16">
+                            <input type="search" placeholder=" {{__('Empieza tu búsqueda')}}" class=" buscador_banner placeholder_buscador mx-2" name="q" aria-label="Search">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FF385C" class="lupa_buscador_icono_home bi bi-search" viewBox="0 0 16 16">
                             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
                             </svg>              
                             <button type="submit" class="navbar-register_button text-white px-4 py-2">{{__('Buscar')}}</button>               
