@@ -76,6 +76,21 @@
                 <a href="{{route('home')}}"><button class="navbar-register_button text-white px-3 py-2 mb-5">{{__('Volver')}}</button></a>
             </div>
         </section>
+        <section class="categories ">           
+            <div class=" flex-column d-flex justify-content-center mt-5">            
+            <h2 class="mx-1 d-block">{{__('Descubre nuestras categorías')}}</h2>
+            <div class="mt-5 d-flex justify-content-center align-items-center flex-column">            
+                <div class="owl-carousel">
+                    @foreach ($categories as $category)
+                        <div class="d-flex flex-column ">                         
+                            <div><a href="{{route('category.ads', $category)}}" class=" category-items d-flex  flex-column"><img src="{{$category->img}}" class="categories_icons m-auto" alt=""><span class="text-center m-auto pt-2">{{__($category->name)}}</span></a>
+                        </div> 
+                    </div>                  
+                    @endforeach                
+                </div>            
+            </div>                     
+            </div>                    
+        </section>    
         <section class="banner_secundarioList">
             
             <div class="pt-5 px-4 d-flex flex-column align-items-start">                
@@ -122,20 +137,6 @@
                 </div>            
             </div>    
         </section> --}}    
-        <section class="categories mt-5">           
-            <div class=" flex-column d-flex justify-content-center mt-5">            
-            <h2 class="mx-1 d-block">{{__('Descubre nuestras categorías')}}</h2>
-            <div class="mt-5 d-flex justify-content-center align-items-center flex-column">            
-                <div class="owl-carousel">
-                    @foreach ($categories as $category)
-                        <div class="d-flex flex-column ">                         
-                            <div><a href="{{route('category.ads', $category)}}" class=" category-items d-flex  flex-column"><img src="{{$category->img}}" class="categories_icons m-auto" alt=""><span class="text-center m-auto pt-2">{{__($category->name)}}</span></a>
-                        </div> 
-                    </div>                  
-                    @endforeach                
-                </div>            
-            </div>                     
-            </div>                    
-        </section>     
+        
     </div>
 </x-layout>

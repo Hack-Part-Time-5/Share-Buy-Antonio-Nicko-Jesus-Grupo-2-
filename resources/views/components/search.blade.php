@@ -40,8 +40,8 @@
                     type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     {{ __('Categorías') }}
                 </button>
-                <div class="dropdown-menu">
-                    <div class="container m-auto">
+                <div class="dropdown-menu categories_search_dropdown   ">
+                    <div class="container m-auto ">
                         <div class="row text-center ">
                             <div class="col">
                                 <div class="">

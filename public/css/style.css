@@ -45,6 +45,11 @@ html{
 .icon__nav{
     width: 1.5em !important;
 }
+
+.icon__nav_collapse{
+    width: 1.2em !important;
+}
+
 .nav__register--button{
     font-size: 0.9em !important;
 }
@@ -97,6 +102,10 @@ html{
 } 
 .navbar-upload__a{
     color: var(--main-color) !important;
+}
+
+.menu_collapse_nav{
+    
 }
 
 /* banner */
@@ -472,6 +481,10 @@ font-size: 25px !important;
     height: 35px !important;
     
 } 
+.categories {
+    margin-top: 0px !important;
+    margin-bottom: 100px !important;
+}
 .categories_icons:hover{
    filter: invert(38%) sepia(25%) saturate(7486%) hue-rotate(328deg) brightness(101%) contrast(105%);
 /* filter: invert(100%); */
@@ -596,6 +609,8 @@ width: 100% !important;
     min-width: 60%;
     min-height: 30vh;
     background-size: cover;
+    margin-bottom: 50px !important;
+    margin-top: 50px !important;
 
 
 }
@@ -764,14 +779,10 @@ padding-right: 0.5rem !important;
 }
 
 /* GRID CATEGORIAS SEARCH */
-.dropdown-menu.show{
-    display:flex !important;
-    justify-content:center !important;
-    width: 100% !important;
-    justify-items: center !important;
-    transform: translate3d(0px, 159px, 0px) !important;
 
-    }
+.categories_search_dropdown{
+    transform: translate3d(0px, 159px, 0px) !important;
+}
 
 .icon_grid{
     width: 40px !important;

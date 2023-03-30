@@ -7,17 +7,20 @@
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
                 class="navbar-toggler-icon"></span></button>        
     </div>   
-    <div class="d-block d-lg-none">
-        <div class="collapse navbar-collapse col-6 justify-content-center " id="navbarSupportedContent">
+    <div class="d-flex d-lg-none menu_collapse_nav">
+       
+        <div class="collapse navbar-collapse col-12 justify-content-center " id="navbarSupportedContent">
+            <hr>
             <div class="navbar-nav mb-2 mb-lg-0 me-0 d-flex">
-                <a href="" class="">{{__('Idioma')}}</a>
+                <a href="" data-bs-toggle="modal" data-bs-target="#modal_language" class="text-muted nav-link"><img src="/img/icons/language_icon.svg" class="icon__nav_collapse" alt="Language"> {{__('Idioma')}}</a>
             </div>
             <div class="navbar-nav mb-2 mb-lg-0 me-0 d-flex justify-content-end ">
-                <a href="" class="">{{__('Favoritos')}}</a>
+                <a href="{{route('wishlist')}}" class="text-muted nav-link"><img src="/img/icons/fav_icon .svg" class="icon__nav_collapse" alt="favoritos"> {{__('Favoritos')}}</a>
             </div>
             <div class="navbar-nav mb-2 mb-lg-0 me-0 d-flex justify-content-end ">
-                <a href="" class="">{{__('Iniciar sesión')}}</a>
+                <a href="" data-bs-toggle="modal" data-bs-target="#dialog1" class="text-muted nav-link"> <img src="/img/icons/login_icon.svg" class="icon__nav_collapse" alt="Log in"> {{__('Iniciar sesión')}}</a>
             </div>
+            <hr>
         </div>
     </div> 
     <div class="container__buton--subir d-flex justify-content-end">                
@@ -247,24 +250,33 @@ aria-hidden="true">
     </div>                
     <div class="nav-item dropdown" >
         <a class="nav-link dropdown-toggle"  href="#" role="button" data-bs-toggle="dropdown"
-            aria-expanded="false"><strong><font color="#253238">¡Hola {{ Auth::user()->name }}!</font></strong></a>
-        <div class="dropdown-menu px-2 py-2" aria-labelledby="navbarDropdown">
+            aria-expanded="false"><strong>¡Hola<font color="#ff385c"> {{ Auth::user()->name }}!</font></strong></a>
+        <div class="dropdown-menu px-2 py-2 " aria-labelledby="navbarDropdown">
             @if(Auth::user()->is_revisor)
                 <div class="my-2">
-                    <a class="dropdown-item" href="{{ route('revisor.home') }}">
-                        {{ __('Anuncios por revisar') }}<span class="badge ms-1 rounded-pill text-danger">{{ \App\Models\Ad::TobeRevisionedCount() }}</span>
+                    <a class="dropdown-item" href="{{ route('revisor.home') }}"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                      </svg>
+                          {{ __('Anuncios por revisar') }}<span class="badge ms-1 rounded-pill text-danger">{{ \App\Models\Ad::TobeRevisionedCount() }}</span>
                     </a>
                 </div>
             @endif
 
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{{ route('ads.create') }}">{{__('Sube tu anuncio')}}</a>
+                <a class="nav-link active" aria-current="page" href="{{ route('ads.create') }}"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-upload" viewBox="0 0 16 16">
+                    <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                    <path d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708l3-3z"/>
+                  </svg>  {{__('Sube tu anuncio')}}</a>
             </li>
             <div class="my-2">
                 <form id="logoutForm" action="{{ route('logout') }}" method="POST">
                     @csrf
                 </form>
-                <a id="logoutBtn" class="dropdown-item" href="#">{{ __('Salir') }}</a>
+                <a id="logoutBtn" class="dropdown-item" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>
+                    <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+                  </svg>  {{ __('Salir') }}</a>
             </div>
             @endguest
             
