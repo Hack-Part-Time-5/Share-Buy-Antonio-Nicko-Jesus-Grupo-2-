@@ -22,21 +22,21 @@
     
     
 </head>
-<body>
+<body>        
+        <section class="container-fluid m-auto px-2 section__general d-flex flex-column align-items-center">
+            <x-navbar/>   
         
-        <x-navbar/>   
         
-        
-        @if (session()->has('message'))
-            <x-alert :type="session('message')['type']" :message="session('message')['text']"/>
-        @endif
-        {{$slot}}
-        <x-footer/>
-        <script src="/js/jquery.min.js"></script>
-        <script src="/js/script.js"></script>
-        <script src="/js/owl.carousel.min.js"></script>
-        @livewireScripts
-        {{$script ?? ''}}
-      
+            @if (session()->has('message'))
+                <x-alert :type="session('message')['type']" :message="session('message')['text']"/>
+            @endif
+            {{$slot}}
+            <x-footer/>
+            <script src="/js/jquery.min.js"></script>
+            <script src="/js/script.js"></script>
+            <script src="/js/owl.carousel.min.js"></script>
+            @livewireScripts
+            {{$script ?? ''}}                     
+        </section>    
 </body>
 </html>

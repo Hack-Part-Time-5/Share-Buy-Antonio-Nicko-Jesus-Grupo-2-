@@ -6,11 +6,18 @@
     padding: 0 !important;
     
 }
+html{
+    width: 100% !important;
+}
 body{
     height: 100%;
     font-family: 'Open Sans', sans-serif !important; 
 
 }
+/* .section__general{
+    
+} */
+
 h1{
     font-weight: 700;
     font-size: 35px !important;
